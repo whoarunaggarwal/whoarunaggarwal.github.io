@@ -565,3 +565,437 @@
 [data-theme="light"] .quiz-explanation-box {
   background: #f1f5f9;
 }
+
+/* ==========================================================================
+   ARUN AI ? Engineering Intelligence Assistant
+   ========================================================================== */
+
+.arun-ai-section {
+  position: relative;
+  margin-top: var(--space-10);
+}
+
+.ai-chassis {
+  background: var(--material-primary);
+  border: 1px solid var(--border-emphasis);
+  border-radius: var(--radius-xl);
+  backdrop-filter: var(--blur-lg);
+  -webkit-backdrop-filter: var(--blur-lg);
+  box-shadow: 0 24px 60px -20px rgba(0, 240, 255, 0.12), var(--shadow-lg);
+  overflow: hidden;
+  padding: var(--space-6);
+  position: relative;
+}
+
+.ai-topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: var(--space-4);
+  padding-bottom: var(--space-4);
+  border-bottom: 1px solid var(--divider);
+  margin-bottom: var(--space-5);
+}
+
+.ai-brand {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+}
+
+.ai-avatar-badge {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #00f0ff, #2563eb);
+  color: #080a0e;
+  font-family: var(--font-mono, monospace);
+  font-weight: 800;
+  font-size: 0.8125rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 16px rgba(0, 240, 255, 0.4);
+}
+
+.ai-name-wrap h3 {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--color-text);
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.ai-name-wrap p {
+  font-family: var(--font-mono, monospace);
+  font-size: 0.6875rem;
+  color: var(--color-accent);
+  margin: 2px 0 0 0;
+  letter-spacing: 0.05em;
+}
+
+.ai-status-pill {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(16, 185, 129, 0.12);
+  border: 1px solid rgba(16, 185, 129, 0.3);
+  padding: 4px 12px;
+  border-radius: var(--radius-pill);
+  font-family: var(--font-mono, monospace);
+  font-size: 0.6875rem;
+  font-weight: 700;
+  color: var(--color-success);
+}
+
+.ai-chat-window {
+  display: flex;
+  flex-direction: column;
+  height: 380px;
+  background: rgba(0, 0, 0, 0.25);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  padding: var(--space-4);
+  overflow-y: auto;
+  gap: var(--space-4);
+  scroll-behavior: smooth;
+}
+
+.ai-msg {
+  display: flex;
+  gap: var(--space-3);
+  max-width: 82%;
+  animation: aiFadeIn 0.25s ease-out;
+}
+
+@keyframes aiFadeIn {
+  from { opacity: 0; transform: translateY(6px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.ai-msg-user {
+  margin-left: auto;
+  flex-direction: row-reverse;
+}
+
+.ai-msg-avatar {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: var(--material-secondary);
+  border: 1px solid var(--border-subtle);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-mono, monospace);
+  font-size: 0.625rem;
+  font-weight: 700;
+  color: var(--color-text-secondary);
+  flex-shrink: 0;
+}
+
+.ai-msg-user .ai-msg-avatar {
+  background: var(--color-accent);
+  color: #080a0e;
+  border-color: var(--color-accent);
+}
+
+.ai-msg-content {
+  background: var(--material-secondary);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  padding: var(--space-3) var(--space-4);
+  font-size: 0.875rem;
+  line-height: 1.5;
+  color: var(--color-text);
+}
+
+.ai-msg-user .ai-msg-content {
+  background: rgba(0, 240, 255, 0.12);
+  border-color: rgba(0, 240, 255, 0.3);
+  color: var(--color-text);
+}
+
+.ai-typing-indicator .ai-msg-content {
+  display: flex;
+  gap: 4px;
+  padding: 10px 16px;
+}
+
+.ai-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--color-accent);
+  animation: aiBounce 1s infinite alternate;
+}
+
+.ai-dot:nth-child(2) { animation-delay: 0.2s; }
+.ai-dot:nth-child(3) { animation-delay: 0.4s; }
+
+@keyframes aiBounce {
+  from { opacity: 0.3; transform: scale(0.8); }
+  to { opacity: 1; transform: scale(1.2); }
+}
+
+.ai-prompt-pills-wrap {
+  margin-top: var(--space-4);
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+}
+
+.ai-prompt-pill {
+  background: var(--material-secondary);
+  border: 1px solid var(--border-subtle);
+  color: var(--color-text-secondary);
+  font-size: 0.75rem;
+  padding: 5px 12px;
+  border-radius: var(--radius-pill);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.ai-prompt-pill:hover {
+  background: var(--material-secondary-hover);
+  border-color: var(--color-accent);
+  color: var(--color-text);
+  transform: translateY(-1px);
+}
+
+.ai-input-bar {
+  display: flex;
+  gap: var(--space-3);
+  margin-top: var(--space-4);
+}
+
+.ai-input {
+  flex: 1;
+  background: var(--material-secondary);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-pill);
+  padding: 10px 18px;
+  color: var(--color-text);
+  font-size: 0.875rem;
+  transition: border-color 0.2s ease;
+}
+
+.ai-input:focus {
+  outline: none;
+  border-color: var(--color-accent);
+}
+
+.ai-send-btn {
+  background: var(--color-accent);
+  color: #080a0e;
+  border: none;
+  border-radius: var(--radius-pill);
+  padding: 0 20px;
+  font-family: var(--font-mono, monospace);
+  font-size: 0.8125rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.ai-send-btn:hover {
+  background: var(--color-accent-strong);
+  box-shadow: 0 0 16px rgba(0, 240, 255, 0.4);
+}
+
+/* ==========================================================================
+   Interactive 3D Engineering Lab (Virtual Manufacturing Cell)
+   ========================================================================== */
+
+.lab-section {
+  position: relative;
+  margin-top: var(--space-10);
+}
+
+.lab-chassis {
+  background: var(--material-primary);
+  border: 1px solid var(--border-emphasis);
+  border-radius: var(--radius-xl);
+  backdrop-filter: var(--blur-lg);
+  -webkit-backdrop-filter: var(--blur-lg);
+  box-shadow: var(--shadow-lg);
+  overflow: hidden;
+  padding: var(--space-6);
+}
+
+.lab-topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: var(--space-4);
+  padding-bottom: var(--space-4);
+  border-bottom: 1px solid var(--divider);
+  margin-bottom: var(--space-5);
+}
+
+.lab-title {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  font-family: var(--font-mono, monospace);
+  font-size: 0.875rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--color-accent);
+}
+
+.lab-actions-bar {
+  display: flex;
+  gap: var(--space-2);
+}
+
+.lab-tool-btn {
+  background: var(--material-secondary);
+  border: 1px solid var(--border-subtle);
+  color: var(--color-text);
+  font-family: var(--font-mono, monospace);
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 6px 14px;
+  border-radius: var(--radius-pill);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.lab-tool-btn:hover,
+.lab-tool-btn.btn-primary {
+  background: var(--color-accent);
+  color: #080a0e;
+  border-color: var(--color-accent);
+  font-weight: 700;
+}
+
+.lab-viewport-wrap {
+  position: relative;
+  width: 100%;
+  height: 480px;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  background: #06080e;
+  border: 1px solid var(--border-subtle);
+  cursor: grab;
+}
+
+.lab-viewport-wrap:active {
+  cursor: grabbing;
+}
+
+#labViewport {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.lab-hotspots-bar {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  flex-wrap: wrap;
+  margin-top: var(--space-4);
+  padding: var(--space-3) var(--space-4);
+  background: var(--material-secondary);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+}
+
+.lab-hotspots-label {
+  font-family: var(--font-mono, monospace);
+  font-size: 0.6875rem;
+  color: var(--color-text-secondary);
+  text-transform: uppercase;
+  margin-right: var(--space-2);
+}
+
+.lab-hotspot-btn {
+  background: var(--material-primary);
+  border: 1px solid var(--border-subtle);
+  color: var(--color-text);
+  font-family: var(--font-mono, monospace);
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 5px 12px;
+  border-radius: var(--radius-pill);
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.lab-hotspot-btn:hover {
+  border-color: var(--color-accent);
+  color: var(--color-accent);
+  background: rgba(0, 240, 255, 0.08);
+}
+
+/* Hotspot Detail Modal */
+.lab-modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(6, 8, 14, 0.85);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  padding: var(--space-4);
+}
+
+.lab-modal-card {
+  background: var(--color-canvas-raised);
+  border: 1px solid var(--border-emphasis);
+  border-radius: var(--radius-lg);
+  max-width: 520px;
+  width: 100%;
+  padding: var(--space-6);
+  position: relative;
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.7);
+  animation: aiFadeIn 0.2s ease-out;
+}
+
+.lab-modal-close {
+  position: absolute;
+  top: var(--space-4);
+  right: var(--space-4);
+  background: transparent;
+  border: none;
+  color: var(--color-text-secondary);
+  cursor: pointer;
+  padding: 4px;
+}
+
+.lab-modal-close:hover {
+  color: var(--color-text);
+}
+
+.lab-spec-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 6px 0;
+  border-bottom: 1px solid var(--divider);
+  font-family: var(--font-mono, monospace);
+  font-size: 0.8125rem;
+}
+
+.lab-spec-label {
+  color: var(--color-text-secondary);
+}
+
+.lab-spec-val {
+  color: var(--color-accent);
+  font-weight: 700;
+}
