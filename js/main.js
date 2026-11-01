@@ -1,6 +1,6 @@
 /* ==========================================================================
    Main Orchestrator: Arun Kumar Aggarwal Portfolio
-   Theme Toggle, Scroll Spy, Mobile Drawer, Cursor Glow, Toasts, PDF Modal
+   Theme Toggle, Sound FX, Arcade Switcher, Scroll Spy, Toasts, PDF Modal
    ========================================================================== */
 
 (function () {
@@ -13,7 +13,7 @@
   function initTheme() {
     const savedTheme = localStorage.getItem('portfolio-theme');
     const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-    const initialTheme = savedTheme || (prefersDark ? 'dark' : 'dark'); // Default to dark industrial
+    const initialTheme = savedTheme || (prefersDark ? 'dark' : 'dark');
     setTheme(initialTheme);
   }
 
@@ -21,7 +21,7 @@
     document.documentElement.setAttribute('data-theme', theme);
     localStorage.setItem('portfolio-theme', theme);
     if (metaThemeColor) {
-      metaThemeColor.setAttribute('content', theme === 'dark' ? '#07090e' : '#f8fafc');
+      metaThemeColor.setAttribute('content', theme === 'dark' ? '#06080e' : '#f8fafc');
     }
   }
 
@@ -30,12 +30,23 @@
       const current = document.documentElement.getAttribute('data-theme') || 'dark';
       const nextTheme = current === 'dark' ? 'light' : 'dark';
       setTheme(nextTheme);
+      if (window.playCyberSound) window.playCyberSound('click');
     });
   }
 
   initTheme();
 
-  // 2. Cursor Glow Tracker
+  // 2. Sound Toggle Button
+  const soundToggleBtn = document.getElementById('soundToggleBtn');
+  if (soundToggleBtn) {
+    soundToggleBtn.addEventListener('click', () => {
+      if (window.toggleCyberAudio) {
+        window.toggleCyberAudio();
+      }
+    });
+  }
+
+  // 3. Cursor Glow Tracker
   const cursorGlow = document.getElementById('cursorGlow');
   if (cursorGlow && window.matchMedia('(hover: hover) and (pointer: fine)').matches) {
     window.addEventListener('mousemove', (e) => {
@@ -51,9 +62,8 @@
     });
   }
 
-  // 3. Scroll Progress & Sticky Nav Shadow
+  // 4. Scroll Progress & Sticky Nav Shadow
   const navProgress = document.getElementById('navProgress');
-  const siteNav = document.getElementById('siteNav');
 
   window.addEventListener('scroll', () => {
     const scrollTop = window.scrollY;
@@ -65,7 +75,7 @@
     }
   }, { passive: true });
 
-  // 4. Mobile Menu Drawer
+  // 5. Mobile Menu Drawer
   const menuToggleBtn = document.getElementById('menuToggleBtn');
   const mobileNavSheet = document.getElementById('mobileNavSheet');
 
@@ -74,6 +84,7 @@
       const isOpen = mobileNavSheet.classList.toggle('is-open');
       menuToggleBtn.classList.toggle('is-active');
       menuToggleBtn.setAttribute('aria-expanded', isOpen);
+      if (window.playCyberSound) window.playCyberSound('click');
     });
 
     mobileNavSheet.querySelectorAll('a').forEach(link => {
@@ -93,7 +104,7 @@
     });
   }
 
-  // 5. Scroll Spy for Nav Links
+  // 6. Scroll Spy for Nav Links
   const sections = document.querySelectorAll('section[id]');
   const navLinks = document.querySelectorAll('.nav-links a');
 
@@ -116,7 +127,7 @@
 
   sections.forEach(section => sectionObserver.observe(section));
 
-  // 6. Number Counter Animation
+  // 7. Number Counter Animation
   const counterElements = document.querySelectorAll('[data-count]');
   const counterObserver = new IntersectionObserver((entries, observer) => {
     entries.forEach(entry => {
@@ -129,7 +140,6 @@
         function updateCount(currentTime) {
           const elapsed = currentTime - startTime;
           const progress = Math.min(elapsed / duration, 1);
-          // Ease out cubic
           const eased = 1 - Math.pow(1 - progress, 3);
           const current = (targetNum * eased).toFixed(targetNum % 1 !== 0 ? 1 : 0);
           el.textContent = current;
@@ -149,12 +159,11 @@
 
   counterElements.forEach(el => counterObserver.observe(el));
 
-  // 7. Live IST Clock
+  // 8. Live IST Clock
   const clockEl = document.getElementById('istClock');
   function updateClock() {
     if (!clockEl) return;
     const now = new Date();
-    // Indian Standard Time (UTC +5:30)
     const options = { timeZone: 'Asia/Kolkata', hour12: false, hour: '2-digit', minute: '2-digit', second: '2-digit' };
     const timeStr = now.toLocaleTimeString('en-US', options);
     clockEl.textContent = `Manesar, India: ${timeStr} IST`;
@@ -162,7 +171,7 @@
   updateClock();
   setInterval(updateClock, 1000);
 
-  // 8. Toast Notification Utility
+  // 9. Toast Notification Utility
   const toastContainer = document.getElementById('toastContainer');
   window.showToast = function (message) {
     if (!toastContainer) return;
@@ -186,11 +195,12 @@
     }, 2800);
   };
 
-  // 9. Click to Copy Helper
+  // 10. Click to Copy Helper
   window.copyToClipboard = function (text, label) {
     if (navigator.clipboard && navigator.clipboard.writeText) {
       navigator.clipboard.writeText(text).then(() => {
         window.showToast(`Copied ${label} to clipboard!`);
+        if (window.playCyberSound) window.playCyberSound('click');
       }).catch(() => {
         fallbackCopy(text, label);
       });
@@ -207,9 +217,29 @@
     document.execCommand('copy');
     document.body.removeChild(tempInput);
     window.showToast(`Copied ${label} to clipboard!`);
+    if (window.playCyberSound) window.playCyberSound('click');
   }
 
-  // 10. PDF Fullscreen Modal Handler
+  // 11. Arcade Game Tabs Switcher
+  const arcadeTabs = document.querySelectorAll('.arcade-tab-btn');
+  const gameViews = document.querySelectorAll('.game-view');
+
+  arcadeTabs.forEach(tab => {
+    tab.addEventListener('click', () => {
+      arcadeTabs.forEach(t => t.classList.remove('is-active'));
+      gameViews.forEach(v => v.classList.remove('is-active'));
+
+      tab.classList.add('is-active');
+      const gameId = tab.dataset.game;
+      const targetView = document.getElementById(`${gameId}View`);
+      if (targetView) {
+        targetView.classList.add('is-active');
+      }
+      if (window.playCyberSound) window.playCyberSound('click');
+    });
+  });
+
+  // 12. PDF Fullscreen Modal Handler
   const resumeModal = document.getElementById('resumeModal');
   const openResumeModalBtn = document.getElementById('openResumeModalBtn');
   const closeResumeModalBtn = document.getElementById('closeResumeModalBtn');
@@ -217,6 +247,7 @@
   if (openResumeModalBtn && resumeModal) {
     openResumeModalBtn.addEventListener('click', () => {
       resumeModal.classList.add('is-active');
+      if (window.playCyberSound) window.playCyberSound('click');
     });
   }
 
@@ -234,7 +265,7 @@
     });
   }
 
-  // 11. Contact Message Form
+  // 13. Contact Message Form
   const contactForm = document.getElementById('contactForm');
   if (contactForm) {
     contactForm.addEventListener('submit', (e) => {
@@ -252,6 +283,7 @@
       const mailtoUrl = `mailto:aggarwal.arun26@gmail.com?subject=${encodeURIComponent(subject || `Portfolio Inquiry from ${name}`)}&body=${encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`)}`;
       
       window.showToast('Opening your default email client...');
+      if (window.playCyberSound) window.playCyberSound('laser');
       window.location.href = mailtoUrl;
     });
   }

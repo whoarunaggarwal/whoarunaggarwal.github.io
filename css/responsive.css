@@ -1,6 +1,6 @@
 /* ==========================================================================
    Responsive Breakpoints: Arun Kumar Aggarwal Portfolio
-   Mobile First & Desktop Media Queries
+   Mobile First, Tablet, & High-DPI Desktop
    ========================================================================== */
 
 @media (max-width: 1024px) {
@@ -28,6 +28,14 @@
   }
 
   .contact-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .chess-arena {
+    grid-template-columns: 1fr;
+  }
+
+  .sudoku-arena {
     grid-template-columns: 1fr;
   }
 }
@@ -98,6 +106,15 @@
     flex-direction: column;
     align-items: flex-start;
   }
+
+  .uno-opponents-row {
+    grid-template-columns: 1fr;
+  }
+
+  .arcade-tabs {
+    width: 100%;
+    overflow-x: auto;
+  }
 }
 
 @media (max-width: 480px) {
@@ -126,5 +143,18 @@
 
   .telemetry-row {
     grid-template-columns: 1fr;
+  }
+
+  .chess-board {
+    max-width: 320px;
+  }
+
+  .sudoku-grid {
+    max-width: 320px;
+  }
+
+  .uno-card {
+    width: 60px;
+    height: 90px;
   }
 }
