@@ -1,6 +1,6 @@
 /* ==========================================================================
-   Three.js 3D Articulated Robotic Arm & Holographic Cyber Stage
-   Interactive 3D Inverse Kinematics, Wireframe Rings, Laser Pulse Shockwaves
+   Three.js 3D Industrial Robotic Digital Twin & Hologram Stage
+   High-detail 6-Axis Kinematics, Welder Sparks, Interactive Modes & Camera
    ========================================================================== */
 
 (function () {
@@ -10,276 +10,316 @@
     const container = document.getElementById('threeHeroContainer');
     if (!container || typeof THREE === 'undefined') return;
 
-    // Scene, Camera, Renderer
+    // Clear any previous canvas
+    container.innerHTML = '';
+
+    // Scene & Perspective Camera
     const scene = new THREE.Scene();
     const camera = new THREE.PerspectiveCamera(45, container.clientWidth / container.clientHeight, 0.1, 1000);
-    camera.position.set(0, 5, 14);
+    camera.position.set(0, 6, 13);
     camera.lookAt(0, 2.5, 0);
 
     const renderer = new THREE.WebGLRenderer({ alpha: true, antialias: true, powerPreference: 'high-performance' });
     renderer.setSize(container.clientWidth, container.clientHeight);
     renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+    renderer.shadowMap.enabled = true;
     container.appendChild(renderer.domElement);
 
-    // Lighting
-    const ambientLight = new THREE.AmbientLight(0xffffff, 0.8);
+    // Advanced Lighting
+    const ambientLight = new THREE.AmbientLight(0xffffff, 1.2);
     scene.add(ambientLight);
 
-    const pointCyan = new THREE.PointLight(0x00f0ff, 3, 25);
-    pointCyan.position.set(5, 8, 5);
-    scene.add(pointCyan);
+    const keyLight = new THREE.DirectionalLight(0x00f0ff, 2.5);
+    keyLight.position.set(6, 12, 8);
+    scene.add(keyLight);
 
-    const pointAmber = new THREE.PointLight(0xf59e0b, 2.5, 20);
-    pointAmber.position.set(-6, 2, 4);
-    scene.add(pointAmber);
+    const fillLight = new THREE.DirectionalLight(0xf59e0b, 1.8);
+    fillLight.position.set(-8, 6, -4);
+    scene.add(fillLight);
 
-    // Materials
-    const darkMat = new THREE.MeshStandardMaterial({
+    const weldLight = new THREE.PointLight(0x00f0ff, 0, 15);
+    scene.add(weldLight);
+
+    // High-Tech Industrial Materials
+    const darkChassisMat = new THREE.MeshStandardMaterial({
       color: 0x0f172a,
-      roughness: 0.3,
-      metalness: 0.8
+      metalness: 0.85,
+      roughness: 0.25
     });
-    const cyanWireMat = new THREE.MeshBasicMaterial({
-      color: 0x00f0ff,
-      wireframe: true,
-      transparent: true,
-      opacity: 0.6
+    const orangeJointMat = new THREE.MeshStandardMaterial({
+      color: 0xf59e0b,
+      metalness: 0.7,
+      roughness: 0.3
     });
-    const neonCyanMat = new THREE.MeshBasicMaterial({ color: 0x00f0ff });
-    const neonAmberMat = new THREE.MeshBasicMaterial({ color: 0xf59e0b });
-    const neonGreenMat = new THREE.MeshBasicMaterial({ color: 0x10b981 });
+    const cyanNeonMat = new THREE.MeshBasicMaterial({ color: 0x00f0ff });
+    const greenNeonMat = new THREE.MeshBasicMaterial({ color: 0x10b981 });
+    const wireMat = new THREE.MeshBasicMaterial({ color: 0x00f0ff, wireframe: true, transparent: true, opacity: 0.35 });
 
-    // ROBOT ARM HIERARCHY
-    const robotGroup = new THREE.Group();
-    scene.add(robotGroup);
-    robotGroup.position.set(0, 0, 0);
+    // 1. Cyber Pedestal & Turntable
+    const workcellGroup = new THREE.Group();
+    scene.add(workcellGroup);
 
-    // 1. Base Pedestal
-    const baseGeo = new THREE.CylinderGeometry(2.4, 2.8, 0.6, 24);
-    const baseMesh = new THREE.Mesh(baseGeo, darkMat);
-    const baseWire = new THREE.Mesh(baseGeo, cyanWireMat);
-    const baseGroup = new THREE.Group();
-    baseGroup.add(baseMesh);
-    baseGroup.add(baseWire);
-    robotGroup.add(baseGroup);
+    // Ground Cyber Grid Disk
+    const gridDiskGeo = new THREE.CylinderGeometry(4.2, 4.4, 0.3, 36);
+    const gridDisk = new THREE.Mesh(gridDiskGeo, darkChassisMat);
+    const gridWire = new THREE.Mesh(gridDiskGeo, wireMat);
+    workcellGroup.add(gridDisk);
+    workcellGroup.add(gridWire);
 
-    // Base glowing ring
-    const baseRingGeo = new THREE.TorusGeometry(2.9, 0.06, 8, 36);
-    const baseRingMesh = new THREE.Mesh(baseRingGeo, neonCyanMat);
-    baseRingMesh.rotation.x = Math.PI / 2;
-    baseRingMesh.position.y = 0.1;
-    robotGroup.add(baseRingMesh);
+    // Concentric Neon Turntable Rings
+    const ring1 = new THREE.Mesh(new THREE.TorusGeometry(3.8, 0.04, 8, 48), cyanNeonMat);
+    ring1.rotation.x = Math.PI / 2;
+    ring1.position.y = 0.16;
+    workcellGroup.add(ring1);
 
-    // 2. Shoulder Pivot
-    const shoulderPivot = new THREE.Group();
-    shoulderPivot.position.y = 0.5;
-    robotGroup.add(shoulderPivot);
+    const ring2 = new THREE.Mesh(new THREE.TorusGeometry(2.6, 0.03, 8, 36), orangeJointMat);
+    ring2.rotation.x = Math.PI / 2;
+    ring2.position.y = 0.17;
+    workcellGroup.add(ring2);
 
-    const shoulderGeo = new THREE.CylinderGeometry(1.2, 1.2, 1.2, 16);
-    const shoulderMesh = new THREE.Mesh(shoulderGeo, darkMat);
-    shoulderMesh.rotation.x = Math.PI / 2;
-    shoulderPivot.add(shoulderMesh);
+    // 2. Base Joint (J1)
+    const j1Group = new THREE.Group();
+    j1Group.position.y = 0.3;
+    workcellGroup.add(j1Group);
 
-    // 3. Upper Arm Link
-    const upperArmGroup = new THREE.Group();
-    upperArmGroup.position.y = 0.6;
-    shoulderPivot.add(upperArmGroup);
+    const j1Base = new THREE.Mesh(new THREE.CylinderGeometry(1.6, 1.9, 0.8, 24), darkChassisMat);
+    j1Base.position.y = 0.4;
+    j1Group.add(j1Base);
 
-    const arm1Geo = new THREE.BoxGeometry(0.8, 3.6, 0.8);
-    const arm1Mesh = new THREE.Mesh(arm1Geo, darkMat);
-    arm1Mesh.position.y = 1.8;
-    const arm1Wire = new THREE.Mesh(arm1Geo, cyanWireMat);
-    arm1Wire.position.y = 1.8;
-    upperArmGroup.add(arm1Mesh);
-    upperArmGroup.add(arm1Wire);
+    // 3. Shoulder Joint (J2)
+    const j2Group = new THREE.Group();
+    j2Group.position.y = 0.9;
+    j1Group.add(j2Group);
 
-    // 4. Elbow Joint
-    const elbowPivot = new THREE.Group();
-    elbowPivot.position.y = 3.6;
-    upperArmGroup.add(elbowPivot);
+    const j2Pivot = new THREE.Mesh(new THREE.CylinderGeometry(1.0, 1.0, 1.4, 20), orangeJointMat);
+    j2Pivot.rotation.z = Math.PI / 2;
+    j2Pivot.position.y = 0.5;
+    j2Group.add(j2Pivot);
 
-    const elbowGeo = new THREE.CylinderGeometry(0.8, 0.8, 0.9, 16);
-    const elbowMesh = new THREE.Mesh(elbowGeo, darkMat);
-    elbowMesh.rotation.z = Math.PI / 2;
-    const elbowGlowRing = new THREE.Mesh(new THREE.TorusGeometry(0.85, 0.05, 8, 24), neonAmberMat);
-    elbowPivot.add(elbowMesh);
-    elbowPivot.add(elbowGlowRing);
+    // 4. Upper Arm Link
+    const upperArm = new THREE.Group();
+    upperArm.position.set(0, 0.5, 0);
+    j2Group.add(upperArm);
 
-    // 5. Forearm Link
-    const forearmGroup = new THREE.Group();
-    elbowPivot.add(forearmGroup);
+    const link1Mesh = new THREE.Mesh(new THREE.BoxGeometry(0.9, 3.4, 0.9), darkChassisMat);
+    link1Mesh.position.y = 1.7;
+    const link1Wire = new THREE.Mesh(new THREE.BoxGeometry(0.92, 3.42, 0.92), wireMat);
+    link1Wire.position.y = 1.7;
+    upperArm.add(link1Mesh);
+    upperArm.add(link1Wire);
 
-    const arm2Geo = new THREE.BoxGeometry(0.65, 3.0, 0.65);
-    const arm2Mesh = new THREE.Mesh(arm2Geo, darkMat);
-    arm2Mesh.position.y = 1.5;
-    const arm2Wire = new THREE.Mesh(arm2Geo, cyanWireMat);
-    arm2Wire.position.y = 1.5;
-    forearmGroup.add(arm2Mesh);
-    forearmGroup.add(arm2Wire);
+    // 5. Elbow Joint (J3)
+    const j3Group = new THREE.Group();
+    j3Group.position.y = 3.4;
+    upperArm.add(j3Group);
 
-    // 6. Wrist & Tool Flange
-    const wristPivot = new THREE.Group();
-    wristPivot.position.y = 3.0;
-    forearmGroup.add(wristPivot);
+    const j3Pivot = new THREE.Mesh(new THREE.CylinderGeometry(0.8, 0.8, 1.2, 18), orangeJointMat);
+    j3Pivot.rotation.z = Math.PI / 2;
+    j3Group.add(j3Pivot);
 
-    const wristGeo = new THREE.SphereGeometry(0.6, 16, 16);
-    const wristMesh = new THREE.Mesh(wristGeo, darkMat);
-    const wristRing = new THREE.Mesh(new THREE.TorusGeometry(0.65, 0.04, 8, 24), neonCyanMat);
-    wristPivot.add(wristMesh);
-    wristPivot.add(wristRing);
+    // 6. Forearm Link (J4)
+    const forearm = new THREE.Group();
+    j3Group.add(forearm);
 
-    // 7. Gripper Fingers
-    const gripperGroup = new THREE.Group();
-    gripperGroup.position.y = 0.6;
-    wristPivot.add(gripperGroup);
+    const link2Mesh = new THREE.Mesh(new THREE.BoxGeometry(0.7, 2.8, 0.7), darkChassisMat);
+    link2Mesh.position.y = 1.4;
+    const link2Wire = new THREE.Mesh(new THREE.BoxGeometry(0.72, 2.82, 0.72), wireMat);
+    link2Wire.position.y = 1.4;
+    forearm.add(link2Mesh);
+    forearm.add(link2Wire);
 
-    const fingerGeo = new THREE.BoxGeometry(0.18, 0.9, 0.3);
-    const fingerLeft = new THREE.Mesh(fingerGeo, neonCyanMat);
-    fingerLeft.position.set(-0.35, 0.45, 0);
-    const fingerRight = new THREE.Mesh(fingerGeo, neonCyanMat);
-    fingerRight.position.set(0.35, 0.45, 0);
-    gripperGroup.add(fingerLeft);
-    gripperGroup.add(fingerRight);
+    // 7. Wrist & Gripper Flange (J5/J6)
+    const wristGroup = new THREE.Group();
+    wristGroup.position.y = 2.8;
+    forearm.add(wristGroup);
 
-    // Laser Emitter Tip
-    const laserTip = new THREE.Mesh(new THREE.SphereGeometry(0.12, 12, 12), neonGreenMat);
-    laserTip.position.y = 0.9;
-    gripperGroup.add(laserTip);
+    const wristMesh = new THREE.Mesh(new THREE.SphereGeometry(0.65, 16, 16), darkChassisMat);
+    wristGroup.add(wristMesh);
 
-    // HOLOGRAPHIC SURROUND RINGS
-    const holoGroup = new THREE.Group();
-    scene.add(holoGroup);
-    holoGroup.position.set(0, 3, 0);
+    // High-Precision Laser Gripper
+    const gripperBase = new THREE.Mesh(new THREE.BoxGeometry(0.8, 0.3, 0.8), orangeJointMat);
+    gripperBase.position.y = 0.45;
+    wristGroup.add(gripperBase);
 
-    const ring1 = new THREE.Mesh(new THREE.TorusGeometry(5.2, 0.03, 8, 64), cyanWireMat);
-    ring1.rotation.x = Math.PI / 3;
-    holoGroup.add(ring1);
+    const fingerLeft = new THREE.Mesh(new THREE.BoxGeometry(0.16, 0.9, 0.25), cyanNeonMat);
+    fingerLeft.position.set(-0.32, 0.85, 0);
+    const fingerRight = new THREE.Mesh(new THREE.BoxGeometry(0.16, 0.9, 0.25), cyanNeonMat);
+    fingerRight.position.set(0.32, 0.85, 0);
+    wristGroup.add(fingerLeft);
+    wristGroup.add(fingerRight);
 
-    const ring2 = new THREE.Mesh(new THREE.TorusGeometry(6.4, 0.03, 8, 64), new THREE.MeshBasicMaterial({ color: 0xf59e0b, wireframe: true, transparent: true, opacity: 0.4 }));
-    ring2.rotation.y = Math.PI / 4;
-    holoGroup.add(ring2);
+    // Laser Emitter Tool Center Point (TCP)
+    const tcpTip = new THREE.Mesh(new THREE.SphereGeometry(0.12, 12, 12), greenNeonMat);
+    tcpTip.position.y = 1.3;
+    wristGroup.add(tcpTip);
 
-    // FLOATING DATA PARTICLES
-    const particleCount = 140;
-    const particleGeo = new THREE.BufferGeometry();
-    const posArray = new Float32Array(particleCount * 3);
+    // Dynamic Toolpath Laser Beam
+    const laserBeamGeo = new THREE.CylinderGeometry(0.04, 0.04, 3.5, 8);
+    const laserBeamMat = new THREE.MeshBasicMaterial({ color: 0x00f0ff, transparent: true, opacity: 0.85 });
+    const laserBeam = new THREE.Mesh(laserBeamGeo, laserBeamMat);
+    laserBeam.position.y = 3.0;
+    wristGroup.add(laserBeam);
 
-    for (let i = 0; i < particleCount * 3; i += 3) {
-      posArray[i] = (Math.random() - 0.5) * 16;
-      posArray[i + 1] = Math.random() * 10;
-      posArray[i + 2] = (Math.random() - 0.5) * 16;
+    // 8. PHYSICAL SPARKS PARTICLE SYSTEM
+    const maxSparks = 200;
+    const sparkGeo = new THREE.BufferGeometry();
+    const sparkPositions = new Float32Array(maxSparks * 3);
+    const sparkVelocities = [];
+
+    for (let i = 0; i < maxSparks; i++) {
+      sparkPositions[i * 3] = 0;
+      sparkPositions[i * 3 + 1] = -100; // start hidden
+      sparkPositions[i * 3 + 2] = 0;
+      sparkVelocities.push(new THREE.Vector3(0, 0, 0));
     }
-    particleGeo.setAttribute('position', new THREE.BufferAttribute(posArray, 3));
+    sparkGeo.setAttribute('position', new THREE.BufferAttribute(sparkPositions, 3));
 
-    const particleMat = new THREE.PointsMaterial({
-      size: 0.12,
+    const sparkMat = new THREE.PointsMaterial({
+      size: 0.16,
       color: 0x00f0ff,
-      transparent: true,
-      opacity: 0.7
+      blending: THREE.AdditiveBlending,
+      transparent: true
     });
-    const particlePoints = new THREE.Points(particleGeo, particleMat);
-    scene.add(particlePoints);
+    const sparkParticles = new THREE.Points(sparkGeo, sparkMat);
+    scene.add(sparkParticles);
 
-    // SHOCKWAVE SYSTEM (Triggered on Click)
-    const shockwaves = [];
-    function spawnShockwave() {
-      const shockGeo = new THREE.RingGeometry(0.2, 0.35, 32);
-      const shockMat = new THREE.MeshBasicMaterial({
-        color: 0x00f0ff,
-        side: THREE.DoubleSide,
-        transparent: true,
-        opacity: 0.9
-      });
-      const shock = new THREE.Mesh(shockGeo, shockMat);
-      // Position at gripper tip in world space
-      const tipWorldPos = new THREE.Vector3();
-      laserTip.getWorldPosition(tipWorldPos);
-      shock.position.copy(tipWorldPos);
-      shock.lookAt(camera.position);
-      scene.add(shock);
-      shockwaves.push({ mesh: shock, scale: 1, opacity: 1 });
+    function triggerSparkBurst() {
+      const tipPos = new THREE.Vector3();
+      tcpTip.getWorldPosition(tipPos);
 
-      if (window.playCyberSound) {
-        window.playCyberSound('laser');
+      // Flash light
+      weldLight.position.copy(tipPos);
+      weldLight.intensity = 4;
+
+      const positions = sparkGeo.attributes.position.array;
+      for (let i = 0; i < maxSparks; i++) {
+        positions[i * 3] = tipPos.x;
+        positions[i * 3 + 1] = tipPos.y;
+        positions[i * 3 + 2] = tipPos.z;
+
+        sparkVelocities[i].set(
+          (Math.random() - 0.5) * 8,
+          Math.random() * 6 + 2,
+          (Math.random() - 0.5) * 8
+        );
       }
+      sparkGeo.attributes.position.needsUpdate = true;
+
+      if (window.playCyberSound) window.playCyberSound('laser');
     }
 
-    container.addEventListener('click', spawnShockwave);
+    container.addEventListener('click', triggerSparkBurst);
+
+    // 9. INTERACTIVE CONTROLS (Mode Switching)
+    let currentMode = 'auto'; // 'auto' | 'manual' | 'weld'
+
+    const modeBtnAuto = document.getElementById('threeModeAuto');
+    const modeBtnWeld = document.getElementById('threeModeWeld');
+    const modeBtnJog = document.getElementById('threeModeJog');
+
+    if (modeBtnAuto) {
+      modeBtnAuto.addEventListener('click', () => {
+        currentMode = 'auto';
+        updateModeBtns(modeBtnAuto);
+      });
+    }
+    if (modeBtnWeld) {
+      modeBtnWeld.addEventListener('click', () => {
+        currentMode = 'weld';
+        updateModeBtns(modeBtnWeld);
+        triggerSparkBurst();
+      });
+    }
+    if (modeBtnJog) {
+      modeBtnJog.addEventListener('click', () => {
+        currentMode = 'manual';
+        updateModeBtns(modeBtnJog);
+      });
+    }
+
+    function updateModeBtns(activeBtn) {
+      document.querySelectorAll('.three-mode-pill').forEach(b => b.classList.remove('is-active'));
+      activeBtn.classList.add('is-active');
+      if (window.playCyberSound) window.playCyberSound('click');
+    }
 
     // MOUSE TRACKING
     let mouseX = 0;
     let mouseY = 0;
-    let targetRotY = 0;
-    let targetArmPitch = -0.3;
-    let targetElbowPitch = 0.6;
-
     window.addEventListener('mousemove', (e) => {
       const rect = container.getBoundingClientRect();
-      const x = ((e.clientX - rect.left) / container.clientWidth) * 2 - 1;
-      const y = -(((e.clientY - rect.top) / container.clientHeight) * 2 - 1);
-      mouseX = x;
-      mouseY = y;
-
-      targetRotY = x * 1.2;
-      targetArmPitch = -0.2 + y * 0.5;
-      targetElbowPitch = 0.5 - y * 0.4;
+      mouseX = ((e.clientX - rect.left) / container.clientWidth) * 2 - 1;
+      mouseY = -(((e.clientY - rect.top) / container.clientHeight) * 2 - 1);
     });
 
-    // RESIZE LISTENER
-    function onResize() {
+    // RESIZE
+    window.addEventListener('resize', () => {
       if (!container) return;
       camera.aspect = container.clientWidth / container.clientHeight;
       camera.updateProjectionMatrix();
       renderer.setSize(container.clientWidth, container.clientHeight);
-    }
-    window.addEventListener('resize', onResize);
+    });
 
-    // ANIMATION LOOP
-    let clock = new THREE.Clock();
+    // 10. ANIMATION CLOCK & LOOP
+    const clock = new THREE.Clock();
 
     function animate() {
       requestAnimationFrame(animate);
       const delta = clock.getDelta();
       const elapsed = clock.getElapsedTime();
 
-      // Smooth Kinematic Lerp
-      shoulderPivot.rotation.y += (targetRotY - shoulderPivot.rotation.y) * 0.08;
-      upperArmGroup.rotation.x += (targetArmPitch - upperArmGroup.rotation.x) * 0.08;
-      elbowPivot.rotation.x += (targetElbowPitch - elbowPivot.rotation.x) * 0.08;
-      wristPivot.rotation.z = Math.sin(elapsed * 2) * 0.3;
-
-      // Gripper breathing
-      const gripOffset = 0.28 + Math.sin(elapsed * 4) * 0.08;
-      fingerLeft.position.x = -gripOffset;
-      fingerRight.position.x = gripOffset;
-
-      // Holographic Rings Rotation
-      ring1.rotation.z += 0.005;
-      ring2.rotation.x += 0.007;
-      holoGroup.rotation.y += 0.003;
-
-      // Particles float
-      const positions = particleGeo.attributes.position.array;
-      for (let i = 1; i < particleCount * 3; i += 3) {
-        positions[i] += Math.sin(elapsed + i) * 0.005;
+      // Fade weld light
+      if (weldLight.intensity > 0) {
+        weldLight.intensity = Math.max(0, weldLight.intensity - delta * 6);
       }
-      particleGeo.attributes.position.needsUpdate = true;
 
-      // Shockwave expansions
-      for (let i = shockwaves.length - 1; i >= 0; i--) {
-        const sw = shockwaves[i];
-        sw.scale += delta * 8;
-        sw.opacity -= delta * 1.5;
-        sw.mesh.scale.set(sw.scale, sw.scale, sw.scale);
-        sw.mesh.material.opacity = Math.max(0, sw.opacity);
+      // Turntable slow rotation
+      gridDisk.rotation.y += 0.003;
 
-        if (sw.opacity <= 0) {
-          scene.remove(sw.mesh);
-          sw.mesh.geometry.dispose();
-          sw.mesh.material.dispose();
-          shockwaves.splice(i, 1);
+      if (currentMode === 'auto') {
+        // Smooth cinematic toolpath trajectory
+        j1Group.rotation.y = Math.sin(elapsed * 1.2) * 0.8;
+        upperArm.rotation.x = -0.3 + Math.sin(elapsed * 1.5) * 0.35;
+        j3Group.rotation.x = 0.6 + Math.cos(elapsed * 1.5) * 0.45;
+        wristGroup.rotation.z = Math.sin(elapsed * 2.5) * 0.6;
+        laserBeam.material.opacity = 0.5 + Math.sin(elapsed * 10) * 0.4;
+      } else if (currentMode === 'manual') {
+        // Inverse kinematics mouse follow
+        j1Group.rotation.y += (mouseX * 1.4 - j1Group.rotation.y) * 0.08;
+        upperArm.rotation.x += ((-0.2 + mouseY * 0.6) - upperArm.rotation.x) * 0.08;
+        j3Group.rotation.x += ((0.5 - mouseY * 0.5) - j3Group.rotation.x) * 0.08;
+      } else if (currentMode === 'weld') {
+        // High-speed industrial welding weaving motion
+        j1Group.rotation.y = Math.sin(elapsed * 3) * 0.3;
+        upperArm.rotation.x = -0.4 + Math.sin(elapsed * 6) * 0.1;
+        wristGroup.rotation.z = Math.sin(elapsed * 8) * 0.2;
+        laserBeam.material.opacity = 0.9;
+
+        // Periodic sparks
+        if (Math.random() < 0.2) {
+          triggerSparkBurst();
         }
       }
+
+      // Update Sparks Physics
+      const positions = sparkGeo.attributes.position.array;
+      for (let i = 0; i < maxSparks; i++) {
+        if (positions[i * 3 + 1] > -50) {
+          positions[i * 3] += sparkVelocities[i].x * delta;
+          positions[i * 3 + 1] += sparkVelocities[i].y * delta;
+          positions[i * 3 + 2] += sparkVelocities[i].z * delta;
+
+          // Gravity
+          sparkVelocities[i].y -= 9.8 * delta;
+
+          // Floor bounce
+          if (positions[i * 3 + 1] <= 0.2) {
+            positions[i * 3 + 1] = 0.2;
+            sparkVelocities[i].y *= -0.4;
+          }
+        }
+      }
+      sparkGeo.attributes.position.needsUpdate = true;
 
       renderer.render(scene, camera);
     }

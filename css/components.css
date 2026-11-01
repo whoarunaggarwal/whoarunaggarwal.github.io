@@ -1,11 +1,11 @@
 /* ==========================================================================
    Components Stylesheet: Arun Kumar Aggarwal Portfolio
-   Hero 3D Stage, Portrait Hologram, Arcade Arena (Chess, Sudoku, Uno),
-   Blueprints, Skills Rack, Career Timeline, Fullscreen PDF Viewer
+   Hero 3D Workcell, SCADA Console, 500+ Games Arcade, MCQ Quiz Wizard,
+   Project Blueprints, Skills Rack, Career Timeline, Fullscreen PDF Viewer
    ========================================================================== */
 
 /* --------------------------------------------------------------------------
-   1. HERO SECTION & 3D PORTRAIT STAGE
+   1. HERO SECTION & 3D PORTRAIT & ROBOTIC WORKCELL
    -------------------------------------------------------------------------- */
 .hero-section {
   padding-top: calc(var(--section-spacing) + 20px);
@@ -117,10 +117,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  perspective: 1200px;
 }
 
-/* Rotating Holographic Orbital Rings */
 .orbit-ring {
   position: absolute;
   width: 110%;
@@ -152,7 +150,6 @@
   to { transform: rotate(0deg); }
 }
 
-/* 3D Portrait Card */
 .portrait-card {
   width: 100%;
   height: 100%;
@@ -162,7 +159,6 @@
   border: 2px solid var(--border-highlight);
   box-shadow: var(--shadow-lg), var(--shadow-cyan);
   background: var(--color-canvas-raised);
-  transform-style: preserve-3d;
 }
 
 .portrait-img {
@@ -178,13 +174,12 @@
   transform: scale(1.05);
 }
 
-/* Floating Status Beacon Overlay */
 .portrait-badge-overlay {
   position: absolute;
   bottom: 16px;
   left: 16px;
   right: 16px;
-  background: rgba(10, 14, 24, 0.88);
+  background: rgba(10, 14, 24, 0.9);
   backdrop-filter: var(--blur-md);
   -webkit-backdrop-filter: var(--blur-md);
   border: 1px solid var(--border-highlight);
@@ -198,8 +193,9 @@
 }
 
 [data-theme="light"] .portrait-badge-overlay {
-  background: rgba(255, 255, 255, 0.95);
+  background: #ffffff;
   border-color: #0284c7;
+  box-shadow: var(--shadow-md);
 }
 
 .portrait-badge-name {
@@ -216,43 +212,81 @@
   font-weight: 700;
 }
 
-/* 3D Robotic Arm Canvas Stage */
+/* 3D Robotic Workcell Container */
 .three-hero-wrapper {
   width: 100%;
   max-width: 440px;
-  height: 240px;
-  background: rgba(10, 15, 26, 0.85);
-  border: 1px solid var(--border-medium);
+  height: 280px;
+  background: rgba(10, 15, 26, 0.9);
+  border: 2px solid var(--border-highlight);
   border-radius: var(--radius-lg);
   position: relative;
   overflow: hidden;
-  box-shadow: var(--shadow-md);
+  box-shadow: var(--shadow-lg), var(--shadow-cyan);
 }
 
 [data-theme="light"] .three-hero-wrapper {
   background: #ffffff;
-  border-color: #cbd5e1;
+  border-color: #0284c7;
+  box-shadow: var(--shadow-md);
 }
 
 .three-hero-canvas-container {
   width: 100%;
   height: 100%;
+  cursor: crosshair;
 }
 
-.three-hero-label {
+.three-hero-top-bar {
   position: absolute;
   top: 10px;
   left: 14px;
+  right: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 10;
+}
+
+.three-hero-label {
   font-family: var(--font-mono);
-  font-size: 0.7rem;
-  font-weight: 700;
+  font-size: 0.72rem;
+  font-weight: 800;
   color: var(--color-cyan);
   text-transform: uppercase;
   letter-spacing: 0.08em;
-  pointer-events: none;
   display: flex;
   align-items: center;
   gap: 6px;
+}
+
+.three-mode-group {
+  display: flex;
+  gap: 4px;
+}
+
+.three-mode-pill {
+  background: rgba(15, 23, 42, 0.8);
+  border: 1px solid var(--border-subtle);
+  color: var(--color-text-secondary);
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  font-weight: 700;
+  padding: 4px 8px;
+  border-radius: var(--radius-xs);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+[data-theme="light"] .three-mode-pill {
+  background: #f1f5f9;
+  border-color: #cbd5e1;
+}
+
+.three-mode-pill:hover, .three-mode-pill.is-active {
+  background: var(--color-cyan);
+  color: #06080e;
+  border-color: var(--color-cyan);
 }
 
 .three-hero-hint {
@@ -263,16 +297,317 @@
   font-size: 0.68rem;
   color: var(--color-text-tertiary);
   pointer-events: none;
+  font-weight: 600;
 }
 
 /* --------------------------------------------------------------------------
-   2. AUTOMATION ARCADE & GAMING ARENA (CHESS, SUDOKU, UNO)
+   2. SCADA SIMULATION & TELEMETRY CONSOLE (SOLID IN BOTH LIGHT & DARK)
    -------------------------------------------------------------------------- */
-.arcade-section {
-  background: linear-gradient(180deg, transparent 0%, rgba(0, 240, 255, 0.04) 50%, transparent 100%);
+.scada-chassis {
+  background: var(--color-canvas-raised);
+  border: 2px solid var(--border-medium);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-lg), var(--shadow-cyan);
+  overflow: hidden;
   position: relative;
+  transition: border-color var(--transition-normal);
 }
 
+[data-theme="light"] .scada-chassis {
+  background: #ffffff;
+  border-color: #cbd5e1;
+  box-shadow: var(--shadow-lg);
+}
+
+.scada-topbar {
+  background: rgba(10, 14, 22, 0.95);
+  border-bottom: 1px solid var(--border-subtle);
+  padding: 14px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+[data-theme="light"] .scada-topbar {
+  background: #f8fafc;
+  border-bottom-color: #cbd5e1;
+}
+
+.scada-title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  font-weight: 800;
+  color: var(--color-text-primary);
+  letter-spacing: 0.05em;
+}
+
+.scada-led-group {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.scada-led {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  color: var(--color-text-tertiary);
+  font-weight: 700;
+}
+
+.led-bulb {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #475569;
+}
+
+.led-bulb.is-green {
+  background: var(--color-green);
+  box-shadow: 0 0 10px var(--color-green);
+}
+
+.led-bulb.is-cyan {
+  background: var(--color-cyan);
+  box-shadow: 0 0 10px var(--color-cyan);
+}
+
+.led-bulb.is-amber {
+  background: var(--color-amber);
+  box-shadow: 0 0 10px var(--color-amber);
+}
+
+.scada-tabs {
+  display: flex;
+  background: rgba(15, 23, 42, 0.5);
+  border-bottom: 1px solid var(--border-subtle);
+  padding: 8px 12px 0 12px;
+  gap: 6px;
+  overflow-x: auto;
+}
+
+[data-theme="light"] .scada-tabs {
+  background: #f1f5f9;
+  border-bottom-color: #cbd5e1;
+}
+
+.scada-tab-btn {
+  background: transparent;
+  border: 1px solid transparent;
+  border-bottom: none;
+  padding: 10px 16px;
+  border-radius: var(--radius-sm) var(--radius-sm) 0 0;
+  font-family: var(--font-mono);
+  font-size: 0.76rem;
+  font-weight: 700;
+  color: var(--color-text-tertiary);
+  cursor: pointer;
+  white-space: nowrap;
+  transition: all var(--transition-fast);
+}
+
+.scada-tab-btn:hover {
+  color: var(--color-text-primary);
+}
+
+.scada-tab-btn.is-active {
+  background: var(--color-canvas-raised);
+  border-color: var(--border-medium);
+  border-bottom: 1px solid var(--color-canvas-raised);
+  color: var(--color-cyan);
+}
+
+[data-theme="light"] .scada-tab-btn.is-active {
+  background: #ffffff;
+  border-color: #cbd5e1;
+  border-bottom-color: #ffffff;
+  color: #0284c7;
+}
+
+.scada-body {
+  padding: 22px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.telemetry-row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+}
+
+.telemetry-card {
+  background: rgba(10, 15, 24, 0.75);
+  border: 1px solid var(--border-medium);
+  border-radius: var(--radius-sm);
+  padding: 12px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+[data-theme="light"] .telemetry-card {
+  background: #f8fafc;
+  border-color: #cbd5e1;
+}
+
+.telemetry-card .tag {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  color: var(--color-text-tertiary);
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.telemetry-card .val {
+  font-family: var(--font-mono);
+  font-size: 1.2rem;
+  font-weight: 800;
+  color: var(--color-cyan);
+}
+
+.telemetry-card.is-green .val {
+  color: var(--color-green);
+}
+
+.waveform-panel {
+  background: rgba(6, 9, 15, 0.95);
+  border: 1px solid var(--border-medium);
+  border-radius: var(--radius-sm);
+  padding: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+[data-theme="light"] .waveform-panel {
+  background: #f8fafc;
+  border-color: #cbd5e1;
+}
+
+.waveform-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--color-text-secondary);
+}
+
+.waveform-canvas {
+  width: 100%;
+  height: 80px;
+  display: block;
+}
+
+.kinematics-panel {
+  background: rgba(10, 15, 24, 0.75);
+  border: 1px solid var(--border-medium);
+  border-radius: var(--radius-sm);
+  padding: 14px;
+}
+
+[data-theme="light"] .kinematics-panel {
+  background: #f8fafc;
+  border-color: #cbd5e1;
+}
+
+.kinematics-title {
+  font-family: var(--font-mono);
+  font-size: 0.74rem;
+  font-weight: 700;
+  color: var(--color-text-secondary);
+  text-transform: uppercase;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.axis-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+
+.axis-box {
+  background: rgba(15, 23, 42, 0.6);
+  border-radius: var(--radius-xs);
+  padding: 8px 10px;
+  text-align: center;
+  border: 1px solid var(--border-subtle);
+}
+
+[data-theme="light"] .axis-box {
+  background: #ffffff;
+  border-color: #cbd5e1;
+}
+
+.axis-name {
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  color: var(--color-text-tertiary);
+  font-weight: 800;
+}
+
+.axis-coord {
+  font-family: var(--font-mono);
+  font-size: 0.95rem;
+  font-weight: 800;
+  color: var(--color-text-primary);
+}
+
+.scada-toolbar {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding-top: 6px;
+}
+
+.scada-btn {
+  flex: 1;
+  padding: 10px 14px;
+  border-radius: var(--radius-xs);
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  font-weight: 800;
+  border: 1px solid var(--border-medium);
+  background: var(--glass-surface);
+  color: var(--color-text-primary);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.scada-btn:hover {
+  background: var(--glass-surface-hover);
+  border-color: var(--color-cyan);
+  color: var(--color-cyan);
+}
+
+.scada-btn.btn-run {
+  background: rgba(16, 185, 129, 0.15);
+  border-color: rgba(16, 185, 129, 0.5);
+  color: var(--color-green);
+}
+
+.scada-btn.btn-estop {
+  background: rgba(239, 68, 68, 0.15);
+  border-color: rgba(239, 68, 68, 0.5);
+  color: var(--color-red);
+}
+
+/* --------------------------------------------------------------------------
+   3. AUTOMATION ARCADE ARENA (STABLE, NO TILTING)
+   -------------------------------------------------------------------------- */
 .arcade-chassis {
   background: var(--glass-surface);
   border: 2px solid var(--border-highlight);
@@ -283,6 +618,7 @@
   display: flex;
   flex-direction: column;
   gap: 24px;
+  transform: none !important; /* Fixes left tilt issue completely */
 }
 
 [data-theme="light"] .arcade-chassis {
@@ -301,7 +637,6 @@
   padding-bottom: 18px;
 }
 
-/* Game Selector Tabs */
 .arcade-tabs {
   display: flex;
   align-items: center;
@@ -343,7 +678,6 @@
   box-shadow: 0 2px 14px var(--color-cyan-glow);
 }
 
-/* Game Views Container */
 .game-view {
   display: none;
   animation: fadeIn 300ms ease forwards;
@@ -353,12 +687,278 @@
   display: block;
 }
 
-@keyframes fadeIn {
-  from { opacity: 0; transform: translateY(8px); }
-  to { opacity: 1; transform: translateY(0); }
+/* 500+ ONLINE GAMES DIRECTORY & BROWSER */
+.arcade-500-toolbar {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-bottom: 24px;
 }
 
-/* --- GAME 1: CYBER CHESS STYLING --- */
+.arcade-cat-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.arcade-cat-pill {
+  background: var(--color-canvas);
+  border: 1px solid var(--border-medium);
+  padding: 8px 16px;
+  border-radius: var(--radius-full);
+  font-family: var(--font-sans);
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--color-text-secondary);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.arcade-cat-pill:hover, .arcade-cat-pill.is-active {
+  background: var(--color-cyan);
+  color: #06080e;
+  border-color: var(--color-cyan);
+}
+
+.arcade-500-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 16px;
+}
+
+.arcade-game-card {
+  background: var(--color-canvas);
+  border: 1px solid var(--border-medium);
+  border-radius: var(--radius-md);
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  transition: all var(--transition-fast);
+}
+
+[data-theme="light"] .arcade-game-card {
+  background: #f8fafc;
+  border-color: #cbd5e1;
+}
+
+.arcade-game-card:hover {
+  border-color: var(--color-cyan);
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+}
+
+.arcade-card-icon {
+  font-size: 2.2rem;
+  line-height: 1;
+}
+
+.arcade-card-cat {
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  font-weight: 800;
+  color: var(--color-cyan);
+}
+
+.arcade-card-title {
+  font-size: 1.05rem;
+  font-weight: 800;
+  color: var(--color-text-primary);
+}
+
+.arcade-card-plays {
+  font-size: 0.75rem;
+  color: var(--color-text-tertiary);
+  font-family: var(--font-mono);
+}
+
+.arcade-play-btn {
+  margin-top: auto;
+  background: linear-gradient(135deg, var(--color-cyan), var(--color-blue));
+  border: none;
+  color: #06080e;
+  padding: 8px 14px;
+  border-radius: var(--radius-xs);
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  font-weight: 800;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.arcade-play-btn:hover {
+  transform: scale(1.04);
+}
+
+/* --------------------------------------------------------------------------
+   4. CONTROL SOFTWARE MCQ CERTIFICATION ARENA
+   -------------------------------------------------------------------------- */
+.quiz-section {
+  position: relative;
+}
+
+.quiz-card {
+  background: var(--glass-surface);
+  border: 2px solid var(--border-highlight);
+  border-radius: var(--radius-xl);
+  padding: clamp(24px, 4vw, 42px);
+  box-shadow: var(--shadow-lg), var(--shadow-cyan);
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+[data-theme="light"] .quiz-card {
+  background: #ffffff;
+  border-color: #0284c7;
+}
+
+.quiz-header {
+  border-bottom: 1px solid var(--border-subtle);
+  padding-bottom: 16px;
+}
+
+.quiz-badge {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  font-weight: 800;
+  color: var(--color-cyan);
+  background: var(--color-cyan-subtle);
+  padding: 4px 12px;
+  border-radius: var(--radius-full);
+}
+
+.quiz-counter {
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  font-weight: 800;
+  color: var(--color-text-secondary);
+}
+
+.quiz-progress-track {
+  width: 100%;
+  height: 6px;
+  background: var(--color-canvas);
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.quiz-progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--color-cyan), var(--color-green));
+  transition: width 300ms ease;
+}
+
+.quiz-question {
+  font-size: clamp(1.2rem, 2vw, 1.5rem);
+  font-weight: 800;
+  color: var(--color-text-primary);
+  line-height: 1.4;
+  margin-bottom: 20px;
+}
+
+.quiz-options-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 12px;
+}
+
+.quiz-option-btn {
+  background: var(--color-canvas);
+  border: 1px solid var(--border-medium);
+  border-radius: var(--radius-md);
+  padding: 16px 20px;
+  font-family: var(--font-sans);
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--color-text-primary);
+  text-align: left;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+[data-theme="light"] .quiz-option-btn {
+  background: #f8fafc;
+  border-color: #cbd5e1;
+}
+
+.quiz-option-btn:hover:not(:disabled) {
+  border-color: var(--color-cyan);
+  background: var(--color-cyan-subtle);
+  transform: translateX(4px);
+}
+
+.quiz-option-btn.is-correct {
+  background: rgba(16, 185, 129, 0.2) !important;
+  border-color: var(--color-green) !important;
+  color: var(--color-green) !important;
+  font-weight: 800;
+}
+
+.quiz-option-btn.is-incorrect {
+  background: rgba(239, 68, 68, 0.2) !important;
+  border-color: var(--color-red) !important;
+  color: var(--color-red) !important;
+}
+
+.quiz-explanation {
+  margin-top: 18px;
+  padding: 16px 20px;
+  border-radius: var(--radius-md);
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.quiz-explanation.exp-correct {
+  background: rgba(16, 185, 129, 0.12);
+  border-left: 4px solid var(--color-green);
+  color: var(--color-text-primary);
+}
+
+.quiz-explanation.exp-incorrect {
+  background: rgba(239, 68, 68, 0.12);
+  border-left: 4px solid var(--color-red);
+  color: var(--color-text-primary);
+}
+
+/* Results Card */
+.quiz-results-card {
+  align-items: center;
+  text-align: center;
+  padding: 48px 24px;
+}
+
+.results-score-circle {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  border: 4px solid var(--color-cyan);
+  box-shadow: 0 0 30px var(--color-cyan-glow);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 12px 0;
+}
+
+.results-num {
+  font-size: 2.5rem;
+  font-weight: 900;
+  font-family: var(--font-mono);
+  color: var(--color-text-primary);
+  line-height: 1;
+}
+
+.results-pct {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  font-weight: 800;
+  color: var(--color-cyan);
+}
+
+/* --------------------------------------------------------------------------
+   5. CHESS, SUDOKU & UNO INTERACTIVE BOARDS
+   -------------------------------------------------------------------------- */
 .chess-arena {
   display: grid;
   grid-template-columns: 1fr 340px;
@@ -499,7 +1099,7 @@
   background: #ffffff;
 }
 
-/* --- GAME 2: QUANTUM SUDOKU STYLING --- */
+/* Sudoku */
 .sudoku-arena {
   display: grid;
   grid-template-columns: 1fr 340px;
@@ -593,7 +1193,7 @@
   color: var(--color-red);
 }
 
-/* --- GAME 3: ROBO UNO BATTLE STYLING --- */
+/* Uno */
 .uno-arena {
   display: flex;
   flex-direction: column;
@@ -666,7 +1266,6 @@
   transform: translateY(-4px) scale(1.05);
 }
 
-/* Individual Uno Card */
 .uno-card {
   width: 76px;
   height: 115px;
@@ -739,7 +1338,7 @@
 }
 
 /* --------------------------------------------------------------------------
-   3. ABOUT ME, PILLARS & SKILLS RACK (HIGH CONTRAST LIGHT / DARK)
+   6. ABOUT, SKILLS, PROJECTS & EDUCATION
    -------------------------------------------------------------------------- */
 .about-grid {
   display: grid;
@@ -976,9 +1575,7 @@
   border-radius: var(--radius-xs);
 }
 
-/* --------------------------------------------------------------------------
-   4. PROJECTS & TIMELINE
-   -------------------------------------------------------------------------- */
+/* Projects Showcase */
 .projects-container {
   display: flex;
   flex-direction: column;
@@ -1310,9 +1907,7 @@
   color: var(--color-text-primary);
 }
 
-/* --------------------------------------------------------------------------
-   5. EDUCATION, RESUME & CONTACT
-   -------------------------------------------------------------------------- */
+/* Education */
 .education-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -1592,7 +2187,7 @@ textarea.form-control {
   resize: vertical;
 }
 
-/* Fullscreen Modals */
+/* Modals */
 .modal-overlay {
   position: fixed;
   inset: 0;
@@ -1629,6 +2224,11 @@ textarea.form-control {
   transition: transform var(--transition-normal);
 }
 
+[data-theme="light"] .modal-card {
+  background: #ffffff;
+  border-color: #0284c7;
+}
+
 .modal-overlay.is-active .modal-card {
   transform: scale(1);
 }
@@ -1640,6 +2240,10 @@ textarea.form-control {
   display: flex;
   align-items: center;
   justify-content: space-between;
+}
+
+[data-theme="light"] .modal-top {
+  background: #f1f5f9;
 }
 
 .modal-title {

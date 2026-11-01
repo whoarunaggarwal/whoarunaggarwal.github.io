@@ -14,7 +14,7 @@
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://whoarunaggarwal.github.io/arun.github.io/">
   <meta property="og:title" content="Arun Kumar Aggarwal | Technical Lead – Control Software">
-  <meta property="og:description" content="Industrial Automation, Robotics Integration, 3D Kinematics & Interactive Cyber Arcade. ~8 years engineering experience leading teams and building mission-critical control software.">
+  <meta property="og:description" content="Industrial Automation, 6-Axis Robotics Kinematics, 500+ Games Arcade & Control Software MCQ Arena. ~8 years engineering leadership.">
   <meta property="og:image" content="assets/images/arun-profile.jpg">
   
   <link rel="canonical" href="https://whoarunaggarwal.github.io/arun.github.io/">
@@ -101,7 +101,8 @@
         <a href="#skills"><span>Skills</span></a>
         <a href="#experience"><span>Experience</span></a>
         <a href="#projects"><span>Projects</span></a>
-        <a href="#arcade"><span>🎮 Arcade</span></a>
+        <a href="#arcade"><span>🎮 500+ Arcade</span></a>
+        <a href="#quiz"><span>🧠 MCQ Quiz</span></a>
         <a href="#education"><span>Education</span></a>
         <a href="#resume"><span>Resume</span></a>
         <a href="#contact"><span>Contact</span></a>
@@ -136,7 +137,8 @@
     <a href="#skills">Technical Skills</a>
     <a href="#experience">Professional Experience</a>
     <a href="#projects">Featured Projects</a>
-    <a href="#arcade">🎮 Arcade Arena (Chess, Sudoku, Uno)</a>
+    <a href="#arcade">🎮 500+ Games Arcade</a>
+    <a href="#quiz">🧠 MCQ Quiz Arena</a>
     <a href="#education">Education</a>
     <a href="#resume">Download Resume</a>
     <a href="#contact">Contact Hub</a>
@@ -144,7 +146,7 @@
 
   <main id="main">
     <!-- ====================================================================
-         1. HERO SECTION (3D PORTRAIT & THREE.JS ROBOTIC ARM)
+         1. HERO SECTION (3D PORTRAIT & HIGH-DETAIL THREE.JS ROBOTIC WORKCELL)
          ==================================================================== -->
     <section class="section hero-section shell" id="hero" aria-labelledby="hero-heading">
       <div class="hero-grid">
@@ -168,7 +170,7 @@
               <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
             </a>
             <a class="btn btn-amber" href="#arcade">
-              🎮 Play Arcade
+              🎮 500+ Games Arcade
               <svg viewBox="0 0 24 24"><polygon points="5 3 19 12 5 21 5 3"/></svg>
             </a>
             <a class="btn btn-secondary" href="assets/documents/Arun_Kumar_Aggarwal_Resume.pdf" download="Arun_Kumar_Aggarwal_Resume.pdf">
@@ -197,10 +199,10 @@
           </div>
         </div>
 
-        <!-- Right Column: 3D Portrait Stage & 3D Interactive Three.js Robotic Arm -->
+        <!-- Right Column: 3D Portrait Stage & 3D Interactive Three.js Robotic Workcell -->
         <div class="hero-stage-container">
           <!-- 3D Portrait Stage -->
-          <div class="hero-portrait-stage" data-tilt data-tilt-max="14">
+          <div class="hero-portrait-stage">
             <div class="orbit-ring"></div>
             <div class="orbit-ring-outer"></div>
 
@@ -219,24 +221,31 @@
             </div>
           </div>
 
-          <!-- 3D Robotic Arm Interactive Canvas -->
-          <div class="three-hero-wrapper" data-tilt data-tilt-max="8">
-            <span class="three-hero-label">
-              <span class="pulse-dot"></span>
-              3D ROBOT KINEMATICS · CLICK TO FIRE LASER
-            </span>
+          <!-- 3D Robotic Workcell Interactive Canvas -->
+          <div class="three-hero-wrapper">
+            <div class="three-hero-top-bar">
+              <span class="three-hero-label">
+                <span class="pulse-dot"></span>
+                6-AXIS DIGITAL TWIN
+              </span>
+              <div class="three-mode-group">
+                <button class="three-mode-pill is-active" id="threeModeAuto" type="button">AUTO SCAN</button>
+                <button class="three-mode-pill" id="threeModeWeld" type="button">WELD SPARK</button>
+                <button class="three-mode-pill" id="threeModeJog" type="button">MANUAL JOG</button>
+              </div>
+            </div>
             <div class="three-hero-canvas-container" id="threeHeroContainer"></div>
-            <span class="three-hero-hint">Pointer-guided inverse kinematics</span>
+            <span class="three-hero-hint">Click stage for physical welding spark physics</span>
           </div>
         </div>
       </div>
     </section>
 
     <!-- ====================================================================
-         2. LIVE SCADA & PLC SIMULATOR CONSOLE
+         2. LIVE SCADA & PLC SIMULATOR CONSOLE (RESTORED CLEAN LAYOUT)
          ==================================================================== -->
     <section class="section shell" style="padding-top: 0;" aria-label="Interactive Control Console">
-      <div class="scada-chassis" data-tilt data-tilt-max="6">
+      <div class="scada-chassis">
         <!-- Top Rack Bar -->
         <div class="scada-topbar">
           <div class="scada-title">
@@ -321,20 +330,24 @@
     </section>
 
     <!-- ====================================================================
-         3. AUTOMATION ARCADE & GAMING ARENA (CHESS, SUDOKU, UNO)
+         3. AUTOMATION ARCADE ARENA (500+ ONLINE GAMES + CHESS, SUDOKU, UNO)
          ==================================================================== -->
     <section class="section arcade-section shell" id="arcade" aria-labelledby="arcade-heading">
       <div class="section-header">
-        <span class="eyebrow">Interactive Gaming Lounge</span>
-        <h2 class="section-title" id="arcade-heading">The Automation Breakroom &amp; Logic Arena</h2>
-        <p class="section-subtitle">Take a mental break from PLC scan loops. Test your cognitive algorithms against automated robot AI in Chess, Sudoku, and Uno!</p>
+        <span class="eyebrow">Interactive Gaming Hub</span>
+        <h2 class="section-title" id="arcade-heading">The Hyper Arcade &amp; 500+ Games Arena</h2>
+        <p class="section-subtitle">Take a mental break from PLC scan loops. Play 500+ online retro classics or test your algorithms in Cyber Chess, Quantum Sudoku, and Robo Uno!</p>
       </div>
 
-      <div class="arcade-chassis" data-tilt data-tilt-max="4">
+      <div class="arcade-chassis">
         <!-- Top Bar with Game Selector Tabs -->
         <div class="arcade-top-bar">
           <div class="arcade-tabs" role="tablist">
-            <button class="arcade-tab-btn is-active" data-game="chess" type="button" role="tab">
+            <button class="arcade-tab-btn is-active" data-game="arcade500" type="button" role="tab">
+              <span>🎮</span>
+              <span>500+ Online Games</span>
+            </button>
+            <button class="arcade-tab-btn" data-game="chess" type="button" role="tab">
               <span>♟️</span>
               <span>Cyber Chess</span>
             </button>
@@ -349,12 +362,38 @@
           </div>
           <div class="status-pill">
             <span class="pulse-dot"></span>
-            <span>ARCADE ENGINES ONLINE</span>
+            <span>ARCADE ONLINE</span>
           </div>
         </div>
 
-        <!-- 1. CYBER CHESS VIEW -->
-        <div class="game-view is-active" id="chessView">
+        <!-- 1. 500+ ONLINE GAMES PORTAL VIEW -->
+        <div class="game-view is-active" id="arcade500View">
+          <div class="arcade-500-toolbar">
+            <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px;">
+              <div class="arcade-cat-pills">
+                <button class="arcade-cat-pill is-active" data-cat="all" type="button">All (500+)</button>
+                <button class="arcade-cat-pill" data-cat="retro" type="button">🕹️ Retro Classics</button>
+                <button class="arcade-cat-pill" data-cat="puzzle" type="button">🧩 Puzzle &amp; Logic</button>
+                <button class="arcade-cat-pill" data-cat="cards" type="button">🃏 Card &amp; Board</button>
+                <button class="arcade-cat-pill" data-cat="action" type="button">🚀 Action &amp; Reflex</button>
+                <button class="arcade-cat-pill" data-cat="arcade" type="button">⚡ Arcade Sports</button>
+              </div>
+
+              <div class="skills-search-wrapper" style="min-width: 260px;">
+                <svg class="skills-search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+                <input class="skills-search-input" id="arcade500Search" type="search" placeholder="Search 500+ games (e.g. Mario, 2048, Tetris, Doom)..." aria-label="Search online games">
+              </div>
+            </div>
+            <div style="font-family: var(--font-mono); font-size: 0.8rem; color: var(--color-cyan); font-weight: 700;" id="arcadeGameCount">
+              Showing 500+ Online Games
+            </div>
+          </div>
+
+          <div class="arcade-500-grid" id="arcade500Grid"></div>
+        </div>
+
+        <!-- 2. CYBER CHESS VIEW -->
+        <div class="game-view" id="chessView">
           <div class="chess-arena">
             <div class="chess-board-wrapper">
               <div class="chess-board" id="chessBoard"></div>
@@ -381,7 +420,7 @@
           </div>
         </div>
 
-        <!-- 2. QUANTUM SUDOKU VIEW -->
+        <!-- 3. QUANTUM SUDOKU VIEW -->
         <div class="game-view" id="sudokuView">
           <div class="sudoku-arena">
             <div class="sudoku-grid-wrapper">
@@ -394,13 +433,11 @@
                 <span style="font-family: var(--font-mono); font-size: 1.2rem; font-weight: 800; color: var(--color-cyan);" id="sudokuTimer">00:00</span>
               </div>
 
-              <!-- Difficulty buttons -->
               <div style="display: flex; gap: 6px;">
                 <button class="skills-filter-btn sudoku-diff-btn is-active" data-diff="easy" type="button">Easy</button>
                 <button class="skills-filter-btn sudoku-diff-btn" data-diff="medium" type="button">Medium</button>
               </div>
 
-              <!-- Number pad -->
               <div>
                 <span style="font-family: var(--font-mono); font-size: 0.74rem; color: var(--color-text-tertiary);">TAP NUMBER TO PLACE IN CELL:</span>
                 <div class="sudoku-numpad" id="sudokuNumpad"></div>
@@ -414,10 +451,9 @@
           </div>
         </div>
 
-        <!-- 3. ROBO UNO BATTLE VIEW -->
+        <!-- 4. ROBO UNO BATTLE VIEW -->
         <div class="game-view" id="unoView">
           <div class="uno-arena" id="unoGameContainer">
-            <!-- Opponent AI Bots Row -->
             <div class="uno-opponents-row">
               <div class="uno-bot-card">
                 <span class="uno-bot-name">🤖 Bot Delta (TwinCAT)</span>
@@ -433,7 +469,6 @@
               </div>
             </div>
 
-            <!-- Center Table: Draw Deck & Discard Pile -->
             <div class="uno-center-table">
               <div class="uno-deck-pile" id="unoDrawDeck" title="Click to Draw a Card">
                 <span>DRAW DECK</span>
@@ -452,7 +487,6 @@
               </div>
             </div>
 
-            <!-- Human Player Hand -->
             <div class="uno-player-hand-wrapper">
               <div style="display: flex; align-items: center; justify-content: space-between;">
                 <span style="font-family: var(--font-mono); font-size: 0.82rem; font-weight: 700; color: var(--color-cyan);">YOUR HAND (TAP A CARD TO PLAY):</span>
@@ -466,7 +500,20 @@
     </section>
 
     <!-- ====================================================================
-         4. ABOUT ME SECTION
+         4. CONTROL SOFTWARE MCQ CERTIFICATION ARENA (RANDOMIZED 5 QUESTIONS)
+         ==================================================================== -->
+    <section class="section quiz-section shell" id="quiz" aria-labelledby="quiz-heading">
+      <div class="section-header">
+        <span class="eyebrow">Technical Knowledge Check</span>
+        <h2 class="section-title" id="quiz-heading">Control Software MCQ Challenge Arena</h2>
+        <p class="section-subtitle">5 randomized engineering questions pulled on demand across Beckhoff TwinCAT, Siemens TIA Portal, EtherCAT, PROFINET, SIL 3 Safety, and Robotics.</p>
+      </div>
+
+      <div id="quizWizard"></div>
+    </section>
+
+    <!-- ====================================================================
+         5. ABOUT ME SECTION
          ==================================================================== -->
     <section class="section shell" id="about" aria-labelledby="about-heading">
       <div class="section-header">
@@ -492,7 +539,7 @@
         </div>
 
         <div class="pillars-grid">
-          <div class="pillar-card" data-tilt data-tilt-max="10">
+          <div class="pillar-card">
             <div class="pillar-icon-box">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="8" rx="2"/><rect x="2" y="14" width="20" height="8" rx="2"/><line x1="6" y1="6" x2="6.01" y2="6"/><line x1="6" y1="18" x2="6.01" y2="18"/></svg>
             </div>
@@ -500,7 +547,7 @@
             <p class="pillar-desc">Designing fault-tolerant, modular PLC programs using IEC 61131-3 Structured Text (ST), Ladder Logic, and Function Block Diagrams.</p>
           </div>
 
-          <div class="pillar-card" data-tilt data-tilt-max="10">
+          <div class="pillar-card">
             <div class="pillar-icon-box">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
             </div>
@@ -508,7 +555,7 @@
             <p class="pillar-desc">Multi-axis servo synchronization, kinematic coordinate transformations, and seamless integration of third-party industrial robots.</p>
           </div>
 
-          <div class="pillar-card" data-tilt data-tilt-max="10">
+          <div class="pillar-card">
             <div class="pillar-icon-box">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
             </div>
@@ -516,7 +563,7 @@
             <p class="pillar-desc">High-speed fieldbus mastery: EtherCAT, PROFINET, Modbus TCP/IP, CC-Link, ADS, and MQTT for zero-packet-drop industrial communication.</p>
           </div>
 
-          <div class="pillar-card" data-tilt data-tilt-max="10">
+          <div class="pillar-card">
             <div class="pillar-icon-box">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
             </div>
@@ -528,7 +575,7 @@
     </section>
 
     <!-- ====================================================================
-         5. TECHNICAL SKILLS SECTION
+         6. TECHNICAL SKILLS SECTION
          ==================================================================== -->
     <section class="section shell" id="skills" aria-labelledby="skills-heading">
       <div class="section-header">
@@ -537,7 +584,6 @@
         <p class="section-subtitle">Categorized competencies across platforms, fieldbus protocols, programming standards, and manufacturing methodologies.</p>
       </div>
 
-      <!-- Skills Toolbar: Filter Tabs & Live Search -->
       <div class="skills-toolbar">
         <div class="skills-filter-group" role="tablist">
           <button class="skills-filter-btn is-active" data-category="all" type="button">All Skills</button>
@@ -554,13 +600,10 @@
         </div>
       </div>
 
-      <!-- Skills Cards Grid -->
       <div class="skills-grid" id="skillsGrid">
-        <!-- 1. Platforms -->
-        <div class="skill-card" data-category="platforms" data-tilt data-tilt-max="8">
-          <div class="skill-card-top">
-            <span class="skill-category-badge">PLC Platform</span>
-          </div>
+        <!-- Platforms -->
+        <div class="skill-card" data-category="platforms">
+          <div class="skill-card-top"><span class="skill-category-badge">PLC Platform</span></div>
           <h3 class="skill-name">Beckhoff TwinCAT 2/3</h3>
           <p class="skill-context">Real-time PC-based control kernel, EtherCAT master configuration, multi-core cyclic tasks, ADS router interfacing, and Structured Text architecture.</p>
           <div class="skill-tags">
@@ -571,10 +614,8 @@
           </div>
         </div>
 
-        <div class="skill-card" data-category="platforms" data-tilt data-tilt-max="8">
-          <div class="skill-card-top">
-            <span class="skill-category-badge">PLC Platform</span>
-          </div>
+        <div class="skill-card" data-category="platforms">
+          <div class="skill-card-top"><span class="skill-category-badge">PLC Platform</span></div>
           <h3 class="skill-name">Siemens TIA Portal (V16+)</h3>
           <p class="skill-context">Programming S7-1500 and S7-1200 controllers, PROFINET network topology, safety interlocks, WinCC HMI integration, and hardware diagnostics.</p>
           <div class="skill-tags">
@@ -585,10 +626,8 @@
           </div>
         </div>
 
-        <div class="skill-card" data-category="platforms" data-tilt data-tilt-max="8">
-          <div class="skill-card-top">
-            <span class="skill-category-badge">PLC Platform</span>
-          </div>
+        <div class="skill-card" data-category="platforms">
+          <div class="skill-card-top"><span class="skill-category-badge">PLC Platform</span></div>
           <h3 class="skill-name">Mitsubishi GX Works2 / 3</h3>
           <p class="skill-context">Development across MELSEC iQ-R, Q-series, and FX controllers using GX Works2, GX Works3, and GX-Developer. CC-Link network integration.</p>
           <div class="skill-tags">
@@ -599,10 +638,8 @@
           </div>
         </div>
 
-        <div class="skill-card" data-category="platforms" data-tilt data-tilt-max="8">
-          <div class="skill-card-top">
-            <span class="skill-category-badge">PLC Platform</span>
-          </div>
+        <div class="skill-card" data-category="platforms">
+          <div class="skill-card-top"><span class="skill-category-badge">PLC Platform</span></div>
           <h3 class="skill-name">Rockwell Allen-Bradley</h3>
           <p class="skill-context">ControlLogix and CompactLogix platform development, EtherNet/IP configuration, producer/consumer tag communication, and routine sequencing.</p>
           <div class="skill-tags">
@@ -612,10 +649,8 @@
           </div>
         </div>
 
-        <div class="skill-card" data-category="platforms" data-tilt data-tilt-max="8">
-          <div class="skill-card-top">
-            <span class="skill-category-badge">PLC Platform</span>
-          </div>
+        <div class="skill-card" data-category="platforms">
+          <div class="skill-card-top"><span class="skill-category-badge">PLC Platform</span></div>
           <h3 class="skill-name">Delta WPL Soft</h3>
           <p class="skill-context">Delta DVP-series programming, cost-effective automation cell logic, high-speed counter modules, and Modbus RTU communication.</p>
           <div class="skill-tags">
@@ -625,11 +660,9 @@
           </div>
         </div>
 
-        <!-- 2. Languages & ST -->
-        <div class="skill-card" data-category="languages" data-tilt data-tilt-max="8">
-          <div class="skill-card-top">
-            <span class="skill-category-badge">IEC 61131-3</span>
-          </div>
+        <!-- Languages -->
+        <div class="skill-card" data-category="languages">
+          <div class="skill-card-top"><span class="skill-category-badge">IEC 61131-3</span></div>
           <h3 class="skill-name">Structured Text (ST)</h3>
           <p class="skill-context">Advanced algorithmic control programming, complex state machine implementation, data encapsulation, array manipulations, and math routines.</p>
           <div class="skill-tags">
@@ -639,10 +672,8 @@
           </div>
         </div>
 
-        <div class="skill-card" data-category="languages" data-tilt data-tilt-max="8">
-          <div class="skill-card-top">
-            <span class="skill-category-badge">IEC 61131-3</span>
-          </div>
+        <div class="skill-card" data-category="languages">
+          <div class="skill-card-top"><span class="skill-category-badge">IEC 61131-3</span></div>
           <h3 class="skill-name">Ladder Logic &amp; FBD</h3>
           <p class="skill-context">Ladder Logic Programming (LLP) and Function Block Diagrams (FBD) for clear safety circuits, interlock sequences, and machine maintenance readability.</p>
           <div class="skill-tags">
@@ -652,10 +683,8 @@
           </div>
         </div>
 
-        <div class="skill-card" data-category="languages" data-tilt data-tilt-max="8">
-          <div class="skill-card-top">
-            <span class="skill-category-badge">Scripting</span>
-          </div>
+        <div class="skill-card" data-category="languages">
+          <div class="skill-card-top"><span class="skill-category-badge">Scripting</span></div>
           <h3 class="skill-name">JSON Scripting &amp; Data Serialization</h3>
           <p class="skill-context">Scripting and structuring recipe parameters, machine telemetry payloads, and dynamic sensor configuration matrices for seamless IT/OT convergence.</p>
           <div class="skill-tags">
@@ -665,8 +694,8 @@
           </div>
         </div>
 
-        <!-- 3. Communication Protocols -->
-        <div class="skill-card" data-category="protocols" data-tilt data-tilt-max="8" style="cursor: pointer;" onclick="openProtocolModal('EtherCAT')">
+        <!-- Protocols -->
+        <div class="skill-card" data-category="protocols" style="cursor: pointer;" onclick="openProtocolModal('EtherCAT')">
           <div class="skill-card-top">
             <span class="skill-category-badge">Fieldbus Protocol</span>
             <span style="font-family: var(--font-mono); font-size: 0.7rem; color: var(--color-cyan);">Inspect ▹</span>
@@ -680,7 +709,7 @@
           </div>
         </div>
 
-        <div class="skill-card" data-category="protocols" data-tilt data-tilt-max="8" style="cursor: pointer;" onclick="openProtocolModal('PROFINET')">
+        <div class="skill-card" data-category="protocols" style="cursor: pointer;" onclick="openProtocolModal('PROFINET')">
           <div class="skill-card-top">
             <span class="skill-category-badge">Fieldbus Protocol</span>
             <span style="font-family: var(--font-mono); font-size: 0.7rem; color: var(--color-cyan);">Inspect ▹</span>
@@ -694,7 +723,7 @@
           </div>
         </div>
 
-        <div class="skill-card" data-category="protocols" data-tilt data-tilt-max="8" style="cursor: pointer;" onclick="openProtocolModal('Modbus')">
+        <div class="skill-card" data-category="protocols" style="cursor: pointer;" onclick="openProtocolModal('Modbus')">
           <div class="skill-card-top">
             <span class="skill-category-badge">Industrial Bus</span>
             <span style="font-family: var(--font-mono); font-size: 0.7rem; color: var(--color-cyan);">Inspect ▹</span>
@@ -708,7 +737,7 @@
           </div>
         </div>
 
-        <div class="skill-card" data-category="protocols" data-tilt data-tilt-max="8" style="cursor: pointer;" onclick="openProtocolModal('Beckhoff ADS')">
+        <div class="skill-card" data-category="protocols" style="cursor: pointer;" onclick="openProtocolModal('Beckhoff ADS')">
           <div class="skill-card-top">
             <span class="skill-category-badge">Device Protocol</span>
             <span style="font-family: var(--font-mono); font-size: 0.7rem; color: var(--color-cyan);">Inspect ▹</span>
@@ -722,10 +751,8 @@
           </div>
         </div>
 
-        <div class="skill-card" data-category="protocols" data-tilt data-tilt-max="8">
-          <div class="skill-card-top">
-            <span class="skill-category-badge">Industrial Peripherals</span>
-          </div>
+        <div class="skill-card" data-category="protocols">
+          <div class="skill-card-top"><span class="skill-category-badge">Industrial Peripherals</span></div>
           <h3 class="skill-name">Industrial I/O &amp; Peripherals</h3>
           <p class="skill-context">Analog (AD/DA 0-10V, 4-20mA), PWM control, PID loops, RTD temperature transmitters, high-speed counters, encoders, CAN bus, and serial RS-232/485.</p>
           <div class="skill-tags">
@@ -735,11 +762,9 @@
           </div>
         </div>
 
-        <!-- 4. Automation & Robotics -->
-        <div class="skill-card" data-category="robotics" data-tilt data-tilt-max="8">
-          <div class="skill-card-top">
-            <span class="skill-category-badge">Robotics</span>
-          </div>
+        <!-- Robotics -->
+        <div class="skill-card" data-category="robotics">
+          <div class="skill-card-top"><span class="skill-category-badge">Robotics</span></div>
           <h3 class="skill-name">Industrial Robotics Integration</h3>
           <p class="skill-context">Interfacing 6-axis and SCARA robots with third-party PLCs, implementing safety interlocks, tool center point (TCP) calibration, and kinematic trajectory handoffs.</p>
           <div class="skill-tags">
@@ -749,10 +774,8 @@
           </div>
         </div>
 
-        <div class="skill-card" data-category="robotics" data-tilt data-tilt-max="8">
-          <div class="skill-card-top">
-            <span class="skill-category-badge">Motion</span>
-          </div>
+        <div class="skill-card" data-category="robotics">
+          <div class="skill-card-top"><span class="skill-category-badge">Motion</span></div>
           <h3 class="skill-name">Servo Motors &amp; Motion Control</h3>
           <p class="skill-context">Multi-axis servo tuning, electronic gearing, camming, homing routines, torque limiting, and high-speed precision positioning.</p>
           <div class="skill-tags">
@@ -762,10 +785,8 @@
           </div>
         </div>
 
-        <div class="skill-card" data-category="robotics" data-tilt data-tilt-max="8">
-          <div class="skill-card-top">
-            <span class="skill-category-badge">Vision &amp; Inspection</span>
-          </div>
+        <div class="skill-card" data-category="robotics">
+          <div class="skill-card-top"><span class="skill-category-badge">Vision &amp; Inspection</span></div>
           <h3 class="skill-name">Vision Applications &amp; AOI</h3>
           <p class="skill-context">Automated Optical Inspection (AOI) integration, pattern matching, edge detection, coordinate math offset transmission to PLCs for real-time robotic correction.</p>
           <div class="skill-tags">
@@ -775,10 +796,8 @@
           </div>
         </div>
 
-        <div class="skill-card" data-category="robotics" data-tilt data-tilt-max="8">
-          <div class="skill-card-top">
-            <span class="skill-category-badge">Supervision</span>
-          </div>
+        <div class="skill-card" data-category="robotics">
+          <div class="skill-card-top"><span class="skill-category-badge">Supervision</span></div>
           <h3 class="skill-name">HMI &amp; SCADA Development</h3>
           <p class="skill-context">Designing ergonomic, operator-friendly touchscreens, alarm management matrices, real-time diagnostic displays, trending charts, and recipe management.</p>
           <div class="skill-tags">
@@ -788,11 +807,9 @@
           </div>
         </div>
 
-        <!-- 5. Quality & Methodologies -->
-        <div class="skill-card" data-category="methodologies" data-tilt data-tilt-max="8">
-          <div class="skill-card-top">
-            <span class="skill-category-badge">Manufacturing Quality</span>
-          </div>
+        <!-- Methodologies -->
+        <div class="skill-card" data-category="methodologies">
+          <div class="skill-card-top"><span class="skill-category-badge">Manufacturing Quality</span></div>
           <h3 class="skill-name">FMEA, KAIZEN &amp; 5-Why Analysis</h3>
           <p class="skill-context">Failure Mode and Effects Analysis (FMEA) to anticipate line risks; KAIZEN continuous improvement cycles; systematic 5-Why root-cause troubleshooting.</p>
           <div class="skill-tags">
@@ -802,10 +819,8 @@
           </div>
         </div>
 
-        <div class="skill-card" data-category="methodologies" data-tilt data-tilt-max="8">
-          <div class="skill-card-top">
-            <span class="skill-category-badge">Engineering SDLC</span>
-          </div>
+        <div class="skill-card" data-category="methodologies">
+          <div class="skill-card-top"><span class="skill-category-badge">Engineering SDLC</span></div>
           <h3 class="skill-name">DFM &amp; Control Software SDLC</h3>
           <p class="skill-context">Design for Manufacturability (DFM) principles, modular code repositories on GitHub, version control branching, and standardized acceptance test protocols.</p>
           <div class="skill-tags">
@@ -818,7 +833,7 @@
     </section>
 
     <!-- ====================================================================
-         6. PROFESSIONAL EXPERIENCE TIMELINE
+         7. PROFESSIONAL EXPERIENCE TIMELINE
          ==================================================================== -->
     <section class="section shell" id="experience" aria-labelledby="experience-heading">
       <div class="section-header">
@@ -828,10 +843,10 @@
       </div>
 
       <div class="timeline">
-        <!-- 1. VVDN Technologies (Featured Current Role) -->
+        <!-- 1. VVDN Technologies -->
         <div class="timeline-item">
           <div class="timeline-marker"><div class="timeline-marker-inner"></div></div>
-          <div class="timeline-card is-current" data-tilt data-tilt-max="6">
+          <div class="timeline-card is-current">
             <div class="timeline-card-header">
               <div>
                 <h3 class="timeline-role">
@@ -882,7 +897,7 @@
         <!-- 2. BorgWarner -->
         <div class="timeline-item">
           <div class="timeline-marker"><div class="timeline-marker-inner"></div></div>
-          <div class="timeline-card" data-tilt data-tilt-max="6">
+          <div class="timeline-card">
             <div class="timeline-card-header">
               <div>
                 <h3 class="timeline-role">Junior Engineer – EGR &amp; Turbochargers</h3>
@@ -903,7 +918,7 @@
         <!-- 3. Mindarika -->
         <div class="timeline-item">
           <div class="timeline-marker"><div class="timeline-marker-inner"></div></div>
-          <div class="timeline-card" data-tilt data-tilt-max="6">
+          <div class="timeline-card">
             <div class="timeline-card-header">
               <div>
                 <h3 class="timeline-role">Senior Executive</h3>
@@ -924,7 +939,7 @@
         <!-- 4. Authentic Engineers -->
         <div class="timeline-item">
           <div class="timeline-marker"><div class="timeline-marker-inner"></div></div>
-          <div class="timeline-card" data-tilt data-tilt-max="6">
+          <div class="timeline-card">
             <div class="timeline-card-header">
               <div>
                 <h3 class="timeline-role">Application Engineer – Automation Solutions</h3>
@@ -958,7 +973,7 @@
     </section>
 
     <!-- ====================================================================
-         7. FEATURED PROJECTS SECTION (INTERACTIVE ARCHITECTURE BLUEPRINTS)
+         8. FEATURED PROJECTS SECTION (INTERACTIVE ARCHITECTURE BLUEPRINTS)
          ==================================================================== -->
     <section class="section shell" id="projects" aria-labelledby="projects-heading">
       <div class="section-header">
@@ -969,7 +984,7 @@
 
       <div class="projects-container">
         <!-- PROJECT 1: Automated DUT Handling and Validation Process -->
-        <article class="project-card" id="project-dut" data-tilt data-tilt-max="4">
+        <article class="project-card" id="project-dut">
           <div class="project-grid">
             <div class="project-info">
               <div class="project-badge-row">
@@ -1020,7 +1035,6 @@
                   </filter>
                 </defs>
 
-                <!-- Signal Bus Lines -->
                 <path d="M 120 70 L 270 70 L 270 140" stroke="#00f0ff" stroke-width="2" stroke-dasharray="4 4" fill="none" class="arch-signal flow-ads">
                   <animate attributeName="stroke-dashoffset" from="32" to="0" dur="1.5s" repeatCount="indefinite"/>
                 </path>
@@ -1036,7 +1050,6 @@
                   <text x="65" y="44" fill="#94a3b8" font-family="'Plus Jakarta Sans', sans-serif" font-size="9" text-anchor="middle">Test Executive &amp; MES</text>
                 </g>
 
-                <!-- Connection Badge: ADS -->
                 <rect x="170" y="58" width="50" height="24" rx="4" fill="#07090e" stroke="#00f0ff" stroke-width="1"/>
                 <text x="195" y="74" fill="#00f0ff" font-family="'JetBrains Mono', monospace" font-size="9" font-weight="700" text-anchor="middle">ADS/TCP</text>
 
@@ -1066,7 +1079,7 @@
         </article>
 
         <!-- PROJECT 2: Automated PCB Connector Placement & Verification System -->
-        <article class="project-card" id="project-pcb" data-tilt data-tilt-max="4">
+        <article class="project-card" id="project-pcb">
           <div class="project-grid">
             <div class="project-info">
               <div class="project-badge-row">
@@ -1107,7 +1120,6 @@
               </div>
 
               <svg class="diagram-interactive-svg" viewBox="0 0 540 280">
-                <!-- Bus Lines -->
                 <path d="M 130 90 L 260 90" stroke="#f59e0b" stroke-width="2" stroke-dasharray="4 4" fill="none">
                   <animate attributeName="stroke-dashoffset" from="32" to="0" dur="1s" repeatCount="indefinite"/>
                 </path>
@@ -1162,7 +1174,7 @@
         </article>
 
         <!-- PROJECT 3: Automated Rotary Smart Meter Assembly SPM -->
-        <article class="project-card" id="project-rotary" data-tilt data-tilt-max="4">
+        <article class="project-card" id="project-rotary">
           <div class="project-grid">
             <div class="project-info">
               <div class="project-badge-row">
@@ -1211,7 +1223,6 @@
                   <circle cx="0" cy="0" r="50" fill="#121a2d" stroke="rgba(0, 240, 255, 0.4)" stroke-width="1.5"/>
                   <text x="0" y="-8" fill="#00f0ff" font-family="'JetBrains Mono', monospace" font-size="12" font-weight="800" text-anchor="middle">CORE A</text>
                   <text x="0" y="12" fill="#94a3b8" font-family="'JetBrains Mono', monospace" font-size="9" text-anchor="middle">26 STATIONS</text>
-                  <!-- Station Nodes -->
                   <circle cx="0" cy="-68" r="5" fill="#00f0ff"/>
                   <circle cx="68" cy="0" r="5" fill="#00f0ff"/>
                   <circle cx="0" cy="68" r="5" fill="#00f0ff"/>
@@ -1226,7 +1237,6 @@
                   <circle cx="0" cy="0" r="50" fill="#121a2d" stroke="rgba(16, 185, 129, 0.4)" stroke-width="1.5"/>
                   <text x="0" y="-8" fill="#10b981" font-family="'JetBrains Mono', monospace" font-size="12" font-weight="800" text-anchor="middle">CORE B</text>
                   <text x="0" y="12" fill="#94a3b8" font-family="'JetBrains Mono', monospace" font-size="9" text-anchor="middle">26 STATIONS</text>
-                  <!-- Station Nodes -->
                   <circle cx="0" cy="-68" r="5" fill="#10b981"/>
                   <circle cx="68" cy="0" r="5" fill="#10b981"/>
                   <circle cx="0" cy="68" r="5" fill="#10b981"/>
@@ -1247,7 +1257,7 @@
     </section>
 
     <!-- ====================================================================
-         8. EDUCATION SECTION
+         9. EDUCATION SECTION
          ==================================================================== -->
     <section class="section shell" id="education" aria-labelledby="education-heading">
       <div class="section-header">
@@ -1257,7 +1267,7 @@
       </div>
 
       <div class="education-grid">
-        <div class="education-card" data-tilt data-tilt-max="8">
+        <div class="education-card">
           <span class="education-badge">CURRENTLY PURSUING</span>
           <h3 class="education-degree">Master of Business Administration (MBA)</h3>
           <div class="education-inst">Information Technology · University of Delhi, School of Open Learning</div>
@@ -1267,7 +1277,7 @@
           </p>
         </div>
 
-        <div class="education-card" data-tilt data-tilt-max="8">
+        <div class="education-card">
           <span class="education-badge">GRADUATED</span>
           <h3 class="education-degree">Bachelor of Technology (B.Tech)</h3>
           <div class="education-inst">Electronics &amp; Communications Engineering · Panipat Institute of Engineering and Technology</div>
@@ -1280,10 +1290,10 @@
     </section>
 
     <!-- ====================================================================
-         9. DEDICATED RESUME / CV SECTION
+         10. DEDICATED RESUME / CV SECTION
          ==================================================================== -->
     <section class="section shell" id="resume" aria-labelledby="resume-heading">
-      <div class="resume-section-wrapper" data-tilt data-tilt-max="4">
+      <div class="resume-section-wrapper">
         <div class="resume-layout">
           <div class="resume-copy">
             <span class="eyebrow">Curriculum Vitae</span>
@@ -1336,7 +1346,7 @@
     </section>
 
     <!-- ====================================================================
-         10. CONTACT SECTION
+         11. CONTACT SECTION
          ==================================================================== -->
     <section class="section shell" id="contact" aria-labelledby="contact-heading">
       <div class="section-header">
@@ -1348,7 +1358,7 @@
       <div class="contact-grid">
         <div class="contact-cards-stack">
           <!-- Email Card -->
-          <div class="contact-card" data-tilt data-tilt-max="8">
+          <div class="contact-card">
             <div class="contact-card-info">
               <div class="contact-card-icon">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
@@ -1362,7 +1372,7 @@
           </div>
 
           <!-- Phone Card 1 -->
-          <div class="contact-card" data-tilt data-tilt-max="8">
+          <div class="contact-card">
             <div class="contact-card-info">
               <div class="contact-card-icon">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
@@ -1376,7 +1386,7 @@
           </div>
 
           <!-- Phone Card 2 -->
-          <div class="contact-card" data-tilt data-tilt-max="8">
+          <div class="contact-card">
             <div class="contact-card-info">
               <div class="contact-card-icon">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
@@ -1390,7 +1400,7 @@
           </div>
 
           <!-- Location & Networking -->
-          <div class="contact-card" data-tilt data-tilt-max="8">
+          <div class="contact-card">
             <div class="contact-card-info">
               <div class="contact-card-icon">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
@@ -1408,7 +1418,7 @@
         </div>
 
         <!-- Contact Message Form -->
-        <form class="contact-form" id="contactForm" data-tilt data-tilt-max="4">
+        <form class="contact-form" id="contactForm">
           <div class="form-group">
             <label for="contactName">Your Name</label>
             <input class="form-control" id="contactName" type="text" placeholder="e.g. John Doe" required>
@@ -1457,6 +1467,21 @@
   <!-- Toast Notification Container -->
   <div class="toast-container" id="toastContainer" aria-live="polite"></div>
 
+  <!-- 500+ Online Game Player Modal -->
+  <div class="modal-overlay" id="gamePlayerModal" role="dialog" aria-modal="true" aria-labelledby="gamePlayerTitle">
+    <div class="modal-card" style="height: 90vh; max-width: 1040px;">
+      <div class="modal-top">
+        <h3 class="modal-title" id="gamePlayerTitle">Instant Game Arena</h3>
+        <button class="modal-close-btn" id="gamePlayerClose" type="button" aria-label="Close game modal">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+        </button>
+      </div>
+      <div class="modal-body" style="padding: 0; height: 100%; background: #000000;">
+        <iframe id="gamePlayerFrame" src="" style="width: 100%; height: 100%; border: none;" title="Instant Online Game Player" allowfullscreen></iframe>
+      </div>
+    </div>
+  </div>
+
   <!-- Fullscreen Resume Modal -->
   <div class="modal-overlay" id="resumeModal" role="dialog" aria-modal="true" aria-labelledby="resumeModalTitle">
     <div class="modal-card" style="height: 90vh;">
@@ -1501,7 +1526,6 @@
   <!-- Core Libraries & Interactive JavaScript Modules -->
   <script src="js/three.min.js"></script>
   <script src="js/audio-effects.js"></script>
-  <script src="js/tilt3d.js"></script>
   <script src="js/three-hero.js"></script>
   <script src="js/telemetry.js"></script>
   <script src="js/skills.js"></script>
@@ -1509,6 +1533,8 @@
   <script src="js/games/chess.js"></script>
   <script src="js/games/sudoku.js"></script>
   <script src="js/games/uno.js"></script>
+  <script src="js/games/arcade500.js"></script>
+  <script src="js/quiz.js"></script>
   <script src="js/main.js"></script>
 </body>
 </html>
