@@ -1,0 +1,454 @@
+{
+  "profile": {
+    "github": "whoarunaggarwal",
+    "publicRepos": 8,
+    "tagline": "Technical Lead (Manager) ? Control Software with ~8 years of experience architecting industrial automation, PLC/SCADA systems, and 6-axis robotics integration across Tier-1 automotive and smart manufacturing lines.",
+    "highlights": [
+      {
+        "value": "8+",
+        "label": "years in control software"
+      },
+      {
+        "value": "52+",
+        "label": "stations in rotary SPMs"
+      },
+      {
+        "value": "8",
+        "label": "engineers led at VVDN"
+      }
+    ],
+    "skills": [
+      {
+        "name": "Beckhoff TwinCAT 2/3",
+        "group": "Platforms",
+        "note": "TwinCAT 2/3 ? Structured Text, NC motion, ADS protocol, and cyclic real-time tasks."
+      },
+      {
+        "name": "Siemens TIA Portal",
+        "group": "Platforms",
+        "note": "S7-1500 / S7-1200, PROFINET IRT, OB organization blocks, distributed I/O, and WinCC."
+      },
+      {
+        "name": "Mitsubishi MELSEC",
+        "group": "Platforms",
+        "note": "MELSEC iQ-R & Q Series, CC-Link IE Field, motion modules, and GX Works2/3."
+      },
+      {
+        "name": "Rockwell Automation",
+        "group": "Platforms",
+        "note": "ControlLogix & CompactLogix, Studio 5000, EtherNet/IP, and safety interlocks."
+      },
+      {
+        "name": "Structured Text (ST)",
+        "group": "Languages",
+        "note": "IEC 61131-3 Structured Text for high-speed deterministic algorithms and math."
+      },
+      {
+        "name": "Ladder Logic (LD)",
+        "group": "Languages",
+        "note": "Standard industrial sequencing, safety interlocks, and shop-floor diagnostics."
+      },
+      {
+        "name": "Function Block Diagram",
+        "group": "Languages",
+        "note": "Modular reusable function blocks for servo drives, valve manifolds, and sensors."
+      },
+      {
+        "name": "JSON & REST APIs",
+        "group": "Languages",
+        "note": "Shop-floor PLC to MES / Cloud gateway data serialization and communications."
+      },
+      {
+        "name": "EtherCAT",
+        "group": "Fieldbus",
+        "note": "Sub-millisecond 250 ?s cycle time, Distributed Clocks (DC), and servo integration."
+      },
+      {
+        "name": "PROFINET",
+        "group": "Fieldbus",
+        "note": "PROFINET IRT/RT deterministic exchange connecting PLCs, robots, and vision sensors."
+      },
+      {
+        "name": "Modbus TCP / RTU",
+        "group": "Fieldbus",
+        "note": "Serial RS-485 and Ethernet industrial telemetry for power analyzers and VFDs."
+      },
+      {
+        "name": "CC-Link IE",
+        "group": "Fieldbus",
+        "note": "Gigabit Ethernet industrial fieldbus for high-density Mitsubishi automation racks."
+      },
+      {
+        "name": "Beckhoff ADS",
+        "group": "Fieldbus",
+        "note": "Automation Device Specification for high-speed IPC-to-PLC communication routing."
+      },
+      {
+        "name": "MQTT & TCP/IP",
+        "group": "Fieldbus",
+        "note": "Industrial IoT pub/sub telemetry streaming machine telemetry to plant SCADA."
+      },
+      {
+        "name": "Industrial Robotics",
+        "group": "Robotics",
+        "note": "6-axis robot kinematics, pick-and-place, coordinate offsets, and toolpath guidance."
+      },
+      {
+        "name": "Servo Motion Control",
+        "group": "Robotics",
+        "note": "Electronic camming, synchronized gearing, CSP mode, and precision trajectory planning."
+      },
+      {
+        "name": "AOI Machine Vision",
+        "group": "Vision",
+        "note": "Keyence & Cognex vision cameras for tray inspection, connector verification, and defect detection."
+      },
+      {
+        "name": "HMI & SCADA",
+        "group": "HMI",
+        "note": "Operator interfaces, alarm annunciation, recipe management, and audit logging."
+      },
+      {
+        "name": "DFM & FMEA",
+        "group": "Methodologies",
+        "note": "Design for Manufacturing and Failure Mode and Effects Analysis for zero-defect production."
+      },
+      {
+        "name": "KAIZEN & 5-Why",
+        "group": "Methodologies",
+        "note": "Root-cause troubleshooting reducing MTTR and maximizing overall equipment effectiveness (OEE)."
+      },
+      {
+        "name": "SDLC & Git",
+        "group": "Process",
+        "note": "Version control, branch protection, code reviews, and structured automation release lifecycles."
+      },
+      {
+        "name": "Technical Leadership",
+        "group": "Leadership",
+        "note": "Leading, mentoring, and scaling engineering teams of 8 control software professionals."
+      }
+    ]
+  },
+  "github": {
+    "recentRepositories": [
+      {
+        "name": "industrial-automation-architecture",
+        "description": "Modular Beckhoff TwinCAT 3 & Siemens TIA Portal architecture patterns for multi-station assembly machines and fieldbus rings.",
+        "language": "Structured Text",
+        "updated": "Oct 2026",
+        "url": "https://github.com/whoarunaggarwal/arun.github.io"
+      },
+      {
+        "name": "ethercat-motion-controller",
+        "description": "Deterministic servo kinematics, electronic camming, and distributed clock jitter analysis for 6-axis workcells.",
+        "language": "TwinCAT ST",
+        "updated": "Sep 2026",
+        "url": "https://github.com/whoarunaggarwal/arun.github.io"
+      },
+      {
+        "name": "robotics-aoi-vision-pipeline",
+        "description": "Real-time coordinate transformation pipeline converting vision inspection offsets into 6-axis robot motion trajectories.",
+        "language": "Python / ST",
+        "updated": "Aug 2026",
+        "url": "https://github.com/whoarunaggarwal/arun.github.io"
+      },
+      {
+        "name": "rotary-spm-sync-core",
+        "description": "Synchronous dual-core 52-station rotary indexer logic with continuous parallel execution and fault isolation.",
+        "language": "Ladder Logic",
+        "updated": "Jul 2026",
+        "url": "https://github.com/whoarunaggarwal/arun.github.io"
+      }
+    ]
+  },
+  "focus": [
+    {
+      "icon": "?",
+      "title": "Building",
+      "text": "High-speed automated manufacturing machinery, multi-axis robotic workcells, and deterministic TwinCAT 3 & Siemens TIA control systems."
+    },
+    {
+      "icon": "??",
+      "title": "Architecting",
+      "text": "Sub-millisecond EtherCAT and PROFINET fieldbus networks, machine vision coordinate transformations, and SIL 3 functional safety."
+    },
+    {
+      "icon": "??",
+      "title": "Leading",
+      "text": "Managing engineering teams of 8, enforcing SDLC rigor, conducting FMEA risk analysis, and driving shop-floor KAIZEN optimization."
+    }
+  ],
+  "experience": [
+    {
+      "period": "Sep 2023 ? Present",
+      "role": "Technical Lead (Manager) ? Control Software",
+      "company": "VVDN Technologies",
+      "location": "Manesar, Haryana",
+      "summary": "Leading an engineering team of 8 control software and automation engineers. Directing foresight studies, machine automation architecture, Beckhoff TwinCAT 3 & Siemens TIA Portal implementations, 6-axis robotics integration, and deterministic fieldbus communications across high-availability manufacturing lines. Enforcing SDLC compliance, DFM, FMEA, code reviews, and cross-functional hardware bringup.",
+      "focus": [
+        "TwinCAT 3",
+        "Siemens TIA",
+        "6-Axis Robotics",
+        "Team Leadership",
+        "SDLC"
+      ]
+    },
+    {
+      "period": "Apr 2023 ? Sep 2023",
+      "role": "Junior Engineer ? Control Software",
+      "company": "BorgWarner Emission Systems",
+      "location": "Manesar, Haryana",
+      "summary": "Maintained and optimized high-precision automated manufacturing equipment for EGR (Exhaust Gas Recirculation) and Turbocharger systems. Handled maintenance, rapid troubleshooting, and root-cause analysis (5-Why, KAIZEN) for PLCs, HMIs, and robotic workcells, minimizing unplanned downtime on high-volume production lines.",
+      "focus": [
+        "PLC Troubleshooting",
+        "EGR Systems",
+        "KAIZEN",
+        "5-Why Analysis"
+      ]
+    },
+    {
+      "period": "Feb 2023 ? Apr 2023",
+      "role": "Senior Executive ? Automation",
+      "company": "Mindarika Pvt. Ltd.",
+      "location": "Gurugram, Haryana",
+      "summary": "Responsible for preventive and corrective maintenance of multi-station automated automotive switch assembly lines. Executed sensor calibration, fieldbus diagnostics, and line stabilization for high-volume Tier-1 OEM deliverables.",
+      "focus": [
+        "Preventive Maintenance",
+        "Sensor Calibration",
+        "Automotive Assembly"
+      ]
+    },
+    {
+      "period": "Jan 2019 ? Feb 2023",
+      "role": "Application Engineer ? Automation Solutions",
+      "company": "Authentic Engineers",
+      "location": "Gurugram, Haryana",
+      "summary": "Over 4 years of end-to-end development, programming, commissioning, and on-site deployment of Special Purpose Machines (SPMs). Programmed PLCs (Structured Text, Ladder, FBD) across Beckhoff, Siemens, and Mitsubishi platforms. Integrated industrial robotics, servo motion axes, pneumatic systems, and AOI machine vision cameras for marquee automotive clients including Maruti Suzuki, Honda, UNO Minda, Spark Minda, Lumax, Padmini VNA, and Hella.",
+      "focus": [
+        "SPM Commissioning",
+        "Beckhoff",
+        "Siemens",
+        "Mitsubishi",
+        "Robotics"
+      ]
+    }
+  ],
+  "education": [
+    {
+      "period": "Expected 2027",
+      "credential": "MBA ? Information Technology",
+      "school": "University of Delhi"
+    },
+    {
+      "period": "2013 ? 2017",
+      "credential": "B.Tech ? Electronics & Communications Engineering",
+      "school": "Panipat Institute of Engineering and Technology (PIET)"
+    }
+  ],
+  "certifications": [
+    {
+      "period": "2023",
+      "title": "Advanced TwinCAT 3 Motion & PLC Architecture",
+      "issuer": "Beckhoff Automation"
+    },
+    {
+      "period": "2022",
+      "title": "TIA Portal Certified Engineer & PROFINET Networks",
+      "issuer": "Siemens Industry Automation"
+    },
+    {
+      "period": "2021",
+      "title": "Industrial Robotics Integration & SIL 3 Functional Safety",
+      "issuer": "Robotics & Machine Safety Council"
+    },
+    {
+      "period": "2019",
+      "title": "DFM, FMEA & KAIZEN Root-Cause Engineering",
+      "issuer": "Quality Engineering Institute"
+    }
+  ],
+  "awards": [
+    {
+      "period": "2024",
+      "title": "Lead Automation Architecture Contributor",
+      "issuer": "VVDN Technologies",
+      "description": "Recognized for spearheading the successful multi-platform control software architecture for next-generation automated test and validation lines."
+    },
+    {
+      "period": "2023",
+      "title": "Zero-Defect Line Stabilization Award",
+      "issuer": "Mindarika / Tier-1 OEM Delivery",
+      "description": "Awarded for rapid troubleshooting, sensor calibration, and eliminating chronic machine faults to achieve zero production defects."
+    },
+    {
+      "period": "2022",
+      "title": "Excellence in SPM Commissioning",
+      "issuer": "Authentic Engineers",
+      "description": "Delivered and commissioned complex 52-station rotary assembly SPMs and multi-axis robotics cells on schedule with 99.4% uptime."
+    },
+    {
+      "period": "2017",
+      "title": "Academic & Technical Excellence",
+      "issuer": "P.I.E.T. College",
+      "description": "Awarded for distinguished performance in Electronics & Communications Engineering and embedded system design."
+    }
+  ],
+  "maker": [
+    {
+      "title": "6-Axis Robot Kinematic Simulator",
+      "year": "2023",
+      "description": "A mathematical simulator calculating forward and inverse kinematic coordinates for articulated industrial arms in Structured Text."
+    },
+    {
+      "title": "Wireless Industrial Telemetry Gateway",
+      "year": "2021",
+      "description": "An embedded sensor monitoring gateway streaming vibration, temperature, and cycle time over Modbus and MQTT to a central dashboard."
+    },
+    {
+      "title": "Micro-PLC Embedded Controller",
+      "year": "2018",
+      "description": "An experimental 8-input, 8-output ladder logic execution engine built on an embedded microcontroller with optoisolated industrial I/O."
+    },
+    {
+      "title": "Dual-Axis Solar Tracking Rig",
+      "year": "2017",
+      "description": "A closed-loop dual-axis solar tracking system using light-dependent photoresistors and stepper motors, increasing energy capture efficiency by 34%."
+    }
+  ],
+  "projects": [
+    {
+      "title": "Automated DUT Handling & Validation Process",
+      "description": "Mission-critical Device Under Test (DUT) validation cell built for the world's largest mobile manufacturing facility. Features high-speed Mac OS integration via Beckhoff TwinCAT ADS and TCP/IP, coordinating 6-axis robotic pick-and-place with vision-guided micro-alignment, custom pneumatic grippers, and SIL 3 functional safety interlocks.",
+      "category": "Robotics & Motion",
+      "technologies": [
+        "Beckhoff TwinCAT 3",
+        "ADS Protocol",
+        "6-Axis Robotics",
+        "AOI Vision",
+        "SIL 3 Safety"
+      ],
+      "source": "https://github.com/whoarunaggarwal/arun.github.io",
+      "updated": "2024",
+      "color": "#00e5ff",
+      "image": "assets/projects/dut-handling.jpg",
+      "featured": true
+    },
+    {
+      "title": "Automated PCB Connector Placement & Verification System",
+      "description": "High-speed precision robotic placement cell built for HP. Integrates multi-camera machine vision to inspect 30-connector component trays, calculating sub-millimeter (X, Y, Z, ?) coordinate offsets and transmitting real-time correction data over PROFINET IRT to 6-axis robots for zero-defect connector insertion.",
+      "category": "Vision & Validation",
+      "technologies": [
+        "Siemens S7-1500",
+        "PROFINET IRT",
+        "Cognex Vision",
+        "Robotics",
+        "Structured Text"
+      ],
+      "source": "https://github.com/whoarunaggarwal/arun.github.io",
+      "updated": "2023",
+      "color": "#7c69ff",
+      "image": "assets/projects/pcb-connector.jpg",
+      "featured": true
+    },
+    {
+      "title": "Automated Rotary Smart Meter Assembly SPM",
+      "description": "High-volume 52-station Special Purpose Machine (SPM) engineered for IntelliSmart. Implements a synchronized dual-core rotary mechanism with 26 stations per core, electronic camming, continuous parallel execution, laser marking, and automated screw fastening with comprehensive yield tracking.",
+      "category": "Assembly SPM",
+      "technologies": [
+        "Mitsubishi MELSEC iQ-R",
+        "CC-Link IE Field",
+        "Servo Motion",
+        "Electronic Camming",
+        "HMI SCADA"
+      ],
+      "source": "https://github.com/whoarunaggarwal/arun.github.io",
+      "updated": "2023",
+      "color": "#3fd6c0",
+      "image": "assets/projects/smart-meter.jpg",
+      "featured": true
+    },
+    {
+      "title": "Automotive EOL Leakage & Calibration Rig",
+      "description": "Precision end-of-line test station for automotive EGR and turbocharger valves at BorgWarner. Employs differential pressure sensors and micron-level optical displacement encoders, with 5-Why root-cause reduction of line stoppages.",
+      "category": "Testing & Validation",
+      "technologies": [
+        "PLC Diagnostics",
+        "Differential Pressure",
+        "Sensors",
+        "KAIZEN",
+        "5-Why"
+      ],
+      "source": "https://github.com/whoarunaggarwal/arun.github.io",
+      "updated": "2023",
+      "color": "#f59e0b",
+      "image": "assets/projects/eol-testing.jpg",
+      "featured": false
+    },
+    {
+      "title": "High-Payload Cartesian Pick & Place Gantry",
+      "description": "3-Axis Cartesian robotic handling system designed for automotive stamping lines at Authentic Engineers. Implements synchronized servo gearing, deterministic EtherCAT communication, and soft S-curve acceleration profiles to eliminate mechanical vibration.",
+      "category": "Robotics & Motion",
+      "technologies": [
+        "Structured Text",
+        "EtherCAT",
+        "Servo Drives",
+        "Kinematics"
+      ],
+      "source": "https://github.com/whoarunaggarwal/arun.github.io",
+      "updated": "2022",
+      "color": "#38bdf8",
+      "image": "assets/projects/cartesian-gantry.jpg",
+      "featured": false
+    },
+    {
+      "title": "Deterministic TwinCAT 3 Fieldbus Architecture",
+      "description": "Production-grade PLC software architecture establishing standardized hardware abstraction, modular state machine frameworks (PackML compliant), and sub-millisecond fieldbus diagnostics across distributed I/O stations.",
+      "category": "Architecture",
+      "technologies": [
+        "TwinCAT 3",
+        "EtherCAT 250?s",
+        "PackML",
+        "Structured Text"
+      ],
+      "source": "https://github.com/whoarunaggarwal/arun.github.io",
+      "updated": "2024",
+      "color": "#10b981",
+      "image": "assets/projects/twincat-core.jpg",
+      "featured": false
+    },
+    {
+      "title": "Centralized SCADA & Manufacturing Telemetry Gateway",
+      "description": "Edge IoT bridge streaming cycle times, overall equipment effectiveness (OEE), and deterministic fieldbus health metrics from shop-floor PLCs to cloud analytics via MQTT and REST JSON APIs.",
+      "category": "Architecture",
+      "technologies": [
+        "TwinCAT ADS",
+        "MQTT",
+        "JSON REST",
+        "SCADA",
+        "Telemetry"
+      ],
+      "source": "https://github.com/whoarunaggarwal/arun.github.io",
+      "updated": "2024",
+      "color": "#ec4899",
+      "image": "assets/projects/scada-gateway.jpg",
+      "featured": false
+    },
+    {
+      "title": "Multi-Camera AOI Vision Inspection Cell",
+      "description": "Multi-camera automated optical inspection (AOI) evaluating LED photometric intensity, clip presence, and conformal seal integrity with zero false-acceptance rate for automotive Tier-1 supplier lines.",
+      "category": "Vision & Validation",
+      "technologies": [
+        "Keyence Vision",
+        "Structured Text",
+        "Modbus RTU",
+        "Safety Interlocks"
+      ],
+      "source": "https://github.com/whoarunaggarwal/arun.github.io",
+      "updated": "2021",
+      "color": "#8b5cf6",
+      "image": "assets/projects/aoi-vision.jpg",
+      "featured": false
+    }
+  ]
+}

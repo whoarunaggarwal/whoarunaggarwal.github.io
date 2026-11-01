@@ -3,1538 +3,391 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#06080e">
+  <meta name="theme-color" content="#080a0e">
   <meta name="color-scheme" content="dark light">
-  
-  <title>Arun Kumar Aggarwal | Technical Lead (Manager) – Control Software</title>
-  <meta name="description" content="Futuristic 3D portfolio of Arun Kumar Aggarwal, Technical Lead (Manager) – Control Software with ~8 years of experience in Industrial Automation, PLC programming, robotics integration, HMI/SCADA, and motion control.">
+  <meta name="description" content="Portfolio of Arun Kumar Aggarwal, Technical Lead (Manager) ? Control Software with ~8 years experience across Industrial Automation, PLC/SCADA systems, and 6-axis robotics integration.">
   <meta name="author" content="Arun Kumar Aggarwal">
-  
-  <!-- Open Graph / Social Sharing -->
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://whoarunaggarwal.github.io/arun.github.io/">
-  <meta property="og:title" content="Arun Kumar Aggarwal | Technical Lead – Control Software">
-  <meta property="og:description" content="Industrial Automation, 6-Axis Robotics Kinematics, 500+ Games Arcade & Control Software MCQ Arena. ~8 years engineering leadership.">
-  <meta property="og:image" content="assets/images/arun-profile.jpg">
-  
+  <meta property="og:title" content="Arun Kumar Aggarwal ? Technical Lead ? Control Software">
+  <meta property="og:description" content="Technical Lead with ~8 years experience architecting industrial automation, PLC/SCADA systems, and 6-axis robotics integration across Tier-1 automotive and smart manufacturing lines.">
+  <meta property="og:image" content="https://whoarunaggarwal.github.io/arun.github.io/assets/images/arun.jpg">
+  <meta property="og:image:alt" content="Portrait of Arun Kumar Aggarwal">
+  <meta name="twitter:card" content="summary">
   <link rel="canonical" href="https://whoarunaggarwal.github.io/arun.github.io/">
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
-
-  <!-- Google Fonts: Plus Jakarta Sans & JetBrains Mono -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-
-  <!-- Core Stylesheets -->
-  <link rel="stylesheet" href="css/tokens.css">
-  <link rel="stylesheet" href="css/main.css">
-  <link rel="stylesheet" href="css/components.css">
-  <link rel="stylesheet" href="css/responsive.css">
-
-  <!-- Structured Data JSON-LD -->
+  <link rel="manifest" href="site.webmanifest">
+  <link rel="preconnect" href="https://avatars.githubusercontent.com" crossorigin>
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <link rel="preload" href="config.json" as="fetch" crossorigin="anonymous">
+  <script>
+    try {
+      const savedTheme = localStorage.getItem('portfolio-theme');
+      const systemTheme = matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
+      const initialTheme = savedTheme === 'light' || savedTheme === 'dark' ? savedTheme : systemTheme;
+      document.documentElement.dataset.theme = initialTheme;
+      document.querySelector('meta[name="theme-color"]').content = initialTheme === 'dark' ? '#080a0e' : '#f2f4f7';
+    } catch (_) { /* The dark document default remains */ }
+  </script>
+  <link rel="stylesheet" href="styles.css">
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "Person",
     "name": "Arun Kumar Aggarwal",
-    "jobTitle": "Technical Lead (Manager) – Control Software",
-    "worksFor": {
-      "@type": "Organization",
-      "name": "VVDN Technologies"
-    },
-    "address": {
-      "@type": "PostalAddress",
-      "addressLocality": "Manesar",
-      "addressRegion": "Haryana",
-      "addressCountry": "IN"
-    },
-    "email": "aggarwal.arun26@gmail.com",
-    "telephone": "+91-7015261054",
+    "jobTitle": "Technical Lead (Manager) ? Control Software",
+    "description": "Technical Lead with ~8 years experience architecting industrial automation, PLC/SCADA systems, and 6-axis robotics integration.",
+    "url": "https://whoarunaggarwal.github.io/arun.github.io/",
     "sameAs": [
-      "https://github.com/whoarunaggarwal"
+      "https://github.com/whoarunaggarwal",
+      "https://www.linkedin.com/in/arunkumar-aggarwal-258079140/"
     ],
     "knowsAbout": [
       "Industrial Automation",
-      "PLC Programming",
-      "Beckhoff TwinCAT 2/3",
+      "Beckhoff TwinCAT 3",
       "Siemens TIA Portal",
-      "Mitsubishi GX Works",
+      "Mitsubishi MELSEC",
       "EtherCAT",
       "PROFINET",
-      "Robotics Integration",
+      "Industrial Robotics",
       "Motion Control",
-      "Automated Optical Inspection",
-      "SCADA Systems",
-      "Structured Text (IEC 61131-3)"
+      "HMI SCADA",
+      "DFM & FMEA"
     ]
   }
   </script>
 </head>
 <body>
-  <!-- Accessible Skip Link -->
   <a class="skip-link" href="#main">Skip to main content</a>
 
-  <!-- Ambient Industrial Atmosphere -->
   <div class="atmosphere" aria-hidden="true">
-    <div class="atmosphere-grid"></div>
-    <div class="atmosphere-glow-1"></div>
-    <div class="atmosphere-glow-2"></div>
-    <div class="atmosphere-glow-3"></div>
+    <span class="atmosphere-field field-a"></span>
+    <span class="atmosphere-field field-b"></span>
+    <span class="atmosphere-field field-c"></span>
+    <span class="atmosphere-grain"></span>
   </div>
 
-  <!-- Mouse Tracking Cursor Glow (Desktop) -->
   <div class="cursor-glow" id="cursorGlow" aria-hidden="true"></div>
 
-  <!-- Sticky Floating Header -->
   <header class="site-header" id="top">
-    <nav class="nav" id="siteNav" aria-label="Primary Navigation">
-      <a class="brand" href="#top" aria-label="Arun Kumar Aggarwal, Home">
-        <span class="brand-badge" aria-hidden="true">AKA</span>
-        <div class="brand-text">
-          <span class="brand-name">Arun Kumar Aggarwal</span>
-          <span class="brand-role">Tech Lead · Control Software</span>
-        </div>
-      </a>
-
+    <nav class="nav" id="siteNav" aria-label="Primary navigation">
+      <a class="brand" href="#top" aria-label="AKA Arun Kumar Aggarwal, home"><span class="brand-mark" aria-hidden="true">AKA</span><span class="brand-name">Arun&nbsp;Kumar&nbsp;Aggarwal</span></a>
       <div class="nav-links" id="navLinks">
-        <a href="#about"><span>About</span></a>
-        <a href="#skills"><span>Skills</span></a>
+        <span class="nav-indicator" id="navIndicator" aria-hidden="true"></span>
+        <a href="#work"><span>Work</span></a>
+        <a href="#github"><span>GitHub</span></a>
         <a href="#experience"><span>Experience</span></a>
-        <a href="#projects"><span>Projects</span></a>
-        <a href="#arcade"><span>🎮 500+ Arcade</span></a>
-        <a href="#quiz"><span>🧠 MCQ Quiz</span></a>
-        <a href="#education"><span>Education</span></a>
-        <a href="#resume"><span>Resume</span></a>
+        <a href="#about"><span>About</span></a>
         <a href="#contact"><span>Contact</span></a>
       </div>
-
       <div class="nav-actions">
-        <!-- Sound FX Synthesizer Toggle -->
-        <button class="sound-toggle-btn is-muted" id="soundToggleBtn" type="button" aria-label="Enable Cyber Audio SFX" title="Cyber Sound FX">
-          <svg viewBox="0 0 24 24"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon><path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"></path></svg>
+        <a class="nav-cta" href="assets/documents/Arun_Kumar_Aggarwal_Resume.pdf" download="Arun_Kumar_Aggarwal_Resume.pdf">R?sum? ??</a>
+        <button class="icon-button" id="themeToggle" type="button" aria-label="Switch to light theme" title="Change theme">
+          <svg aria-hidden="true" viewBox="0 0 24 24"><path class="icon-sun" d="M12 3v2m0 14v2M3 12h2m14 0h2M5.64 5.64l1.42 1.42m9.88 9.88 1.42 1.42m0-12.72-1.42 1.42M7.06 16.94l-1.42 1.42M16 12a4 4 0 1 1-8 0 4 4 0 0 1 8 0Z"/><path class="icon-moon" d="M20 15.2A8 8 0 0 1 8.8 4 8 8 0 1 0 20 15.2Z"/></svg>
         </button>
-
-        <!-- Dark/Light Theme Toggle -->
-        <button class="theme-toggle-btn" id="themeToggleBtn" type="button" aria-label="Toggle Dark/Light Theme" title="Toggle Theme">
-          <svg class="theme-icon-moon" viewBox="0 0 24 24"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
-          <svg class="theme-icon-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
-        </button>
-
-        <a class="btn btn-primary" href="#contact" style="padding: 8px 18px; font-size: 0.85rem;">Let's Talk</a>
-
-        <button class="menu-toggle-btn" id="menuToggleBtn" type="button" aria-expanded="false" aria-controls="mobileNavSheet" aria-label="Toggle Navigation Menu">
-          <span></span><span></span><span></span>
+        <button class="menu-button" id="menuToggle" type="button" aria-expanded="false" aria-controls="navSheet" aria-label="Open navigation">
+          <span class="menu-bar"></span><span class="menu-bar"></span>
         </button>
       </div>
-
       <span class="nav-progress" id="navProgress" aria-hidden="true"></span>
     </nav>
   </header>
 
-  <!-- Mobile Navigation Sheet -->
-  <div class="mobile-nav-sheet" id="mobileNavSheet" aria-hidden="true">
-    <a href="#about">About</a>
-    <a href="#skills">Technical Skills</a>
-    <a href="#experience">Professional Experience</a>
-    <a href="#projects">Featured Projects</a>
-    <a href="#arcade">🎮 500+ Games Arcade</a>
-    <a href="#quiz">🧠 MCQ Quiz Arena</a>
-    <a href="#education">Education</a>
-    <a href="#resume">Download Resume</a>
-    <a href="#contact">Contact Hub</a>
+  <div class="nav-sheet" id="navSheet" aria-hidden="true" inert>
+    <div class="nav-sheet-inner">
+      <a href="#work">Work</a>
+      <a href="#github">GitHub</a>
+      <a href="#experience">Experience</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+      <a class="nav-sheet-cta" href="mailto:aggarwal.arun26@gmail.com">aggarwal.arun26@gmail.com</a>
+    </div>
   </div>
 
   <main id="main">
-    <!-- ====================================================================
-         1. HERO SECTION (3D PORTRAIT & HIGH-DETAIL THREE.JS ROBOTIC WORKCELL)
-         ==================================================================== -->
-    <section class="section hero-section shell" id="hero" aria-labelledby="hero-heading">
-      <div class="hero-grid">
-        <div class="hero-copy">
-          <div class="status-pill">
-            <span class="pulse-dot"></span>
-            <span>SYSTEM ACTIVE · 1.0 ms DETERMINISTIC SCAN KERNEL</span>
+    <section class="hero shell" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <p class="pill pill-status hero-in hero-delay-0"><span class="status-dot"></span> Available for Technical Leadership &amp; Automation Architecture</p>
+        <h1 id="hero-title">
+          <span class="line hero-in hero-delay-1">I engineer machines</span>
+          <span class="line line-accent hero-in hero-delay-2">with precision control.</span>
+        </h1>
+        <p class="hero-lede hero-in hero-delay-3">I'm <strong>Arun Kumar Aggarwal</strong>, a Technical Lead (Manager) ? Control Software with ~8 years of experience architecting industrial automation, PLC/SCADA systems, and 6-axis robotics integration across Tier-1 automotive and smart manufacturing lines.</p>
+        <div class="hero-actions hero-in hero-delay-4">
+          <a class="button button-primary" href="#work" data-magnetic>Explore my work <span class="arrow arrow-down" aria-hidden="true">?</span></a>
+          <a class="button button-secondary" href="assets/documents/Arun_Kumar_Aggarwal_Resume.pdf" download="Arun_Kumar_Aggarwal_Resume.pdf" data-magnetic>Download R?sum? <span class="arrow" aria-hidden="true">?</span></a>
+        </div>
+        <ul class="hero-meta hero-in hero-delay-5">
+          <li><strong id="repoCount" data-count="8" data-immediate>8</strong><span>public repositories</span></li>
+          <li><strong data-count="52" data-suffix="+" data-immediate>52+</strong><span>stations in rotary SPMs</span></li>
+          <li><strong data-count="8" data-suffix="+" data-immediate>8+</strong><span>years control software</span></li>
+        </ul>
+      </div>
+
+      <div class="hero-visual">
+        <div class="portrait-stage hero-in hero-delay-2">
+          <div class="portrait-glow" aria-hidden="true"></div>
+          <div class="portrait-card" id="portraitCard">
+            <div class="portrait-sheen" aria-hidden="true"></div>
+            <div class="portrait-fallback" aria-hidden="true"><span>AKA</span><small>Lead ? Control Software</small></div>
+            <img src="assets/images/arun.jpg" alt="Arun Kumar Aggarwal" width="520" height="520" fetchpriority="high" data-avatar>
+            <div class="portrait-caption">
+              <span class="status-dot"></span>
+              <div><strong>Technical Lead ? Control Software</strong><small>Delhi NCR, India ? UTC +5:30</small></div>
+            </div>
           </div>
-
-          <h1 class="hero-heading" id="hero-heading">
-            Engineering Motion, Logic &amp; Robotics for <span class="text-gradient">Next-Gen Industry.</span>
-          </h1>
-
-          <p class="hero-lede">
-            I am <strong>Arun Kumar Aggarwal</strong>, Technical Lead (Manager) – Control Software with approximately <strong>8 years of progressive experience</strong> architecting mission-critical PLC systems, deterministic fieldbuses, robotic workcells, and high-throughput automated manufacturing lines.
-          </p>
-
-          <div class="hero-actions">
-            <a class="btn btn-primary" href="#projects">
-              Explore Blueprints
-              <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-            </a>
-            <a class="btn btn-amber" href="#arcade">
-              🎮 500+ Games Arcade
-              <svg viewBox="0 0 24 24"><polygon points="5 3 19 12 5 21 5 3"/></svg>
-            </a>
-            <a class="btn btn-secondary" href="assets/documents/Arun_Kumar_Aggarwal_Resume.pdf" download="Arun_Kumar_Aggarwal_Resume.pdf">
-              Download CV
-              <svg viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
-            </a>
-          </div>
-
-          <div class="hero-stats">
-            <div class="stat-item">
-              <div class="stat-val"><span data-count="8">0</span><span class="suffix">+</span></div>
-              <span class="stat-label">Years Exp.</span>
-            </div>
-            <div class="stat-item">
-              <div class="stat-val"><span data-count="8">0</span></div>
-              <span class="stat-label">Engineers Led</span>
-            </div>
-            <div class="stat-item">
-              <div class="stat-val"><span data-count="10">0</span><span class="suffix">+</span></div>
-              <span class="stat-label">Global Clients</span>
-            </div>
-            <div class="stat-item">
-              <div class="stat-val">&lt;<span data-count="1.5">0</span><span class="suffix">ms</span></div>
-              <span class="stat-label">Cycle Jitter</span>
-            </div>
+          <div class="skill-orbit" aria-hidden="true">
+            <span class="orbit-pill" style="--orbit-index: 0"><span class="pill"><i></i>TwinCAT 3</span></span>
+            <span class="orbit-pill" style="--orbit-index: 1"><span class="pill"><i></i>Siemens TIA</span></span>
+            <span class="orbit-pill" style="--orbit-index: 2"><span class="pill"><i></i>EtherCAT</span></span>
+            <span class="orbit-pill" style="--orbit-index: 3"><span class="pill"><i></i>Robotics</span></span>
+            <span class="orbit-pill" style="--orbit-index: 4"><span class="pill"><i></i>PROFINET</span></span>
+            <span class="orbit-pill" style="--orbit-index: 5"><span class="pill"><i></i>Structured Text</span></span>
+            <span class="orbit-pill" style="--orbit-index: 6"><span class="pill"><i></i>Motion Control</span></span>
+            <span class="orbit-pill" style="--orbit-index: 7"><span class="pill"><i></i>AOI Vision</span></span>
+            <span class="orbit-pill" style="--orbit-index: 8"><span class="pill"><i></i>HMI / SCADA</span></span>
+            <span class="orbit-pill" style="--orbit-index: 9"><span class="pill"><i></i>DFM &amp; FMEA</span></span>
           </div>
         </div>
+      </div>
 
-        <!-- Right Column: 3D Portrait Stage & 3D Interactive Three.js Robotic Workcell -->
-        <div class="hero-stage-container">
-          <!-- 3D Portrait Stage -->
-          <div class="hero-portrait-stage">
-            <div class="orbit-ring"></div>
-            <div class="orbit-ring-outer"></div>
+      <a class="hero-scroll hero-in hero-delay-6" href="#work" aria-label="Scroll to selected work">
+        <span>Scroll to explore</span>
+        <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M12 5v14m0 0 5-5m-5 5-5-5"/></svg>
+      </a>
+    </section>
 
-            <div class="portrait-card">
-              <img class="portrait-img" src="assets/images/arun-profile.jpg" alt="Arun Kumar Aggarwal – Technical Lead (Manager) Control Software" width="440" height="510" fetchpriority="high">
-              <div class="portrait-badge-overlay">
-                <div>
-                  <div class="portrait-badge-name">Arun Kumar Aggarwal</div>
-                  <div class="portrait-badge-sub">Technical Lead · Control Software</div>
-                </div>
-                <div class="status-pill" style="padding: 4px 10px; font-size: 0.7rem;">
-                  <span class="pulse-dot"></span>
-                  <span>ONLINE</span>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- 3D Robotic Workcell Interactive Canvas -->
-          <div class="three-hero-wrapper">
-            <div class="three-hero-top-bar">
-              <span class="three-hero-label">
-                <span class="pulse-dot"></span>
-                6-AXIS DIGITAL TWIN
-              </span>
-              <div class="three-mode-group">
-                <button class="three-mode-pill is-active" id="threeModeAuto" type="button">AUTO SCAN</button>
-                <button class="three-mode-pill" id="threeModeWeld" type="button">WELD SPARK</button>
-                <button class="three-mode-pill" id="threeModeJog" type="button">MANUAL JOG</button>
-              </div>
-            </div>
-            <div class="three-hero-canvas-container" id="threeHeroContainer"></div>
-            <span class="three-hero-hint">Click stage for physical welding spark physics</span>
-          </div>
-        </div>
+    <section class="marquee" aria-label="Languages, software, and platforms I use ? Beckhoff TwinCAT 3, Siemens TIA Portal, Mitsubishi MELSEC, Structured Text, Ladder Logic, Function Block Diagram, EtherCAT, PROFINET, Modbus TCP, Industrial Robotics, Motion Control, and AOI Vision">
+      <div class="marquee-heading shell" aria-hidden="true">
+        <span>Toolchain</span>
+        <span>PLCs ? Fieldbuses ? Robotics ? Motion</span>
+      </div>
+      <div class="marquee-mask" id="marqueeMask">
+        <div class="marquee-track" id="marqueeTrack"></div>
       </div>
     </section>
 
-    <!-- ====================================================================
-         2. LIVE SCADA & PLC SIMULATOR CONSOLE (RESTORED CLEAN LAYOUT)
-         ==================================================================== -->
-    <section class="section shell" style="padding-top: 0;" aria-label="Interactive Control Console">
-      <div class="scada-chassis">
-        <!-- Top Rack Bar -->
-        <div class="scada-topbar">
-          <div class="scada-title">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--color-cyan)" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="4"/><path d="M7 12h10M12 7v10"/></svg>
-            <span>LIVE SCADA &amp; MOTION TELEMETRY CONSOLE</span>
-          </div>
-          <div class="scada-led-group">
-            <div class="scada-led"><span class="led-bulb is-green" id="ledRun"></span><span>RUN</span></div>
-            <div class="scada-led"><span class="led-bulb is-cyan" id="ledBus"></span><span>BUS</span></div>
-            <div class="scada-led"><span class="led-bulb" id="ledForce"></span><span>FORCE</span></div>
-          </div>
+    <section class="section shell" id="work" aria-labelledby="work-title">
+      <div class="section-heading reveal-group">
+        <div class="reveal">
+          <p class="eyebrow">Selected work</p>
+          <h2 id="work-title">Industrial systems engineered to scale.</h2>
         </div>
+        <p class="section-sub reveal">Mission-critical automation, high-speed robotics, and deterministic control software deployed on real-world factory floors.</p>
+      </div>
 
-        <!-- Platform Tabs -->
-        <div class="scada-tabs" role="tablist">
-          <button class="scada-tab-btn is-active" data-platform="beckhoff" type="button" role="tab">Beckhoff TwinCAT 3 (ST)</button>
-          <button class="scada-tab-btn" data-platform="siemens" type="button" role="tab">Siemens TIA S7-1500</button>
-          <button class="scada-tab-btn" data-platform="mitsubishi" type="button" role="tab">Mitsubishi MELSEC iQ-R</button>
+      <div class="project-toolbar reveal" role="group" aria-label="Filter projects">
+        <div class="filters" id="projectFilters"></div>
+        <div class="project-tools-end">
+          <output class="project-count" id="projectCount" for="projectSearch">Loading work?</output>
+          <label class="search">
+            <span class="sr-only">Search projects</span>
+            <svg aria-hidden="true" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="m16 16 4 4"/></svg>
+            <input id="projectSearch" type="search" placeholder="Search projects?" autocomplete="off">
+          </label>
         </div>
+      </div>
 
-        <!-- Dashboard Body -->
-        <div class="scada-body">
-          <div class="telemetry-row">
-            <div class="telemetry-card">
-              <span class="tag">Scan Cycle Task</span>
-              <span class="val" id="telemetryScanTime">1.20 ms</span>
-            </div>
-            <div class="telemetry-card">
-              <span class="tag">Fieldbus Sync</span>
-              <span class="val" id="telemetryBusCycle">EtherCAT 250 µs</span>
-            </div>
-            <div class="telemetry-card is-green">
-              <span class="tag">Kernel State</span>
-              <span class="val" id="telemetryTaskState">RUNNING</span>
-            </div>
-          </div>
+      <div class="projects-grid is-loading" id="projectsGrid" aria-live="polite" aria-busy="true">
+        <div class="skeleton-card skeleton-featured" aria-hidden="true"><span></span><span></span><span></span></div>
+        <div class="skeleton-card skeleton-featured" aria-hidden="true"><span></span><span></span><span></span></div>
+        <div class="skeleton-card" aria-hidden="true"><span></span><span></span><span></span></div>
+      </div>
+      <div class="empty-state glass" id="emptyProjects" hidden>
+        <span class="empty-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="6.5"/><path d="m16 16 4 4M8.5 11h5"/></svg></span>
+        <h3>No projects found</h3>
+        <p>Try a different search or return to the full collection.</p>
+        <button class="button button-secondary" id="clearProjectFilters" type="button">Clear filters</button>
+      </div>
+      <div class="center"><button class="button button-secondary" id="showMore" type="button">Show all projects</button></div>
+    </section>
 
-          <!-- Real-Time Waveform -->
-          <div class="waveform-panel">
-            <div class="waveform-header">
-              <span>REAL-TIME DETERMINISTIC JITTER MONITOR</span>
-              <span style="color: var(--color-cyan);">± 0.02 ms</span>
-            </div>
-            <canvas class="waveform-canvas" id="scadaWaveformCanvas"></canvas>
-          </div>
-
-          <!-- 4-Axis Kinematics Readout -->
-          <div class="kinematics-panel">
-            <div class="kinematics-title">
-              <span>ROBOTIC AXIS ENCODER FEEDBACK</span>
-              <span style="color: var(--color-green);">COORDINATES (mm / deg)</span>
-            </div>
-            <div class="axis-grid">
-              <div class="axis-box">
-                <div class="axis-name">AXIS X</div>
-                <div class="axis-coord" id="axisX">420.5</div>
-              </div>
-              <div class="axis-box">
-                <div class="axis-name">AXIS Y</div>
-                <div class="axis-coord" id="axisY">185.2</div>
-              </div>
-              <div class="axis-box">
-                <div class="axis-name">AXIS Z</div>
-                <div class="axis-coord" id="axisZ">82.0</div>
-              </div>
-              <div class="axis-box">
-                <div class="axis-name">THETA θ</div>
-                <div class="axis-coord" id="axisTheta">45.0°</div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Interactive Controls -->
-          <div class="scada-toolbar">
-            <button class="scada-btn btn-run" id="scadaBtnRun" type="button">START CYCLE</button>
-            <button class="scada-btn" id="scadaBtnPause" type="button">PAUSE</button>
-            <button class="scada-btn" id="scadaBtnInspect" type="button">TRIGGER AOI</button>
-            <button class="scada-btn btn-estop" id="scadaBtnEstop" type="button">EMERGENCY STOP</button>
-          </div>
+    <section class="section shell github-section" id="github" aria-labelledby="github-title">
+      <div class="section-heading reveal-group">
+        <div class="reveal">
+          <p class="eyebrow">Open source footprint</p>
+          <h2 id="github-title">Control software &amp;<br>open automation.</h2>
         </div>
+        <p class="section-sub reveal">Public repositories, industrial automation architectures, PLC simulation blocks, and engineering tools published under @whoarunaggarwal.</p>
+      </div>
+
+      <div class="github-stats reveal" id="githubStats">
+        <div class="stat">
+          <span class="stat-value" id="statRepos" data-count="8">0</span>
+          <span class="stat-label">Public repositories</span>
+        </div>
+        <div class="stat">
+          <span class="stat-value" data-count="2017" data-static="2017">2017</span>
+          <span class="stat-label">Engineering Degree</span>
+        </div>
+        <div class="stat">
+          <span class="stat-value" data-count="52" data-suffix="+">0</span>
+          <span class="stat-label">Stations Synchronized</span>
+        </div>
+        <div class="stat">
+          <span class="stat-value" data-static="Delhi NCR">Delhi NCR</span>
+          <span class="stat-label">India</span>
+        </div>
+      </div>
+
+      <div class="github-bento">
+        <article class="github-profile-card glass" aria-labelledby="github-profile-name">
+          <header class="github-profile-top">
+            <div class="github-avatar" aria-hidden="true">
+              <span>AKA</span>
+              <img src="assets/images/arun160.jpg" alt="Arun Kumar Aggarwal" width="80" height="80" loading="lazy" data-avatar>
+            </div>
+            <div class="github-profile-identity">
+              <span class="pill pill-tag">@whoarunaggarwal</span>
+              <h3 id="github-profile-name">Arun Kumar Aggarwal</h3>
+              <p>Technical Lead (Manager) ? Control Software</p>
+            </div>
+          </header>
+          <a class="button button-primary github-profile-link" href="https://github.com/whoarunaggarwal" target="_blank" rel="noopener noreferrer" data-magnetic>View GitHub profile <span class="arrow" aria-hidden="true">?</span></a>
+        </article>
+        <ul class="github-repos is-loading" id="githubRepos" aria-busy="true">
+          <li class="repo-skeleton" aria-hidden="true"><span></span><span></span></li>
+          <li class="repo-skeleton" aria-hidden="true"><span></span><span></span></li>
+          <li class="repo-skeleton" aria-hidden="true"><span></span><span></span></li>
+        </ul>
       </div>
     </section>
 
-    <!-- ====================================================================
-         3. AUTOMATION ARCADE ARENA (500+ ONLINE GAMES + CHESS, SUDOKU, UNO)
-         ==================================================================== -->
-    <section class="section arcade-section shell" id="arcade" aria-labelledby="arcade-heading">
-      <div class="section-header">
-        <span class="eyebrow">Interactive Gaming Hub</span>
-        <h2 class="section-title" id="arcade-heading">The Hyper Arcade &amp; 500+ Games Arena</h2>
-        <p class="section-subtitle">Take a mental break from PLC scan loops. Play 500+ online retro classics or test your algorithms in Cyber Chess, Quantum Sudoku, and Robo Uno!</p>
+    <section class="section shell" id="experience" aria-labelledby="experience-title">
+      <div class="section-heading reveal-group">
+        <div class="reveal">
+          <p class="eyebrow">Experience</p>
+          <h2 id="experience-title">Built with teams.<br>Led with care.</h2>
+        </div>
+        <p class="section-sub reveal">From hands-on commissioning and shop-floor debugging to managing engineering teams across Tier-1 automation and smart manufacturing lines.</p>
       </div>
-
-      <div class="arcade-chassis">
-        <!-- Top Bar with Game Selector Tabs -->
-        <div class="arcade-top-bar">
-          <div class="arcade-tabs" role="tablist">
-            <button class="arcade-tab-btn is-active" data-game="arcade500" type="button" role="tab">
-              <span>🎮</span>
-              <span>500+ Online Games</span>
-            </button>
-            <button class="arcade-tab-btn" data-game="chess" type="button" role="tab">
-              <span>♟️</span>
-              <span>Cyber Chess</span>
-            </button>
-            <button class="arcade-tab-btn" data-game="sudoku" type="button" role="tab">
-              <span>🔢</span>
-              <span>Quantum Sudoku</span>
-            </button>
-            <button class="arcade-tab-btn" data-game="uno" type="button" role="tab">
-              <span>🃏</span>
-              <span>Robo Uno Battle</span>
-            </button>
-          </div>
-          <div class="status-pill">
-            <span class="pulse-dot"></span>
-            <span>ARCADE ONLINE</span>
-          </div>
-        </div>
-
-        <!-- 1. 500+ ONLINE GAMES PORTAL VIEW -->
-        <div class="game-view is-active" id="arcade500View">
-          <div class="arcade-500-toolbar">
-            <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px;">
-              <div class="arcade-cat-pills">
-                <button class="arcade-cat-pill is-active" data-cat="all" type="button">All (500+)</button>
-                <button class="arcade-cat-pill" data-cat="retro" type="button">🕹️ Retro Classics</button>
-                <button class="arcade-cat-pill" data-cat="puzzle" type="button">🧩 Puzzle &amp; Logic</button>
-                <button class="arcade-cat-pill" data-cat="cards" type="button">🃏 Card &amp; Board</button>
-                <button class="arcade-cat-pill" data-cat="action" type="button">🚀 Action &amp; Reflex</button>
-                <button class="arcade-cat-pill" data-cat="arcade" type="button">⚡ Arcade Sports</button>
-              </div>
-
-              <div class="skills-search-wrapper" style="min-width: 260px;">
-                <svg class="skills-search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
-                <input class="skills-search-input" id="arcade500Search" type="search" placeholder="Search 500+ games (e.g. Mario, 2048, Tetris, Doom)..." aria-label="Search online games">
-              </div>
-            </div>
-            <div style="font-family: var(--font-mono); font-size: 0.8rem; color: var(--color-cyan); font-weight: 700;" id="arcadeGameCount">
-              Showing 500+ Online Games
-            </div>
-          </div>
-
-          <div class="arcade-500-grid" id="arcade500Grid"></div>
-        </div>
-
-        <!-- 2. CYBER CHESS VIEW -->
-        <div class="game-view" id="chessView">
-          <div class="chess-arena">
-            <div class="chess-board-wrapper">
-              <div class="chess-board" id="chessBoard"></div>
-            </div>
-
-            <div class="chess-sidebar">
-              <div class="chess-status-badge" id="chessStatus">YOUR TURN (WHITE)</div>
-              
-              <div class="chess-captured-box">
-                <span style="font-family: var(--font-mono); font-size: 0.72rem; color: var(--color-text-tertiary);">CAPTURED BY BLACK:</span>
-                <div class="chess-captured-tray" id="chessCapturedWhite"></div>
-              </div>
-
-              <div class="chess-captured-box">
-                <span style="font-family: var(--font-mono); font-size: 0.72rem; color: var(--color-text-tertiary);">CAPTURED BY WHITE:</span>
-                <div class="chess-captured-tray" id="chessCapturedBlack"></div>
-              </div>
-
-              <div style="display: flex; gap: 10px; margin-top: auto;">
-                <button class="btn btn-secondary" id="chessAiToggleBtn" type="button" style="flex: 1; padding: 10px 14px; font-size: 0.85rem;">Mode: Vs Bot 🤖</button>
-                <button class="btn btn-amber" id="chessResetBtn" type="button" style="padding: 10px 16px; font-size: 0.85rem;">New Match</button>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- 3. QUANTUM SUDOKU VIEW -->
-        <div class="game-view" id="sudokuView">
-          <div class="sudoku-arena">
-            <div class="sudoku-grid-wrapper">
-              <div class="sudoku-grid" id="sudokuGrid"></div>
-            </div>
-
-            <div class="chess-sidebar">
-              <div style="display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid var(--border-subtle); padding-bottom: 10px;">
-                <span style="font-family: var(--font-mono); font-size: 0.8rem; color: var(--color-text-tertiary);">TIMER</span>
-                <span style="font-family: var(--font-mono); font-size: 1.2rem; font-weight: 800; color: var(--color-cyan);" id="sudokuTimer">00:00</span>
-              </div>
-
-              <div style="display: flex; gap: 6px;">
-                <button class="skills-filter-btn sudoku-diff-btn is-active" data-diff="easy" type="button">Easy</button>
-                <button class="skills-filter-btn sudoku-diff-btn" data-diff="medium" type="button">Medium</button>
-              </div>
-
-              <div>
-                <span style="font-family: var(--font-mono); font-size: 0.74rem; color: var(--color-text-tertiary);">TAP NUMBER TO PLACE IN CELL:</span>
-                <div class="sudoku-numpad" id="sudokuNumpad"></div>
-              </div>
-
-              <div style="display: flex; gap: 8px; margin-top: auto;">
-                <button class="btn btn-secondary" id="sudokuHintBtn" type="button" style="flex: 1; padding: 10px 12px; font-size: 0.85rem;">Get Hint 💡</button>
-                <button class="btn btn-amber" id="sudokuResetBtn" type="button" style="padding: 10px 16px; font-size: 0.85rem;">Restart</button>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- 4. ROBO UNO BATTLE VIEW -->
-        <div class="game-view" id="unoView">
-          <div class="uno-arena" id="unoGameContainer">
-            <div class="uno-opponents-row">
-              <div class="uno-bot-card">
-                <span class="uno-bot-name">🤖 Bot Delta (TwinCAT)</span>
-                <span class="uno-bot-count" id="botDeltaCards">7 Cards</span>
-              </div>
-              <div class="uno-bot-card">
-                <span class="uno-bot-name">🤖 Bot Kuka (ProfiNet)</span>
-                <span class="uno-bot-count" id="botKukaCards">7 Cards</span>
-              </div>
-              <div class="uno-bot-card">
-                <span class="uno-bot-name">🤖 Bot Fanuc (Robotics)</span>
-                <span class="uno-bot-count" id="botFanucCards">7 Cards</span>
-              </div>
-            </div>
-
-            <div class="uno-center-table">
-              <div class="uno-deck-pile" id="unoDrawDeck" title="Click to Draw a Card">
-                <span>DRAW DECK</span>
-              </div>
-
-              <div id="unoTopCard" class="uno-card uno-card-large uno-card-red">
-                <span class="uno-corner-val">7</span>
-                <span class="uno-center-val">7</span>
-                <span class="uno-corner-val val-bottom">7</span>
-              </div>
-
-              <div style="display: flex; flex-direction: column; gap: 8px;">
-                <span class="status-pill" id="unoCurrentColor" style="font-weight: 800;">Active Color: RED</span>
-                <span id="unoStatus" style="font-family: var(--font-mono); font-size: 0.88rem; font-weight: 800; color: var(--color-cyan);">YOUR TURN!</span>
-                <button class="btn btn-amber" id="unoCallBtn" type="button" style="padding: 8px 16px; font-size: 0.82rem;">CALL UNO! 💥</button>
-              </div>
-            </div>
-
-            <div class="uno-player-hand-wrapper">
-              <div style="display: flex; align-items: center; justify-content: space-between;">
-                <span style="font-family: var(--font-mono); font-size: 0.82rem; font-weight: 700; color: var(--color-cyan);">YOUR HAND (TAP A CARD TO PLAY):</span>
-                <button class="btn btn-secondary" id="unoResetBtn" type="button" style="padding: 6px 14px; font-size: 0.78rem;">New Hand</button>
-              </div>
-              <div class="uno-hand-cards" id="unoPlayerHand"></div>
-            </div>
-          </div>
-        </div>
-      </div>
+      <div class="timeline" id="experienceList"></div>
     </section>
 
-    <!-- ====================================================================
-         4. CONTROL SOFTWARE MCQ CERTIFICATION ARENA (RANDOMIZED 5 QUESTIONS)
-         ==================================================================== -->
-    <section class="section quiz-section shell" id="quiz" aria-labelledby="quiz-heading">
-      <div class="section-header">
-        <span class="eyebrow">Technical Knowledge Check</span>
-        <h2 class="section-title" id="quiz-heading">Control Software MCQ Challenge Arena</h2>
-        <p class="section-subtitle">5 randomized engineering questions pulled on demand across Beckhoff TwinCAT, Siemens TIA Portal, EtherCAT, PROFINET, SIL 3 Safety, and Robotics.</p>
-      </div>
-
-      <div id="quizWizard"></div>
-    </section>
-
-    <!-- ====================================================================
-         5. ABOUT ME SECTION
-         ==================================================================== -->
-    <section class="section shell" id="about" aria-labelledby="about-heading">
-      <div class="section-header">
-        <span class="eyebrow">Professional Identity</span>
-        <h2 class="section-title" id="about-heading">Pioneering Industrial Control &amp; Team Leadership</h2>
-        <p class="section-subtitle">Bridging the gap between embedded hardware, real-time control software, and high-throughput automated manufacturing.</p>
-      </div>
-
+    <section class="section shell" id="about" aria-labelledby="about-title">
       <div class="about-grid">
-        <div class="about-narrative">
-          <p>
-            With approximately <strong>8 years of progressive experience</strong>, I lead control software engineering teams delivering mission-critical industrial automation systems for premier technology and automotive manufacturers worldwide. Currently, as <strong>Technical Lead (Manager) – Control Software at VVDN Technologies</strong>, I lead a dedicated team of 8 control software engineers.
-          </p>
-          <div class="about-quote">
-            "Industrial automation software is not merely about writing code; it is about guaranteeing deterministic sub-millisecond safety, zero-defect quality control, and uninterrupted 24/7 manufacturing uptime."
-          </div>
-          <p>
-            My responsibilities span high-availability system architecture, cross-functional foresight studies, task delegation, and direct technical mentorship. I specialize in designing and troubleshooting complex control architectures across <strong>Beckhoff TwinCAT, Siemens TIA Portal, Mitsubishi, and Delta</strong> platforms, synchronizing 6-axis and SCARA robots with machine vision inspection systems.
-          </p>
-          <p>
-            My engineering philosophy combines rigorous quality methodologies—such as <strong>DFM, FMEA, KAIZEN, and 5-Why root-cause analysis</strong>—with modern software engineering workflows (SDLC, JSON scripting, modular function blocks) to eliminate operational bottlenecks and customer-escalated failures.
-          </p>
-        </div>
-
-        <div class="pillars-grid">
-          <div class="pillar-card">
-            <div class="pillar-icon-box">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="8" rx="2"/><rect x="2" y="14" width="20" height="8" rx="2"/><line x1="6" y1="6" x2="6.01" y2="6"/><line x1="6" y1="18" x2="6.01" y2="18"/></svg>
-            </div>
-            <h3 class="pillar-title">Control Software Architecture</h3>
-            <p class="pillar-desc">Designing fault-tolerant, modular PLC programs using IEC 61131-3 Structured Text (ST), Ladder Logic, and Function Block Diagrams.</p>
-          </div>
-
-          <div class="pillar-card">
-            <div class="pillar-icon-box">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
-            </div>
-            <h3 class="pillar-title">Robotics &amp; Motion Control</h3>
-            <p class="pillar-desc">Multi-axis servo synchronization, kinematic coordinate transformations, and seamless integration of third-party industrial robots.</p>
-          </div>
-
-          <div class="pillar-card">
-            <div class="pillar-icon-box">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-            </div>
-            <h3 class="pillar-title">Deterministic Fieldbus Networks</h3>
-            <p class="pillar-desc">High-speed fieldbus mastery: EtherCAT, PROFINET, Modbus TCP/IP, CC-Link, ADS, and MQTT for zero-packet-drop industrial communication.</p>
-          </div>
-
-          <div class="pillar-card">
-            <div class="pillar-icon-box">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
-            </div>
-            <h3 class="pillar-title">Technical Leadership &amp; Foresight</h3>
-            <p class="pillar-desc">Leading 8 control engineers, running cross-functional foresight studies, ensuring high availability, and mentoring on systematic debugging.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ====================================================================
-         6. TECHNICAL SKILLS SECTION
-         ==================================================================== -->
-    <section class="section shell" id="skills" aria-labelledby="skills-heading">
-      <div class="section-header">
-        <span class="eyebrow">Technical Competencies</span>
-        <h2 class="section-title" id="skills-heading">Industrial Automation Skill Matrix</h2>
-        <p class="section-subtitle">Categorized competencies across platforms, fieldbus protocols, programming standards, and manufacturing methodologies.</p>
-      </div>
-
-      <div class="skills-toolbar">
-        <div class="skills-filter-group" role="tablist">
-          <button class="skills-filter-btn is-active" data-category="all" type="button">All Skills</button>
-          <button class="skills-filter-btn" data-category="platforms" type="button">PLC &amp; Platforms</button>
-          <button class="skills-filter-btn" data-category="languages" type="button">Languages &amp; ST</button>
-          <button class="skills-filter-btn" data-category="protocols" type="button">Protocols &amp; Fieldbuses</button>
-          <button class="skills-filter-btn" data-category="robotics" type="button">Robotics &amp; Motion</button>
-          <button class="skills-filter-btn" data-category="methodologies" type="button">Quality &amp; SDLC</button>
-        </div>
-
-        <div class="skills-search-wrapper">
-          <svg class="skills-search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
-          <input class="skills-search-input" id="skillsSearchInput" type="search" placeholder="Search skills, protocols, tools..." aria-label="Search skills">
-        </div>
-      </div>
-
-      <div class="skills-grid" id="skillsGrid">
-        <!-- Platforms -->
-        <div class="skill-card" data-category="platforms">
-          <div class="skill-card-top"><span class="skill-category-badge">PLC Platform</span></div>
-          <h3 class="skill-name">Beckhoff TwinCAT 2/3</h3>
-          <p class="skill-context">Real-time PC-based control kernel, EtherCAT master configuration, multi-core cyclic tasks, ADS router interfacing, and Structured Text architecture.</p>
-          <div class="skill-tags">
-            <span class="skill-tag">TwinCAT 3</span>
-            <span class="skill-tag">Structured Text</span>
-            <span class="skill-tag">EtherCAT</span>
-            <span class="skill-tag">ADS</span>
-          </div>
-        </div>
-
-        <div class="skill-card" data-category="platforms">
-          <div class="skill-card-top"><span class="skill-category-badge">PLC Platform</span></div>
-          <h3 class="skill-name">Siemens TIA Portal (V16+)</h3>
-          <p class="skill-context">Programming S7-1500 and S7-1200 controllers, PROFINET network topology, safety interlocks, WinCC HMI integration, and hardware diagnostics.</p>
-          <div class="skill-tags">
-            <span class="skill-tag">S7-1500</span>
-            <span class="skill-tag">TIA V16+</span>
-            <span class="skill-tag">PROFINET</span>
-            <span class="skill-tag">WinCC</span>
-          </div>
-        </div>
-
-        <div class="skill-card" data-category="platforms">
-          <div class="skill-card-top"><span class="skill-category-badge">PLC Platform</span></div>
-          <h3 class="skill-name">Mitsubishi GX Works2 / 3</h3>
-          <p class="skill-context">Development across MELSEC iQ-R, Q-series, and FX controllers using GX Works2, GX Works3, and GX-Developer. CC-Link network integration.</p>
-          <div class="skill-tags">
-            <span class="skill-tag">GX Works3</span>
-            <span class="skill-tag">MELSEC iQ-R</span>
-            <span class="skill-tag">CC-Link</span>
-            <span class="skill-tag">FX-Series</span>
-          </div>
-        </div>
-
-        <div class="skill-card" data-category="platforms">
-          <div class="skill-card-top"><span class="skill-category-badge">PLC Platform</span></div>
-          <h3 class="skill-name">Rockwell Allen-Bradley</h3>
-          <p class="skill-context">ControlLogix and CompactLogix platform development, EtherNet/IP configuration, producer/consumer tag communication, and routine sequencing.</p>
-          <div class="skill-tags">
-            <span class="skill-tag">ControlLogix</span>
-            <span class="skill-tag">CompactLogix</span>
-            <span class="skill-tag">Studio 5000</span>
-          </div>
-        </div>
-
-        <div class="skill-card" data-category="platforms">
-          <div class="skill-card-top"><span class="skill-category-badge">PLC Platform</span></div>
-          <h3 class="skill-name">Delta WPL Soft</h3>
-          <p class="skill-context">Delta DVP-series programming, cost-effective automation cell logic, high-speed counter modules, and Modbus RTU communication.</p>
-          <div class="skill-tags">
-            <span class="skill-tag">WPL Soft</span>
-            <span class="skill-tag">DVP Series</span>
-            <span class="skill-tag">High-Speed Counters</span>
-          </div>
-        </div>
-
-        <!-- Languages -->
-        <div class="skill-card" data-category="languages">
-          <div class="skill-card-top"><span class="skill-category-badge">IEC 61131-3</span></div>
-          <h3 class="skill-name">Structured Text (ST)</h3>
-          <p class="skill-context">Advanced algorithmic control programming, complex state machine implementation, data encapsulation, array manipulations, and math routines.</p>
-          <div class="skill-tags">
-            <span class="skill-tag">IEC 61131-3</span>
-            <span class="skill-tag">OOP / Methods</span>
-            <span class="skill-tag">State Machines</span>
-          </div>
-        </div>
-
-        <div class="skill-card" data-category="languages">
-          <div class="skill-card-top"><span class="skill-category-badge">IEC 61131-3</span></div>
-          <h3 class="skill-name">Ladder Logic &amp; FBD</h3>
-          <p class="skill-context">Ladder Logic Programming (LLP) and Function Block Diagrams (FBD) for clear safety circuits, interlock sequences, and machine maintenance readability.</p>
-          <div class="skill-tags">
-            <span class="skill-tag">Ladder (LLP)</span>
-            <span class="skill-tag">Function Blocks (FBD)</span>
-            <span class="skill-tag">Safety Circuits</span>
-          </div>
-        </div>
-
-        <div class="skill-card" data-category="languages">
-          <div class="skill-card-top"><span class="skill-category-badge">Scripting</span></div>
-          <h3 class="skill-name">JSON Scripting &amp; Data Serialization</h3>
-          <p class="skill-context">Scripting and structuring recipe parameters, machine telemetry payloads, and dynamic sensor configuration matrices for seamless IT/OT convergence.</p>
-          <div class="skill-tags">
-            <span class="skill-tag">JSON</span>
-            <span class="skill-tag">Recipe Management</span>
-            <span class="skill-tag">MES Data Payloads</span>
-          </div>
-        </div>
-
-        <!-- Protocols -->
-        <div class="skill-card" data-category="protocols" style="cursor: pointer;" onclick="openProtocolModal('EtherCAT')">
-          <div class="skill-card-top">
-            <span class="skill-category-badge">Fieldbus Protocol</span>
-            <span style="font-family: var(--font-mono); font-size: 0.7rem; color: var(--color-cyan);">Inspect ▹</span>
-          </div>
-          <h3 class="skill-name">EtherCAT</h3>
-          <p class="skill-context">High-speed deterministic fieldbus with distributed clocks, sub-millisecond cycle times, slave terminal configuration, and real-time servo coordination.</p>
-          <div class="skill-tags">
-            <span class="skill-tag">Distributed Clocks</span>
-            <span class="skill-tag">Sub-ms Cycle</span>
-            <span class="skill-tag">Multi-Axis Sync</span>
-          </div>
-        </div>
-
-        <div class="skill-card" data-category="protocols" style="cursor: pointer;" onclick="openProtocolModal('PROFINET')">
-          <div class="skill-card-top">
-            <span class="skill-category-badge">Fieldbus Protocol</span>
-            <span style="font-family: var(--font-mono); font-size: 0.7rem; color: var(--color-cyan);">Inspect ▹</span>
-          </div>
-          <h3 class="skill-name">PROFINET</h3>
-          <p class="skill-context">Real-time industrial Ethernet (RT / IRT), MRP ring redundancy, GSDML profile management, and direct vision system coordinate integration.</p>
-          <div class="skill-tags">
-            <span class="skill-tag">PROFINET IRT</span>
-            <span class="skill-tag">GSDML</span>
-            <span class="skill-tag">Vision Coordinate Bus</span>
-          </div>
-        </div>
-
-        <div class="skill-card" data-category="protocols" style="cursor: pointer;" onclick="openProtocolModal('Modbus')">
-          <div class="skill-card-top">
-            <span class="skill-category-badge">Industrial Bus</span>
-            <span style="font-family: var(--font-mono); font-size: 0.7rem; color: var(--color-cyan);">Inspect ▹</span>
-          </div>
-          <h3 class="skill-name">Modbus TCP/IP &amp; RTU</h3>
-          <p class="skill-context">Client/server and master/slave architectures over Ethernet and RS-485 serial, reading sensor instrumentation, PID controllers, and energy meters.</p>
-          <div class="skill-tags">
-            <span class="skill-tag">Modbus TCP</span>
-            <span class="skill-tag">RS-485</span>
-            <span class="skill-tag">RTU Registers</span>
-          </div>
-        </div>
-
-        <div class="skill-card" data-category="protocols" style="cursor: pointer;" onclick="openProtocolModal('Beckhoff ADS')">
-          <div class="skill-card-top">
-            <span class="skill-category-badge">Device Protocol</span>
-            <span style="font-family: var(--font-mono); font-size: 0.7rem; color: var(--color-cyan);">Inspect ▹</span>
-          </div>
-          <h3 class="skill-name">Beckhoff ADS &amp; MQTT</h3>
-          <p class="skill-context">Automation Device Specification router for real-time symbolic exchange with Mac UI / PC applications; MQTT for cloud telemetry and IIoT gateways.</p>
-          <div class="skill-tags">
-            <span class="skill-tag">ADS Router</span>
-            <span class="skill-tag">Symbolic Addressing</span>
-            <span class="skill-tag">MQTT IoT</span>
-          </div>
-        </div>
-
-        <div class="skill-card" data-category="protocols">
-          <div class="skill-card-top"><span class="skill-category-badge">Industrial Peripherals</span></div>
-          <h3 class="skill-name">Industrial I/O &amp; Peripherals</h3>
-          <p class="skill-context">Analog (AD/DA 0-10V, 4-20mA), PWM control, PID loops, RTD temperature transmitters, high-speed counters, encoders, CAN bus, and serial RS-232/485.</p>
-          <div class="skill-tags">
-            <span class="skill-tag">PID Loops</span>
-            <span class="skill-tag">RTD Transmitters</span>
-            <span class="skill-tag">CAN / PWM</span>
-          </div>
-        </div>
-
-        <!-- Robotics -->
-        <div class="skill-card" data-category="robotics">
-          <div class="skill-card-top"><span class="skill-category-badge">Robotics</span></div>
-          <h3 class="skill-name">Industrial Robotics Integration</h3>
-          <p class="skill-context">Interfacing 6-axis and SCARA robots with third-party PLCs, implementing safety interlocks, tool center point (TCP) calibration, and kinematic trajectory handoffs.</p>
-          <div class="skill-tags">
-            <span class="skill-tag">6-Axis Robots</span>
-            <span class="skill-tag">SCARA</span>
-            <span class="skill-tag">TCP Calibration</span>
-          </div>
-        </div>
-
-        <div class="skill-card" data-category="robotics">
-          <div class="skill-card-top"><span class="skill-category-badge">Motion</span></div>
-          <h3 class="skill-name">Servo Motors &amp; Motion Control</h3>
-          <p class="skill-context">Multi-axis servo tuning, electronic gearing, camming, homing routines, torque limiting, and high-speed precision positioning.</p>
-          <div class="skill-tags">
-            <span class="skill-tag">Servo Tuning</span>
-            <span class="skill-tag">Electronic Gearing</span>
-            <span class="skill-tag">Positioning</span>
-          </div>
-        </div>
-
-        <div class="skill-card" data-category="robotics">
-          <div class="skill-card-top"><span class="skill-category-badge">Vision &amp; Inspection</span></div>
-          <h3 class="skill-name">Vision Applications &amp; AOI</h3>
-          <p class="skill-context">Automated Optical Inspection (AOI) integration, pattern matching, edge detection, coordinate math offset transmission to PLCs for real-time robotic correction.</p>
-          <div class="skill-tags">
-            <span class="skill-tag">AOI Systems</span>
-            <span class="skill-tag">Coordinate Offsets</span>
-            <span class="skill-tag">Defect Verification</span>
-          </div>
-        </div>
-
-        <div class="skill-card" data-category="robotics">
-          <div class="skill-card-top"><span class="skill-category-badge">Supervision</span></div>
-          <h3 class="skill-name">HMI &amp; SCADA Development</h3>
-          <p class="skill-context">Designing ergonomic, operator-friendly touchscreens, alarm management matrices, real-time diagnostic displays, trending charts, and recipe management.</p>
-          <div class="skill-tags">
-            <span class="skill-tag">HMI Design</span>
-            <span class="skill-tag">SCADA Alarm Trees</span>
-            <span class="skill-tag">Historical Trending</span>
-          </div>
-        </div>
-
-        <!-- Methodologies -->
-        <div class="skill-card" data-category="methodologies">
-          <div class="skill-card-top"><span class="skill-category-badge">Manufacturing Quality</span></div>
-          <h3 class="skill-name">FMEA, KAIZEN &amp; 5-Why Analysis</h3>
-          <p class="skill-context">Failure Mode and Effects Analysis (FMEA) to anticipate line risks; KAIZEN continuous improvement cycles; systematic 5-Why root-cause troubleshooting.</p>
-          <div class="skill-tags">
-            <span class="skill-tag">FMEA</span>
-            <span class="skill-tag">5-Why Analysis</span>
-            <span class="skill-tag">KAIZEN</span>
-          </div>
-        </div>
-
-        <div class="skill-card" data-category="methodologies">
-          <div class="skill-card-top"><span class="skill-category-badge">Engineering SDLC</span></div>
-          <h3 class="skill-name">DFM &amp; Control Software SDLC</h3>
-          <p class="skill-context">Design for Manufacturability (DFM) principles, modular code repositories on GitHub, version control branching, and standardized acceptance test protocols.</p>
-          <div class="skill-tags">
-            <span class="skill-tag">DFM</span>
-            <span class="skill-tag">Git / GitHub</span>
-            <span class="skill-tag">Acceptance Testing</span>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ====================================================================
-         7. PROFESSIONAL EXPERIENCE TIMELINE
-         ==================================================================== -->
-    <section class="section shell" id="experience" aria-labelledby="experience-heading">
-      <div class="section-header">
-        <span class="eyebrow">Career Milestones</span>
-        <h2 class="section-title" id="experience-heading">Professional Career Timeline</h2>
-        <p class="section-subtitle">Progressive journey from hands-on automation commissioning to Technical Lead managing enterprise control software.</p>
-      </div>
-
-      <div class="timeline">
-        <!-- 1. VVDN Technologies -->
-        <div class="timeline-item">
-          <div class="timeline-marker"><div class="timeline-marker-inner"></div></div>
-          <div class="timeline-card is-current">
-            <div class="timeline-card-header">
-              <div>
-                <h3 class="timeline-role">
-                  Tech Lead – Control Software
-                  <span class="badge-lead">LEADING 8 ENGINEERS</span>
-                </h3>
-                <div class="timeline-company">
-                  <span>VVDN Technologies</span>
-                  <span style="color: var(--color-text-tertiary);">· Manesar, Haryana</span>
-                </div>
-              </div>
-              <div class="timeline-period">September 2023 – Present</div>
-            </div>
-
-            <p style="color: var(--color-text-primary); font-weight: 600; margin-bottom: 12px;">
-              Domain: Industrial Automation – Software development for PLC, SCADA, HMI, and industrial communication systems including real-time data processing and hardware integration.
-            </p>
-
-            <ul class="timeline-bullets">
-              <li>
-                <strong>Department Leadership &amp; Team Management:</strong> Leading a specialized team of 8 control software engineers, overseeing project execution, sprint delegation, code reviews, and on-time commissioning of high-speed automation solutions.
-              </li>
-              <li>
-                <strong>Foresight Studies &amp; High Availability:</strong> Spearheaded cross-functional foresight studies to ensure maximum availability, fault tolerance, and 24/7 reliability of automation lines for end users.
-              </li>
-              <li>
-                <strong>Multi-Platform PLC Development:</strong> Architected and delivered deterministic control software for Delta, Beckhoff, Mitsubishi, and Siemens platforms, enabling sub-millisecond precision.
-              </li>
-              <li>
-                <strong>Operator-Centric HMI UI:</strong> Designed intuitive, ergonomic HMI screens facilitating zero-confusion operator interaction, automated pre-flight checks, and rapid alarm diagnosis.
-              </li>
-              <li>
-                <strong>Robotics &amp; Vision Interoperability:</strong> Engineered seamless real-time handshakes between robotic controllers and master PLCs, eliminating communication bottlenecks.
-              </li>
-            </ul>
-
-            <div class="client-pills">
-              <span class="client-pill-title">Key Engagements:</span>
-              <span class="client-pill">World's Largest Mobile Mfg Client</span>
-              <span class="client-pill">HP</span>
-              <span class="client-pill">IntelliSmart</span>
-              <span class="client-pill">Beckhoff TwinCAT 3</span>
-              <span class="client-pill">Siemens TIA Portal</span>
-            </div>
-          </div>
-        </div>
-
-        <!-- 2. BorgWarner -->
-        <div class="timeline-item">
-          <div class="timeline-marker"><div class="timeline-marker-inner"></div></div>
-          <div class="timeline-card">
-            <div class="timeline-card-header">
-              <div>
-                <h3 class="timeline-role">Junior Engineer – EGR &amp; Turbochargers</h3>
-                <div class="timeline-company">
-                  <span>BorgWarner Emission Systems India Pvt. Ltd.</span>
-                  <span style="color: var(--color-text-tertiary);">· Manesar, Haryana</span>
-                </div>
-              </div>
-              <div class="timeline-period">April 2023 – September 2023</div>
-            </div>
-
-            <p style="color: var(--color-text-secondary); line-height: 1.6;">
-              Responsible for the comprehensive preventive maintenance, emergency troubleshooting, and performance tuning of PLCs, HMIs, robotic welding/assembly cells, and plant utility systems to guarantee uninterrupted manufacturing of automotive EGR and turbocharger systems.
-            </p>
-          </div>
-        </div>
-
-        <!-- 3. Mindarika -->
-        <div class="timeline-item">
-          <div class="timeline-marker"><div class="timeline-marker-inner"></div></div>
-          <div class="timeline-card">
-            <div class="timeline-card-header">
-              <div>
-                <h3 class="timeline-role">Senior Executive</h3>
-                <div class="timeline-company">
-                  <span>Mindarika Pvt. Ltd.</span>
-                  <span style="color: var(--color-text-tertiary);">· Manesar, Haryana</span>
-                </div>
-              </div>
-              <div class="timeline-period">February 2023 – April 2023</div>
-            </div>
-
-            <p style="color: var(--color-text-secondary); line-height: 1.6;">
-              Spearheaded preventive and corrective maintenance across high-volume automotive switch and sensor manufacturing lines, performing logic debugging on PLC-driven machinery to minimize unplanned line stoppages.
-            </p>
-          </div>
-        </div>
-
-        <!-- 4. Authentic Engineers -->
-        <div class="timeline-item">
-          <div class="timeline-marker"><div class="timeline-marker-inner"></div></div>
-          <div class="timeline-card">
-            <div class="timeline-card-header">
-              <div>
-                <h3 class="timeline-role">Application Engineer – Automation Solutions</h3>
-                <div class="timeline-company">
-                  <span>Authentic Engineers</span>
-                  <span style="color: var(--color-text-tertiary);">· Manesar, Haryana</span>
-                </div>
-              </div>
-              <div class="timeline-period">January 2019 – February 2023 (~4 Years)</div>
-            </div>
-
-            <p style="color: var(--color-text-secondary); line-height: 1.6; margin-bottom: 14px;">
-              Delivered complete end-to-end automation engineering—including electrical design review, PLC &amp; HMI software development, robotics programming, commissioning, and onsite support for India’s premier automotive OEMs and Tier-1 suppliers.
-            </p>
-
-            <div class="client-pills">
-              <span class="client-pill-title">Key Automotive Clients Served:</span>
-              <span class="client-pill">Maruti Suzuki</span>
-              <span class="client-pill">Honda</span>
-              <span class="client-pill">Padmini</span>
-              <span class="client-pill">Hella</span>
-              <span class="client-pill">UNO Minda</span>
-              <span class="client-pill">Spark Minda</span>
-              <span class="client-pill">Lumax</span>
-              <span class="client-pill">IJL</span>
-              <span class="client-pill">Joyson Anand Abhishek Safety Systems</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ====================================================================
-         8. FEATURED PROJECTS SECTION (INTERACTIVE ARCHITECTURE BLUEPRINTS)
-         ==================================================================== -->
-    <section class="section shell" id="projects" aria-labelledby="projects-heading">
-      <div class="section-header">
-        <span class="eyebrow">Engineering Blueprints</span>
-        <h2 class="section-title" id="projects-heading">Featured Automation Projects</h2>
-        <p class="section-subtitle">Real-world industrial systems engineered for high throughput, sub-millisecond determinism, and zero-defect quality control.</p>
-      </div>
-
-      <div class="projects-container">
-        <!-- PROJECT 1: Automated DUT Handling and Validation Process -->
-        <article class="project-card" id="project-dut">
-          <div class="project-grid">
-            <div class="project-info">
-              <div class="project-badge-row">
-                <span class="project-num">PROJECT 01</span>
-                <span class="project-client-badge">World's Largest Mobile Mfg Co, India</span>
-              </div>
-
-              <h3 class="project-name">Automated DUT Handling &amp; Validation Process</h3>
-
-              <p class="project-desc">
-                Developed and implemented an advanced automated validation system for handling, verifying, and testing high-value Devices Under Test (DUTs) with extreme precision. Seamlessly bridged a host Mac UI test executive with an industrial Beckhoff PLC controller to orchestrate high-speed robotic testing.
-              </p>
-
-              <ul class="project-highlights-list">
-                <li><strong>AOI Vision Inspection:</strong> Enhanced part verification accuracy and defect detection using a custom vision-based Automated Optical Inspection (AOI) station.</li>
-                <li><strong>Real-Time Mac UI Integration:</strong> Engineered Beckhoff ADS communication layer to stream test commands and telemetry between Mac OS and TwinCAT 3 with zero latency.</li>
-                <li><strong>Safety Interlocks &amp; Pre-checks:</strong> Designed SIL 3 fail-safe hardware routines and pre-test health verifications to ensure system integrity before test execution.</li>
-              </ul>
-
-              <div class="project-tech-tags">
-                <span class="project-tech-tag">Beckhoff TwinCAT 3</span>
-                <span class="project-tech-tag">Structured Text (ST)</span>
-                <span class="project-tech-tag">Beckhoff ADS</span>
-                <span class="project-tech-tag">AOI Machine Vision</span>
-                <span class="project-tech-tag">6-Axis Robot</span>
-                <span class="project-tech-tag">Safety Interlocks</span>
-              </div>
-            </div>
-
-            <!-- Interactive Architecture Diagram (SVG) -->
-            <div class="project-diagram-panel">
-              <div class="diagram-header">
-                <span class="diagram-title">
-                  <span class="pulse-dot"></span>
-                  SYSTEM ARCHITECTURE // SIGNAL FLOW
-                </span>
-                <button class="copy-btn" onclick="expandProjectDiagram('dut-handling')" type="button">Expand Blueprint</button>
-              </div>
-
-              <svg class="diagram-interactive-svg" viewBox="0 0 540 280">
-                <defs>
-                  <linearGradient id="cyanNode" x1="0%" y1="0%" x2="100%" y2="100%">
-                    <stop offset="0%" stop-color="#0e2a3b"/>
-                    <stop offset="100%" stop-color="#091824"/>
-                  </linearGradient>
-                  <filter id="nodeGlow">
-                    <feDropShadow dx="0" dy="2" stdDeviation="4" flood-color="#00f0ff" flood-opacity="0.3"/>
-                  </filter>
-                </defs>
-
-                <path d="M 120 70 L 270 70 L 270 140" stroke="#00f0ff" stroke-width="2" stroke-dasharray="4 4" fill="none" class="arch-signal flow-ads">
-                  <animate attributeName="stroke-dashoffset" from="32" to="0" dur="1.5s" repeatCount="indefinite"/>
-                </path>
-                <path d="M 270 170 L 270 210 L 420 210" stroke="#10b981" stroke-width="2" fill="none" class="arch-signal flow-plc"/>
-                <path d="M 270 140 L 420 70" stroke="#f59e0b" stroke-width="2" stroke-dasharray="4 4" fill="none" class="arch-signal flow-vision">
-                  <animate attributeName="stroke-dashoffset" from="32" to="0" dur="1.2s" repeatCount="indefinite"/>
-                </path>
-
-                <!-- Node 1: Mac UI Executive -->
-                <g class="arch-node" data-flow="ads" transform="translate(20, 40)" filter="url(#nodeGlow)">
-                  <rect width="130" height="60" rx="8" fill="url(#cyanNode)" stroke="#00f0ff" stroke-width="1.5"/>
-                  <text x="65" y="26" fill="#00f0ff" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="700" text-anchor="middle">MAC OS HOST UI</text>
-                  <text x="65" y="44" fill="#94a3b8" font-family="'Plus Jakarta Sans', sans-serif" font-size="9" text-anchor="middle">Test Executive &amp; MES</text>
-                </g>
-
-                <rect x="170" y="58" width="50" height="24" rx="4" fill="#07090e" stroke="#00f0ff" stroke-width="1"/>
-                <text x="195" y="74" fill="#00f0ff" font-family="'JetBrains Mono', monospace" font-size="9" font-weight="700" text-anchor="middle">ADS/TCP</text>
-
-                <!-- Node 2: TwinCAT 3 Control Kernel -->
-                <g class="arch-node" data-flow="plc" transform="translate(205, 120)" filter="url(#nodeGlow)">
-                  <rect width="130" height="65" rx="8" fill="url(#cyanNode)" stroke="#10b981" stroke-width="2"/>
-                  <text x="65" y="28" fill="#10b981" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="800" text-anchor="middle">TWINCAT 3 PLC</text>
-                  <text x="65" y="46" fill="#f8fafc" font-family="'JetBrains Mono', monospace" font-size="9" text-anchor="middle">1.0ms Cycle Kernel</text>
-                </g>
-
-                <!-- Node 3: AOI Machine Vision -->
-                <g class="arch-node" data-flow="vision" transform="translate(370, 40)">
-                  <rect width="140" height="60" rx="8" fill="#111827" stroke="#f59e0b" stroke-width="1.5"/>
-                  <text x="70" y="26" fill="#f59e0b" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="700" text-anchor="middle">AOI VISION SYSTEM</text>
-                  <text x="70" y="44" fill="#94a3b8" font-family="'Plus Jakarta Sans', sans-serif" font-size="9" text-anchor="middle">Defect Inspection</text>
-                </g>
-
-                <!-- Node 4: 6-Axis Robot & Interlocks -->
-                <g class="arch-node" data-flow="plc" transform="translate(370, 180)">
-                  <rect width="140" height="60" rx="8" fill="#111827" stroke="#10b981" stroke-width="1.5"/>
-                  <text x="70" y="26" fill="#10b981" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="700" text-anchor="middle">6-AXIS ROBOT CELL</text>
-                  <text x="70" y="44" fill="#94a3b8" font-family="'Plus Jakarta Sans', sans-serif" font-size="9" text-anchor="middle">SIL 3 Safety Interlocks</text>
-                </g>
-              </svg>
-            </div>
-          </div>
+        <article class="about-copy reveal">
+          <p class="eyebrow">About me</p>
+          <h2 id="about-title">Engineering precision<br>by&nbsp;design.</h2>
+          <p class="about-lede">I specialize in bringing physical machinery to life with deterministic, high-reliability control software. Over the past 8 years, I have architected and deployed automated manufacturing systems that power automotive, consumer electronics, and smart grid infrastructure.</p>
+          <p>As a Technical Lead at VVDN Technologies, I guide an engineering team of 8 through complex machine automation lifecycles?from initial DFM and safety architecture to real-time EtherCAT fieldbus synchronization and factory acceptance testing. Beyond code, I believe in structured root-cause analysis (5-Why, KAIZEN) and mentoring engineers to build resilient, fault-tolerant industrial systems.</p>
+          <a class="text-link" href="mailto:aggarwal.arun26@gmail.com">Let's discuss an automation challenge <span class="arrow" aria-hidden="true">?</span></a>
         </article>
 
-        <!-- PROJECT 2: Automated PCB Connector Placement & Verification System -->
-        <article class="project-card" id="project-pcb">
-          <div class="project-grid">
-            <div class="project-info">
-              <div class="project-badge-row">
-                <span class="project-num">PROJECT 02</span>
-                <span class="project-client-badge">HP Inc.</span>
-              </div>
-
-              <h3 class="project-name">Automated PCB Connector Placement &amp; Verification</h3>
-
-              <p class="project-desc">
-                Designed and deployed a high-speed robotic system for precision connector pick-and-place with vision-guided trajectory correction. Overcame tray misalignment and component dimensional tolerances through real-time mathematical coordinate transformations.
-              </p>
-
-              <ul class="project-highlights-list">
-                <li><strong>30-Connector Tray Inspection:</strong> High-resolution industrial camera inspects trays containing 30 connectors simultaneously, calculating precise (X, Y, Z, and Theta) offset vectors.</li>
-                <li><strong>PROFINET Fieldbus Streaming:</strong> Seamlessly transferred coordinate packet buffers from the vision controller directly to the master PLC via PROFINET.</li>
-                <li><strong>Dynamic Kinematic Transformation:</strong> PLC computes corrected position matrices and dynamically transmits target offsets to the placement robot for sub-millimeter insertion.</li>
-              </ul>
-
-              <div class="project-tech-tags">
-                <span class="project-tech-tag">Siemens TIA Portal</span>
-                <span class="project-tech-tag">PROFINET IRT</span>
-                <span class="project-tech-tag">Cognex / Machine Vision</span>
-                <span class="project-tech-tag">X/Y/Z/θ Kinematics</span>
-                <span class="project-tech-tag">SCARA / 6-Axis Robot</span>
-                <span class="project-tech-tag">HP Quality Standards</span>
-              </div>
-            </div>
-
-            <!-- Interactive Architecture Diagram (SVG) -->
-            <div class="project-diagram-panel">
-              <div class="diagram-header">
-                <span class="diagram-title">
-                  <span class="pulse-dot"></span>
-                  KINEMATIC OFFSETS &amp; PROFINET LOOP
-                </span>
-                <button class="copy-btn" onclick="expandProjectDiagram('pcb-connector')" type="button">Expand Blueprint</button>
-              </div>
-
-              <svg class="diagram-interactive-svg" viewBox="0 0 540 280">
-                <path d="M 130 90 L 260 90" stroke="#f59e0b" stroke-width="2" stroke-dasharray="4 4" fill="none">
-                  <animate attributeName="stroke-dashoffset" from="32" to="0" dur="1s" repeatCount="indefinite"/>
-                </path>
-                <path d="M 260 140 L 260 190 L 380 190" stroke="#00f0ff" stroke-width="2" fill="none"/>
-                <path d="M 380 90 L 440 90" stroke="#10b981" stroke-width="2" stroke-dasharray="4 4" fill="none">
-                  <animate attributeName="stroke-dashoffset" from="32" to="0" dur="1s" repeatCount="indefinite"/>
-                </path>
-
-                <!-- Tray (30 Connectors) -->
-                <g transform="translate(15, 50)">
-                  <rect width="115" height="80" rx="6" fill="#111827" stroke="#334155" stroke-width="1.5"/>
-                  <text x="57" y="24" fill="#94a3b8" font-family="'JetBrains Mono', monospace" font-size="10" font-weight="700" text-anchor="middle">30-PIN TRAY</text>
-                  <circle cx="25" cy="42" r="3" fill="#00f0ff"/>
-                  <circle cx="45" cy="42" r="3" fill="#00f0ff"/>
-                  <circle cx="65" cy="42" r="3" fill="#00f0ff"/>
-                  <circle cx="85" cy="42" r="3" fill="#00f0ff"/>
-                  <circle cx="25" cy="58" r="3" fill="#00f0ff"/>
-                  <circle cx="45" cy="58" r="3" fill="#00f0ff"/>
-                  <circle cx="65" cy="58" r="3" fill="#00f0ff"/>
-                  <circle cx="85" cy="58" r="3" fill="#00f0ff"/>
-                </g>
-
-                <!-- Vision Camera -->
-                <g transform="translate(180, 50)">
-                  <rect width="140" height="75" rx="8" fill="#161f30" stroke="#f59e0b" stroke-width="1.5"/>
-                  <text x="70" y="26" fill="#f59e0b" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="700" text-anchor="middle">MACHINE VISION</text>
-                  <text x="70" y="44" fill="#f8fafc" font-family="'JetBrains Mono', monospace" font-size="9" text-anchor="middle">(ΔX, ΔY, ΔZ, Δθ)</text>
-                  <text x="70" y="60" fill="#94a3b8" font-family="'Plus Jakarta Sans', sans-serif" font-size="8" text-anchor="middle">Coordinate Calc</text>
-                </g>
-
-                <!-- PROFINET Label -->
-                <rect x="220" y="150" width="80" height="22" rx="4" fill="#07090e" stroke="#00f0ff" stroke-width="1"/>
-                <text x="260" y="165" fill="#00f0ff" font-family="'JetBrains Mono', monospace" font-size="9" font-weight="700" text-anchor="middle">PROFINET I/O</text>
-
-                <!-- Siemens PLC -->
-                <g transform="translate(360, 50)">
-                  <rect width="140" height="75" rx="8" fill="#161f30" stroke="#00f0ff" stroke-width="2"/>
-                  <text x="70" y="26" fill="#00f0ff" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="700" text-anchor="middle">SIEMENS S7-1500</text>
-                  <text x="70" y="44" fill="#f8fafc" font-family="'JetBrains Mono', monospace" font-size="9" text-anchor="middle">Kinematic Matrix</text>
-                  <text x="70" y="60" fill="#94a3b8" font-family="'Plus Jakarta Sans', sans-serif" font-size="8" text-anchor="middle">Real-Time Offset Sync</text>
-                </g>
-
-                <!-- Robot Placement -->
-                <g transform="translate(360, 165)">
-                  <rect width="140" height="65" rx="8" fill="#161f30" stroke="#10b981" stroke-width="2"/>
-                  <text x="70" y="26" fill="#10b981" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="800" text-anchor="middle">PLACEMENT ROBOT</text>
-                  <text x="70" y="46" fill="#f8fafc" font-family="'Plus Jakarta Sans', sans-serif" font-size="9" text-anchor="middle">Zero-Defect Insertion</text>
-                </g>
-              </svg>
-            </div>
+        <div class="about-details">
+          <div class="detail-card glass reveal">
+            <span class="detail-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 2v4m0 12v4M4.93 4.93l2.83 2.83m8.48 8.48 2.83 2.83M2 12h4m12 0h4M4.93 19.07l2.83-2.83m8.48-8.48 2.83-2.83"/><circle cx="12" cy="12" r="4"/></svg></span>
+            <p>Robotics &amp; Kinematics</p>
           </div>
-        </article>
-
-        <!-- PROJECT 3: Automated Rotary Smart Meter Assembly SPM -->
-        <article class="project-card" id="project-rotary">
-          <div class="project-grid">
-            <div class="project-info">
-              <div class="project-badge-row">
-                <span class="project-num">PROJECT 03</span>
-                <span class="project-client-badge">IntelliSmart</span>
-              </div>
-
-              <h3 class="project-name">Automated Rotary Smart Meter Assembly SPM</h3>
-
-              <p class="project-desc">
-                Engineered the control architecture for the IntelliSmart Rotary Base Machine—a massive high-speed Special Purpose Machine (SPM) built to assemble next-generation smart electricity meters with uninterrupted parallel throughput.
-              </p>
-
-              <ul class="project-highlights-list">
-                <li><strong>Dual-Core Rotary Mechanism:</strong> Architected two independent rotary indexing cores, each equipped with 26 dedicated stations (52 total stations performing complex parallel tasks).</li>
-                <li><strong>Synchronized Parallel Execution:</strong> Synchronized dual rotary tables to eliminate cycle time bottlenecks—driving simultaneous torque verification, laser marking, and optical calibration.</li>
-                <li><strong>Dramatic Cycle Time Slash:</strong> Achieved a greater than 45% reduction in production cycle time compared to traditional sequential assembly lines.</li>
-              </ul>
-
-              <div class="project-tech-tags">
-                <span class="project-tech-tag">Special Purpose Machine (SPM)</span>
-                <span class="project-tech-tag">Dual-Core Indexer (26+26 Stations)</span>
-                <span class="project-tech-tag">Motion Synchronization</span>
-                <span class="project-tech-tag">Torque Verification</span>
-                <span class="project-tech-tag">Laser Marking</span>
-                <span class="project-tech-tag">Cycle Optimization</span>
-              </div>
-            </div>
-
-            <!-- Interactive Architecture Diagram (SVG) -->
-            <div class="project-diagram-panel">
-              <div class="diagram-header">
-                <span class="diagram-title">
-                  <span class="pulse-dot"></span>
-                  DUAL-CORE ROTARY MECHANISM (52 STATIONS)
-                </span>
-                <button class="copy-btn" onclick="expandProjectDiagram('rotary-spm')" type="button">Expand Blueprint</button>
-              </div>
-
-              <svg class="diagram-interactive-svg" viewBox="0 0 540 280">
-                <!-- Core A Rotary Indexer -->
-                <g transform="translate(140, 140)">
-                  <circle cx="0" cy="0" r="85" fill="#0b111e" stroke="#00f0ff" stroke-width="2" stroke-dasharray="6 4">
-                    <animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="24s" repeatCount="indefinite"/>
-                  </circle>
-                  <circle cx="0" cy="0" r="50" fill="#121a2d" stroke="rgba(0, 240, 255, 0.4)" stroke-width="1.5"/>
-                  <text x="0" y="-8" fill="#00f0ff" font-family="'JetBrains Mono', monospace" font-size="12" font-weight="800" text-anchor="middle">CORE A</text>
-                  <text x="0" y="12" fill="#94a3b8" font-family="'JetBrains Mono', monospace" font-size="9" text-anchor="middle">26 STATIONS</text>
-                  <circle cx="0" cy="-68" r="5" fill="#00f0ff"/>
-                  <circle cx="68" cy="0" r="5" fill="#00f0ff"/>
-                  <circle cx="0" cy="68" r="5" fill="#00f0ff"/>
-                  <circle cx="-68" cy="0" r="5" fill="#00f0ff"/>
-                </g>
-
-                <!-- Core B Rotary Indexer -->
-                <g transform="translate(380, 140)">
-                  <circle cx="0" cy="0" r="85" fill="#10b981" stroke="#10b981" stroke-width="2" stroke-dasharray="6 4">
-                    <animateTransform attributeName="transform" type="rotate" from="360" to="0" dur="24s" repeatCount="indefinite"/>
-                  </circle>
-                  <circle cx="0" cy="0" r="50" fill="#121a2d" stroke="rgba(16, 185, 129, 0.4)" stroke-width="1.5"/>
-                  <text x="0" y="-8" fill="#10b981" font-family="'JetBrains Mono', monospace" font-size="12" font-weight="800" text-anchor="middle">CORE B</text>
-                  <text x="0" y="12" fill="#94a3b8" font-family="'JetBrains Mono', monospace" font-size="9" text-anchor="middle">26 STATIONS</text>
-                  <circle cx="0" cy="-68" r="5" fill="#10b981"/>
-                  <circle cx="68" cy="0" r="5" fill="#10b981"/>
-                  <circle cx="0" cy="68" r="5" fill="#10b981"/>
-                  <circle cx="-68" cy="0" r="5" fill="#10b981"/>
-                </g>
-
-                <!-- Transfer Bridge -->
-                <path d="M 225 140 L 295 140" stroke="#f59e0b" stroke-width="3" stroke-dasharray="5 3">
-                  <animate attributeName="stroke-dashoffset" from="16" to="0" dur="0.8s" repeatCount="indefinite"/>
-                </path>
-                <rect x="235" y="115" width="50" height="20" rx="4" fill="#07090e" stroke="#f59e0b" stroke-width="1"/>
-                <text x="260" y="129" fill="#f59e0b" font-family="'JetBrains Mono', monospace" font-size="8" font-weight="700" text-anchor="middle">SYNC BRIDGE</text>
-              </svg>
-            </div>
+          <div class="detail-card glass reveal">
+            <span class="detail-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><rect width="6" height="6" x="2" y="9" rx="1"/><rect width="6" height="6" x="16" y="3" rx="1"/><rect width="6" height="6" x="16" y="15" rx="1"/><path d="M8 12h4m0 0V6h4m-4 6v6h4"/></svg></span>
+            <p>EtherCAT &amp; PROFINET</p>
           </div>
-        </article>
+          <div class="detail-card glass reveal">
+            <span class="detail-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="m21.5 2-5 5-4-4L2 13.5V22h8.5l10.5-10.5-4-4 5-5Z"/></svg></span>
+            <p>KAIZEN &amp; 5-Why</p>
+          </div>
+          <div class="detail-card glass reveal">
+            <span class="detail-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 4h16v16H4z"/><path d="M4 12h16M12 4v16"/></svg></span>
+            <p>Automation Architecture</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="focus-grid" id="focusGrid"></div>
+
+      <div class="toolbox reveal" id="toolbox">
+        <p class="eyebrow">Toolbox</p>
+        <h3>Machines operate reliably with the right architecture.</h3>
+        <div class="skill-cloud" id="skillCloud"></div>
+        <ul class="specialty-row" id="specialtyRow"></ul>
       </div>
     </section>
 
-    <!-- ====================================================================
-         9. EDUCATION SECTION
-         ==================================================================== -->
-    <section class="section shell" id="education" aria-labelledby="education-heading">
-      <div class="section-header">
-        <span class="eyebrow">Academic Qualifications</span>
-        <h2 class="section-title" id="education-heading">Educational Foundations</h2>
-        <p class="section-subtitle">Blending technical engineering depth with executive information technology management.</p>
-      </div>
-
-      <div class="education-grid">
-        <div class="education-card">
-          <span class="education-badge">CURRENTLY PURSUING</span>
-          <h3 class="education-degree">Master of Business Administration (MBA)</h3>
-          <div class="education-inst">Information Technology · University of Delhi, School of Open Learning</div>
-          <div class="education-period">Expected 2027 · Delhi, India</div>
-          <p class="education-notes">
-            Specializing in IT strategy, digital transformation, enterprise systems architecture, and engineering leadership to scale high-performance control software organizations.
-          </p>
+    <section class="section shell" id="recognition" aria-labelledby="recognition-title">
+      <div class="section-heading reveal-group">
+        <div class="reveal">
+          <p class="eyebrow">Recognition</p>
+          <h2 id="recognition-title">Proven impact on<br>the factory floor.</h2>
         </div>
+        <p class="section-sub reveal">Milestones along the way ? from plant-wide zero-defect stabilization to high-speed SPM commissioning.</p>
+      </div>
+      <div class="awards-grid" id="awardsGrid"></div>
+    </section>
 
-        <div class="education-card">
-          <span class="education-badge">GRADUATED</span>
-          <h3 class="education-degree">Bachelor of Technology (B.Tech)</h3>
-          <div class="education-inst">Electronics &amp; Communications Engineering · Panipat Institute of Engineering and Technology</div>
-          <div class="education-period">2013 – 2017 · Panipat, Haryana</div>
-          <p class="education-notes">
-            Comprehensive foundation in microprocessors, digital signal processing, communication protocols, embedded systems, control theory, and circuit design.
-          </p>
+    <section class="section shell" id="foundations" aria-labelledby="foundations-title">
+      <div class="section-heading reveal-group">
+        <div class="reveal">
+          <p class="eyebrow">Foundations</p>
+          <h2 id="foundations-title">Education &amp;<br>credentials.</h2>
+        </div>
+        <p class="section-sub reveal">Master's in IT, B.Tech in Electronics &amp; Communication, and specialized industrial automation certifications.</p>
+      </div>
+      <div class="foundations-grid">
+        <div class="foundations-col">
+          <h3 class="foundations-label">Education</h3>
+          <div class="foundations-list" id="educationList"></div>
+        </div>
+        <div class="foundations-col">
+          <h3 class="foundations-label">Certifications &amp; training</h3>
+          <div class="foundations-list" id="certificationList"></div>
         </div>
       </div>
     </section>
 
-    <!-- ====================================================================
-         10. DEDICATED RESUME / CV SECTION
-         ==================================================================== -->
-    <section class="section shell" id="resume" aria-labelledby="resume-heading">
-      <div class="resume-section-wrapper">
-        <div class="resume-layout">
-          <div class="resume-copy">
-            <span class="eyebrow">Curriculum Vitae</span>
-            <h2 class="section-title" id="resume-heading" style="text-align: left; margin-bottom: 12px;">Verified Resume &amp; Credentials</h2>
-            <p class="section-subtitle" style="text-align: left;">
-              My complete professional journey, verified roles, projects, and technical proficiencies available for direct inspection and PDF download.
-            </p>
-
-            <ul class="resume-highlights">
-              <li>
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
-                <span>8 Years Progressive Experience in Control Software</span>
-              </li>
-              <li>
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
-                <span>Technical Lead leading a team of 8 engineers</span>
-              </li>
-              <li>
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
-                <span>Automotive Tier-1 &amp; Global Tech Deployments</span>
-              </li>
-              <li>
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
-                <span>Full PDF stored locally in GitHub repository</span>
-              </li>
-            </ul>
-
-            <div style="display: flex; flex-wrap: wrap; gap: 14px; margin-top: 10px;">
-              <a class="btn btn-primary" href="assets/documents/Arun_Kumar_Aggarwal_Resume.pdf" download="Arun_Kumar_Aggarwal_Resume.pdf">
-                Download Official PDF
-                <svg viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
-              </a>
-              <button class="btn btn-secondary" id="openResumeModalBtn" type="button">
-                Open Fullscreen Preview
-                <svg viewBox="0 0 24 24"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg>
-              </button>
-            </div>
-          </div>
-
-          <!-- In-Browser PDF Interactive Viewer -->
-          <div class="resume-preview-frame">
-            <div class="resume-frame-bar">
-              <span>Arun_Kumar_Aggarwal_Resume.pdf</span>
-              <a href="assets/documents/Arun_Kumar_Aggarwal_Resume.pdf" target="_blank" rel="noopener noreferrer" style="color: var(--color-cyan); text-decoration: none;">New Window ↗</a>
-            </div>
-            <iframe class="resume-iframe" src="assets/documents/Arun_Kumar_Aggarwal_Resume.pdf" title="Arun Kumar Aggarwal Resume Preview"></iframe>
-          </div>
+    <section class="section shell" id="maker" aria-labelledby="maker-title">
+      <div class="section-heading reveal-group">
+        <div class="reveal">
+          <p class="eyebrow">Engineering roots</p>
+          <h2 id="maker-title">Where the precision<br>started.</h2>
         </div>
+        <p class="section-sub reveal">Early embedded systems and automation experiments ? building, wiring, and testing from the very beginning.</p>
       </div>
+      <div class="maker-grid" id="makerGrid"></div>
     </section>
 
-    <!-- ====================================================================
-         11. CONTACT SECTION
-         ==================================================================== -->
-    <section class="section shell" id="contact" aria-labelledby="contact-heading">
-      <div class="section-header">
-        <span class="eyebrow">Direct Communication</span>
-        <h2 class="section-title" id="contact-heading">Connect With Me</h2>
-        <p class="section-subtitle">Open to technical leadership discussions, industrial automation consultations, and engineering collaborations.</p>
-      </div>
-
-      <div class="contact-grid">
-        <div class="contact-cards-stack">
-          <!-- Email Card -->
-          <div class="contact-card">
-            <div class="contact-card-info">
-              <div class="contact-card-icon">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-              </div>
-              <div>
-                <div class="contact-card-label">Official Email</div>
-                <a class="contact-card-val" href="mailto:aggarwal.arun26@gmail.com">aggarwal.arun26@gmail.com</a>
-              </div>
-            </div>
-            <button class="copy-btn" onclick="copyToClipboard('aggarwal.arun26@gmail.com', 'Email')" type="button">Copy</button>
-          </div>
-
-          <!-- Phone Card 1 -->
-          <div class="contact-card">
-            <div class="contact-card-info">
-              <div class="contact-card-icon">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-              </div>
-              <div>
-                <div class="contact-card-label">Primary Mobile</div>
-                <a class="contact-card-val" href="tel:+917015261054">+91-7015261054</a>
-              </div>
-            </div>
-            <button class="copy-btn" onclick="copyToClipboard('+917015261054', 'Phone number')" type="button">Copy</button>
-          </div>
-
-          <!-- Phone Card 2 -->
-          <div class="contact-card">
-            <div class="contact-card-info">
-              <div class="contact-card-icon">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-              </div>
-              <div>
-                <div class="contact-card-label">Alternate Mobile</div>
-                <a class="contact-card-val" href="tel:+918950385004">+91-8950385004</a>
-              </div>
-            </div>
-            <button class="copy-btn" onclick="copyToClipboard('+918950385004', 'Alternate phone')" type="button">Copy</button>
-          </div>
-
-          <!-- Location & Networking -->
-          <div class="contact-card">
-            <div class="contact-card-info">
-              <div class="contact-card-icon">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-              </div>
-              <div>
-                <div class="contact-card-label">Location &amp; Networking</div>
-                <span class="contact-card-val">Manesar, Haryana / Delhi NCR, India</span>
-              </div>
-            </div>
-            <div style="display: flex; gap: 8px;">
-              <a class="copy-btn" href="https://github.com/whoarunaggarwal" target="_blank" rel="noopener noreferrer">GitHub</a>
-              <a class="copy-btn" href="https://linkedin.com/in/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-            </div>
-          </div>
+    <section class="section shell cta-section" id="contact" aria-labelledby="contact-title">
+      <div class="cta-glow" aria-hidden="true"></div>
+      <div class="contact-inner reveal">
+        <p class="eyebrow">Have an automation project?</p>
+        <h2 id="contact-title">Let's engineer<br>something resilient.</h2>
+        <p class="contact-lede">Available for technical leadership roles, automation software consulting, and high-precision machine engineering.</p>
+        <a class="button button-light button-cta" href="mailto:aggarwal.arun26@gmail.com" data-magnetic>Start a conversation <span class="arrow" aria-hidden="true">?</span></a>
+        <div class="social-row">
+          <a href="https://github.com/whoarunaggarwal" target="_blank" rel="noopener noreferrer">GitHub</a>
+          <a href="https://www.linkedin.com/in/arunkumar-aggarwal-258079140/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+          <a href="assets/documents/Arun_Kumar_Aggarwal_Resume.pdf" download="Arun_Kumar_Aggarwal_Resume.pdf">R?sum? ??</a>
         </div>
-
-        <!-- Contact Message Form -->
-        <form class="contact-form" id="contactForm">
-          <div class="form-group">
-            <label for="contactName">Your Name</label>
-            <input class="form-control" id="contactName" type="text" placeholder="e.g. John Doe" required>
-          </div>
-          <div class="form-group">
-            <label for="contactEmail">Your Email</label>
-            <input class="form-control" id="contactEmail" type="email" placeholder="e.g. john@company.com" required>
-          </div>
-          <div class="form-group">
-            <label for="contactSubject">Subject / Topic</label>
-            <input class="form-control" id="contactSubject" type="text" placeholder="e.g. Automation Architecture Consultation" required>
-          </div>
-          <div class="form-group">
-            <label for="contactMessage">Message</label>
-            <textarea class="form-control" id="contactMessage" placeholder="Tell me about your project, team, or inquiry..." required></textarea>
-          </div>
-          <button class="btn btn-primary" type="submit" style="align-self: flex-start;">
-            Send Inquiry
-            <svg viewBox="0 0 24 24"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
-          </button>
-        </form>
+        <p class="contact-availability"><span class="status-dot"></span> Delhi NCR / Manesar based ? Leading teams &amp; engineering</p>
       </div>
     </section>
   </main>
 
-  <!-- ====================================================================
-       SITE FOOTER
-       ==================================================================== -->
-  <footer class="site-footer">
-    <div class="shell footer-content">
-      <div class="footer-brand">
-        <div class="footer-title">Arun Kumar Aggarwal</div>
-        <div class="footer-subtitle">Technical Lead (Manager) – Control Software · Industrial Automation</div>
-      </div>
-
-      <div class="footer-meta">
-        <span class="footer-clock" id="istClock">Manesar, India: 17:30:00 IST</span>
-        <a class="back-top-btn" href="#top">
-          Back to Top
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="18 15 12 9 6 15"/></svg>
-        </a>
-      </div>
-    </div>
+  <footer class="footer shell">
+    <a class="brand" href="#top"><span class="brand-mark" aria-hidden="true">AKA</span><span>Arun Kumar Aggarwal</span></a>
+    <p>Designed &amp; engineered with precision ? <span id="year">2026</span></p>
+    <a class="back-top" href="#top" id="backTop">Back to top ?</a>
   </footer>
 
-  <!-- Toast Notification Container -->
-  <div class="toast-container" id="toastContainer" aria-live="polite"></div>
+  <noscript><div class="noscript">JavaScript is disabled. Core contact links still work, but project listings require JavaScript.</div></noscript>
 
-  <!-- 500+ Online Game Player Modal -->
-  <div class="modal-overlay" id="gamePlayerModal" role="dialog" aria-modal="true" aria-labelledby="gamePlayerTitle">
-    <div class="modal-card" style="height: 90vh; max-width: 1040px;">
-      <div class="modal-top">
-        <h3 class="modal-title" id="gamePlayerTitle">Instant Game Arena</h3>
-        <button class="modal-close-btn" id="gamePlayerClose" type="button" aria-label="Close game modal">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
-        </button>
-      </div>
-      <div class="modal-body" style="padding: 0; height: 100%; background: #000000;">
-        <iframe id="gamePlayerFrame" src="" style="width: 100%; height: 100%; border: none;" title="Instant Online Game Player" allowfullscreen></iframe>
+  <div class="modal-backdrop" id="modalBackdrop" aria-hidden="true" hidden>
+    <div class="modal-sheet" id="modalSheet" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+      <button class="modal-close" id="modalClose" type="button" aria-label="Close project details"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="m6 6 12 12M18 6 6 18"/></svg></button>
+      <div class="modal-media" id="modalMedia"></div>
+      <div class="modal-body">
+        <p class="eyebrow" id="modalMeta"></p>
+        <h2 id="modalTitle">Project details</h2>
+        <p id="modalDescription"></p>
+        <div class="tags" id="modalTags"></div>
+        <div class="project-links" id="modalLinks"></div>
       </div>
     </div>
   </div>
 
-  <!-- Fullscreen Resume Modal -->
-  <div class="modal-overlay" id="resumeModal" role="dialog" aria-modal="true" aria-labelledby="resumeModalTitle">
-    <div class="modal-card" style="height: 90vh;">
-      <div class="modal-top">
-        <h3 class="modal-title" id="resumeModalTitle">Arun Kumar Aggarwal – Resume Preview</h3>
-        <button class="modal-close-btn" id="closeResumeModalBtn" type="button" aria-label="Close modal">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
-        </button>
-      </div>
-      <div class="modal-body" style="padding: 0; height: 100%;">
-        <iframe src="assets/documents/Arun_Kumar_Aggarwal_Resume.pdf" style="width: 100%; height: 100%; border: none;" title="Resume PDF Modal"></iframe>
-      </div>
-    </div>
-  </div>
-
-  <!-- Protocol Inspector Modal -->
-  <div class="modal-overlay" id="protocolModal" role="dialog" aria-modal="true" aria-labelledby="protocolModalTitle">
-    <div class="modal-card">
-      <div class="modal-top">
-        <h3 class="modal-title" id="protocolModalTitle">Protocol Architecture</h3>
-        <button class="modal-close-btn" id="protocolModalClose" type="button" aria-label="Close modal">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
-        </button>
-      </div>
-      <div class="modal-body" id="protocolModalBody"></div>
-    </div>
-  </div>
-
-  <!-- Project Blueprint Expansion Modal -->
-  <div class="modal-overlay" id="diagramModal" role="dialog" aria-modal="true" aria-labelledby="diagramModalTitle">
-    <div class="modal-card">
-      <div class="modal-top">
-        <h3 class="modal-title" id="diagramModalTitle">System Blueprint</h3>
-        <button class="modal-close-btn" id="diagramModalClose" type="button" aria-label="Close modal">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
-        </button>
-      </div>
-      <div class="modal-body" id="diagramModalContent"></div>
-    </div>
-  </div>
-
-  <!-- Core Libraries & Interactive JavaScript Modules -->
-  <script src="js/three.min.js"></script>
-  <script src="js/audio-effects.js"></script>
-  <script src="js/three-hero.js"></script>
-  <script src="js/telemetry.js"></script>
-  <script src="js/skills.js"></script>
-  <script src="js/projects.js"></script>
-  <script src="js/games/chess.js"></script>
-  <script src="js/games/sudoku.js"></script>
-  <script src="js/games/uno.js"></script>
-  <script src="js/games/arcade500.js"></script>
-  <script src="js/quiz.js"></script>
-  <script src="js/main.js"></script>
+  <script>
+    window.PORTFOLIO_CONFIG = {"profile": {"github": "whoarunaggarwal", "publicRepos": 8, "tagline": "Technical Lead (Manager) ? Control Software with ~8 years of experience architecting industrial automation, PLC/SCADA systems, and 6-axis robotics integration across Tier-1 automotive and smart manufacturing lines.", "highlights": [{"value": "8+", "label": "years in control software"}, {"value": "52+", "label": "stations in rotary SPMs"}, {"value": "8", "label": "engineers led at VVDN"}], "skills": [{"name": "Beckhoff TwinCAT 2/3", "group": "Platforms", "note": "TwinCAT 2/3 ? Structured Text, NC motion, ADS protocol, and cyclic real-time tasks."}, {"name": "Siemens TIA Portal", "group": "Platforms", "note": "S7-1500 / S7-1200, PROFINET IRT, OB organization blocks, distributed I/O, and WinCC."}, {"name": "Mitsubishi MELSEC", "group": "Platforms", "note": "MELSEC iQ-R & Q Series, CC-Link IE Field, motion modules, and GX Works2/3."}, {"name": "Rockwell Automation", "group": "Platforms", "note": "ControlLogix & CompactLogix, Studio 5000, EtherNet/IP, and safety interlocks."}, {"name": "Structured Text (ST)", "group": "Languages", "note": "IEC 61131-3 Structured Text for high-speed deterministic algorithms and math."}, {"name": "Ladder Logic (LD)", "group": "Languages", "note": "Standard industrial sequencing, safety interlocks, and shop-floor diagnostics."}, {"name": "Function Block Diagram", "group": "Languages", "note": "Modular reusable function blocks for servo drives, valve manifolds, and sensors."}, {"name": "JSON & REST APIs", "group": "Languages", "note": "Shop-floor PLC to MES / Cloud gateway data serialization and communications."}, {"name": "EtherCAT", "group": "Fieldbus", "note": "Sub-millisecond 250 ?s cycle time, Distributed Clocks (DC), and servo integration."}, {"name": "PROFINET", "group": "Fieldbus", "note": "PROFINET IRT/RT deterministic exchange connecting PLCs, robots, and vision sensors."}, {"name": "Modbus TCP / RTU", "group": "Fieldbus", "note": "Serial RS-485 and Ethernet industrial telemetry for power analyzers and VFDs."}, {"name": "CC-Link IE", "group": "Fieldbus", "note": "Gigabit Ethernet industrial fieldbus for high-density Mitsubishi automation racks."}, {"name": "Beckhoff ADS", "group": "Fieldbus", "note": "Automation Device Specification for high-speed IPC-to-PLC communication routing."}, {"name": "MQTT & TCP/IP", "group": "Fieldbus", "note": "Industrial IoT pub/sub telemetry streaming machine telemetry to plant SCADA."}, {"name": "Industrial Robotics", "group": "Robotics", "note": "6-axis robot kinematics, pick-and-place, coordinate offsets, and toolpath guidance."}, {"name": "Servo Motion Control", "group": "Robotics", "note": "Electronic camming, synchronized gearing, CSP mode, and precision trajectory planning."}, {"name": "AOI Machine Vision", "group": "Vision", "note": "Keyence & Cognex vision cameras for tray inspection, connector verification, and defect detection."}, {"name": "HMI & SCADA", "group": "HMI", "note": "Operator interfaces, alarm annunciation, recipe management, and audit logging."}, {"name": "DFM & FMEA", "group": "Methodologies", "note": "Design for Manufacturing and Failure Mode and Effects Analysis for zero-defect production."}, {"name": "KAIZEN & 5-Why", "group": "Methodologies", "note": "Root-cause troubleshooting reducing MTTR and maximizing overall equipment effectiveness (OEE)."}, {"name": "SDLC & Git", "group": "Process", "note": "Version control, branch protection, code reviews, and structured automation release lifecycles."}, {"name": "Technical Leadership", "group": "Leadership", "note": "Leading, mentoring, and scaling engineering teams of 8 control software professionals."}]}, "github": {"recentRepositories": [{"name": "industrial-automation-architecture", "description": "Modular Beckhoff TwinCAT 3 & Siemens TIA Portal architecture patterns for multi-station assembly machines and fieldbus rings.", "language": "Structured Text", "updated": "Oct 2026", "url": "https://github.com/whoarunaggarwal/arun.github.io"}, {"name": "ethercat-motion-controller", "description": "Deterministic servo kinematics, electronic camming, and distributed clock jitter analysis for 6-axis workcells.", "language": "TwinCAT ST", "updated": "Sep 2026", "url": "https://github.com/whoarunaggarwal/arun.github.io"}, {"name": "robotics-aoi-vision-pipeline", "description": "Real-time coordinate transformation pipeline converting vision inspection offsets into 6-axis robot motion trajectories.", "language": "Python / ST", "updated": "Aug 2026", "url": "https://github.com/whoarunaggarwal/arun.github.io"}, {"name": "rotary-spm-sync-core", "description": "Synchronous dual-core 52-station rotary indexer logic with continuous parallel execution and fault isolation.", "language": "Ladder Logic", "updated": "Jul 2026", "url": "https://github.com/whoarunaggarwal/arun.github.io"}]}, "focus": [{"icon": "?", "title": "Building", "text": "High-speed automated manufacturing machinery, multi-axis robotic workcells, and deterministic TwinCAT 3 & Siemens TIA control systems."}, {"icon": "??", "title": "Architecting", "text": "Sub-millisecond EtherCAT and PROFINET fieldbus networks, machine vision coordinate transformations, and SIL 3 functional safety."}, {"icon": "??", "title": "Leading", "text": "Managing engineering teams of 8, enforcing SDLC rigor, conducting FMEA risk analysis, and driving shop-floor KAIZEN optimization."}], "experience": [{"period": "Sep 2023 ? Present", "role": "Technical Lead (Manager) ? Control Software", "company": "VVDN Technologies", "location": "Manesar, Haryana", "summary": "Leading an engineering team of 8 control software and automation engineers. Directing foresight studies, machine automation architecture, Beckhoff TwinCAT 3 & Siemens TIA Portal implementations, 6-axis robotics integration, and deterministic fieldbus communications across high-availability manufacturing lines. Enforcing SDLC compliance, DFM, FMEA, code reviews, and cross-functional hardware bringup.", "focus": ["TwinCAT 3", "Siemens TIA", "6-Axis Robotics", "Team Leadership", "SDLC"]}, {"period": "Apr 2023 ? Sep 2023", "role": "Junior Engineer ? Control Software", "company": "BorgWarner Emission Systems", "location": "Manesar, Haryana", "summary": "Maintained and optimized high-precision automated manufacturing equipment for EGR (Exhaust Gas Recirculation) and Turbocharger systems. Handled maintenance, rapid troubleshooting, and root-cause analysis (5-Why, KAIZEN) for PLCs, HMIs, and robotic workcells, minimizing unplanned downtime on high-volume production lines.", "focus": ["PLC Troubleshooting", "EGR Systems", "KAIZEN", "5-Why Analysis"]}, {"period": "Feb 2023 ? Apr 2023", "role": "Senior Executive ? Automation", "company": "Mindarika Pvt. Ltd.", "location": "Gurugram, Haryana", "summary": "Responsible for preventive and corrective maintenance of multi-station automated automotive switch assembly lines. Executed sensor calibration, fieldbus diagnostics, and line stabilization for high-volume Tier-1 OEM deliverables.", "focus": ["Preventive Maintenance", "Sensor Calibration", "Automotive Assembly"]}, {"period": "Jan 2019 ? Feb 2023", "role": "Application Engineer ? Automation Solutions", "company": "Authentic Engineers", "location": "Gurugram, Haryana", "summary": "Over 4 years of end-to-end development, programming, commissioning, and on-site deployment of Special Purpose Machines (SPMs). Programmed PLCs (Structured Text, Ladder, FBD) across Beckhoff, Siemens, and Mitsubishi platforms. Integrated industrial robotics, servo motion axes, pneumatic systems, and AOI machine vision cameras for marquee automotive clients including Maruti Suzuki, Honda, UNO Minda, Spark Minda, Lumax, Padmini VNA, and Hella.", "focus": ["SPM Commissioning", "Beckhoff", "Siemens", "Mitsubishi", "Robotics"]}], "education": [{"period": "Expected 2027", "credential": "MBA ? Information Technology", "school": "University of Delhi"}, {"period": "2013 ? 2017", "credential": "B.Tech ? Electronics & Communications Engineering", "school": "Panipat Institute of Engineering and Technology (PIET)"}], "certifications": [{"period": "2023", "title": "Advanced TwinCAT 3 Motion & PLC Architecture", "issuer": "Beckhoff Automation"}, {"period": "2022", "title": "TIA Portal Certified Engineer & PROFINET Networks", "issuer": "Siemens Industry Automation"}, {"period": "2021", "title": "Industrial Robotics Integration & SIL 3 Functional Safety", "issuer": "Robotics & Machine Safety Council"}, {"period": "2019", "title": "DFM, FMEA & KAIZEN Root-Cause Engineering", "issuer": "Quality Engineering Institute"}], "awards": [{"period": "2024", "title": "Lead Automation Architecture Contributor", "issuer": "VVDN Technologies", "description": "Recognized for spearheading the successful multi-platform control software architecture for next-generation automated test and validation lines."}, {"period": "2023", "title": "Zero-Defect Line Stabilization Award", "issuer": "Mindarika / Tier-1 OEM Delivery", "description": "Awarded for rapid troubleshooting, sensor calibration, and eliminating chronic machine faults to achieve zero production defects."}, {"period": "2022", "title": "Excellence in SPM Commissioning", "issuer": "Authentic Engineers", "description": "Delivered and commissioned complex 52-station rotary assembly SPMs and multi-axis robotics cells on schedule with 99.4% uptime."}, {"period": "2017", "title": "Academic & Technical Excellence", "issuer": "P.I.E.T. College", "description": "Awarded for distinguished performance in Electronics & Communications Engineering and embedded system design."}], "maker": [{"title": "6-Axis Robot Kinematic Simulator", "year": "2023", "description": "A mathematical simulator calculating forward and inverse kinematic coordinates for articulated industrial arms in Structured Text."}, {"title": "Wireless Industrial Telemetry Gateway", "year": "2021", "description": "An embedded sensor monitoring gateway streaming vibration, temperature, and cycle time over Modbus and MQTT to a central dashboard."}, {"title": "Micro-PLC Embedded Controller", "year": "2018", "description": "An experimental 8-input, 8-output ladder logic execution engine built on an embedded microcontroller with optoisolated industrial I/O."}, {"title": "Dual-Axis Solar Tracking Rig", "year": "2017", "description": "A closed-loop dual-axis solar tracking system using light-dependent photoresistors and stepper motors, increasing energy capture efficiency by 34%."}], "projects": [{"title": "Automated DUT Handling & Validation Process", "description": "Mission-critical Device Under Test (DUT) validation cell built for the world's largest mobile manufacturing facility. Features high-speed Mac OS integration via Beckhoff TwinCAT ADS and TCP/IP, coordinating 6-axis robotic pick-and-place with vision-guided micro-alignment, custom pneumatic grippers, and SIL 3 functional safety interlocks.", "category": "Robotics & Motion", "technologies": ["Beckhoff TwinCAT 3", "ADS Protocol", "6-Axis Robotics", "AOI Vision", "SIL 3 Safety"], "source": "https://github.com/whoarunaggarwal/arun.github.io", "updated": "2024", "color": "#00e5ff", "image": "assets/projects/dut-handling.jpg", "featured": true}, {"title": "Automated PCB Connector Placement & Verification System", "description": "High-speed precision robotic placement cell built for HP. Integrates multi-camera machine vision to inspect 30-connector component trays, calculating sub-millimeter (X, Y, Z, ?) coordinate offsets and transmitting real-time correction data over PROFINET IRT to 6-axis robots for zero-defect connector insertion.", "category": "Vision & Validation", "technologies": ["Siemens S7-1500", "PROFINET IRT", "Cognex Vision", "Robotics", "Structured Text"], "source": "https://github.com/whoarunaggarwal/arun.github.io", "updated": "2023", "color": "#7c69ff", "image": "assets/projects/pcb-connector.jpg", "featured": true}, {"title": "Automated Rotary Smart Meter Assembly SPM", "description": "High-volume 52-station Special Purpose Machine (SPM) engineered for IntelliSmart. Implements a synchronized dual-core rotary mechanism with 26 stations per core, electronic camming, continuous parallel execution, laser marking, and automated screw fastening with comprehensive yield tracking.", "category": "Assembly SPM", "technologies": ["Mitsubishi MELSEC iQ-R", "CC-Link IE Field", "Servo Motion", "Electronic Camming", "HMI SCADA"], "source": "https://github.com/whoarunaggarwal/arun.github.io", "updated": "2023", "color": "#3fd6c0", "image": "assets/projects/smart-meter.jpg", "featured": true}, {"title": "Automotive EOL Leakage & Calibration Rig", "description": "Precision end-of-line test station for automotive EGR and turbocharger valves at BorgWarner. Employs differential pressure sensors and micron-level optical displacement encoders, with 5-Why root-cause reduction of line stoppages.", "category": "Testing & Validation", "technologies": ["PLC Diagnostics", "Differential Pressure", "Sensors", "KAIZEN", "5-Why"], "source": "https://github.com/whoarunaggarwal/arun.github.io", "updated": "2023", "color": "#f59e0b", "image": "assets/projects/eol-testing.jpg", "featured": false}, {"title": "High-Payload Cartesian Pick & Place Gantry", "description": "3-Axis Cartesian robotic handling system designed for automotive stamping lines at Authentic Engineers. Implements synchronized servo gearing, deterministic EtherCAT communication, and soft S-curve acceleration profiles to eliminate mechanical vibration.", "category": "Robotics & Motion", "technologies": ["Structured Text", "EtherCAT", "Servo Drives", "Kinematics"], "source": "https://github.com/whoarunaggarwal/arun.github.io", "updated": "2022", "color": "#38bdf8", "image": "assets/projects/cartesian-gantry.jpg", "featured": false}, {"title": "Deterministic TwinCAT 3 Fieldbus Architecture", "description": "Production-grade PLC software architecture establishing standardized hardware abstraction, modular state machine frameworks (PackML compliant), and sub-millisecond fieldbus diagnostics across distributed I/O stations.", "category": "Architecture", "technologies": ["TwinCAT 3", "EtherCAT 250?s", "PackML", "Structured Text"], "source": "https://github.com/whoarunaggarwal/arun.github.io", "updated": "2024", "color": "#10b981", "image": "assets/projects/twincat-core.jpg", "featured": false}, {"title": "Centralized SCADA & Manufacturing Telemetry Gateway", "description": "Edge IoT bridge streaming cycle times, overall equipment effectiveness (OEE), and deterministic fieldbus health metrics from shop-floor PLCs to cloud analytics via MQTT and REST JSON APIs.", "category": "Architecture", "technologies": ["TwinCAT ADS", "MQTT", "JSON REST", "SCADA", "Telemetry"], "source": "https://github.com/whoarunaggarwal/arun.github.io", "updated": "2024", "color": "#ec4899", "image": "assets/projects/scada-gateway.jpg", "featured": false}, {"title": "Multi-Camera AOI Vision Inspection Cell", "description": "Multi-camera automated optical inspection (AOI) evaluating LED photometric intensity, clip presence, and conformal seal integrity with zero false-acceptance rate for automotive Tier-1 supplier lines.", "category": "Vision & Validation", "technologies": ["Keyence Vision", "Structured Text", "Modbus RTU", "Safety Interlocks"], "source": "https://github.com/whoarunaggarwal/arun.github.io", "updated": "2021", "color": "#8b5cf6", "image": "assets/projects/aoi-vision.jpg", "featured": false}]};
+  </script>
+  <script src="script.js"></script>
 </body>
 </html>

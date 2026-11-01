@@ -1,0 +1,10 @@
+{
+  "name": "Arun Kumar Aggarwal ? Portfolio",
+  "short_name": "Arun Aggarwal",
+  "description": "Technical Lead (Manager) ? Control Software portfolio",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#080a0e",
+  "theme_color": "#080a0e",
+  "icons": [{"src": "favicon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any"}]
+}
