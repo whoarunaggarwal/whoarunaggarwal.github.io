@@ -1,0 +1,130 @@
+/* ==========================================================================
+   Responsive Breakpoints: Arun Kumar Aggarwal Portfolio
+   Mobile First & Desktop Media Queries
+   ========================================================================== */
+
+@media (max-width: 1024px) {
+  .hero-grid {
+    grid-template-columns: 1fr;
+    gap: 48px;
+  }
+
+  .about-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .project-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .project-info {
+    border-right: none;
+    border-bottom: 1px solid var(--border-subtle);
+  }
+
+  .resume-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  :root {
+    --shell-padding: 20px;
+    --section-spacing: 64px;
+  }
+
+  .nav-links {
+    display: none;
+  }
+
+  .menu-toggle-btn {
+    display: flex;
+  }
+
+  .hero-stats {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  .pillars-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .education-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .telemetry-row {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .axis-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .skills-toolbar {
+    flex-direction: column;
+    align-items: stretch;
+    border-radius: var(--radius-lg);
+  }
+
+  .skills-search-wrapper {
+    min-width: 100%;
+  }
+
+  .timeline::before {
+    left: 18px;
+  }
+
+  .timeline-item {
+    padding-left: 48px;
+  }
+
+  .timeline-marker {
+    left: 7px;
+  }
+
+  .timeline-card-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .footer-content {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .hero-actions .btn {
+    width: 100%;
+  }
+
+  .hero-stats {
+    grid-template-columns: 1fr;
+  }
+
+  .scada-topbar {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  .scada-toolbar {
+    flex-wrap: wrap;
+  }
+
+  .telemetry-row {
+    grid-template-columns: 1fr;
+  }
+}

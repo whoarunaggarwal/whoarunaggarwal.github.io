@@ -1,0 +1,1303 @@
+/* ==========================================================================
+   Components Stylesheet: Arun Kumar Aggarwal Portfolio
+   Hero Telemetry, Project Blueprints, Skills Rack, Career Timeline, PDF Viewer
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   1. HERO SECTION & INTERACTIVE SCADA CONSOLE
+   -------------------------------------------------------------------------- */
+.hero-section {
+  padding-top: calc(var(--section-spacing) + 40px);
+  padding-bottom: var(--section-spacing);
+  min-height: 92vh;
+  display: flex;
+  align-items: center;
+}
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1.15fr 0.95fr;
+  gap: clamp(32px, 5vw, 64px);
+  align-items: center;
+}
+
+.hero-copy {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.hero-heading {
+  font-size: clamp(2.4rem, 4.4vw, 3.6rem);
+  font-weight: 800;
+  line-height: 1.12;
+  letter-spacing: -0.035em;
+  color: var(--color-text-primary);
+}
+
+.hero-heading .text-gradient {
+  background: linear-gradient(135deg, var(--color-cyan) 0%, #38bdf8 50%, var(--color-amber) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.hero-lede {
+  font-size: clamp(1.05rem, 1.25vw, 1.2rem);
+  color: var(--color-text-secondary);
+  line-height: 1.65;
+  max-width: 620px;
+}
+
+.hero-actions {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-top: 10px;
+}
+
+/* Hero Stats Bar */
+.hero-stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  padding: 22px 0;
+  border-top: 1px solid var(--border-subtle);
+  border-bottom: 1px solid var(--border-subtle);
+  margin-top: 24px;
+}
+
+.stat-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.stat-val {
+  font-size: clamp(1.8rem, 2.4vw, 2.3rem);
+  font-weight: 800;
+  font-family: var(--font-mono);
+  color: var(--color-text-primary);
+  line-height: 1.1;
+  display: flex;
+  align-items: baseline;
+}
+
+.stat-val .suffix {
+  color: var(--color-cyan);
+  font-size: 0.85em;
+  margin-left: 2px;
+}
+
+.stat-label {
+  font-size: 0.78rem;
+  color: var(--color-text-tertiary);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-top: 4px;
+}
+
+/* SCADA Industrial Simulation Console */
+.scada-chassis {
+  background: var(--color-canvas-raised);
+  border: 1px solid var(--border-medium);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-lg), var(--shadow-cyan);
+  overflow: hidden;
+  position: relative;
+  transition: border-color var(--transition-normal);
+}
+
+.scada-chassis:hover {
+  border-color: var(--border-highlight);
+}
+
+/* Console Header & Status LEDs */
+.scada-topbar {
+  background: rgba(10, 14, 22, 0.95);
+  border-bottom: 1px solid var(--border-subtle);
+  padding: 12px 18px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.scada-title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--color-text-primary);
+  letter-spacing: 0.05em;
+}
+
+.scada-led-group {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.scada-led {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  color: var(--color-text-tertiary);
+  font-weight: 600;
+}
+
+.led-bulb {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #334155;
+}
+
+.led-bulb.is-green {
+  background: var(--color-green);
+  box-shadow: 0 0 8px var(--color-green);
+}
+
+.led-bulb.is-cyan {
+  background: var(--color-cyan);
+  box-shadow: 0 0 8px var(--color-cyan);
+}
+
+.led-bulb.is-amber {
+  background: var(--color-amber);
+  box-shadow: 0 0 8px var(--color-amber);
+}
+
+/* Console Controller Selector */
+.scada-tabs {
+  display: flex;
+  background: rgba(15, 23, 42, 0.4);
+  border-bottom: 1px solid var(--border-subtle);
+  padding: 8px 12px 0 12px;
+  gap: 6px;
+  overflow-x: auto;
+}
+
+.scada-tab-btn {
+  background: transparent;
+  border: 1px solid transparent;
+  border-bottom: none;
+  padding: 8px 14px;
+  border-radius: var(--radius-sm) var(--radius-sm) 0 0;
+  font-family: var(--font-mono);
+  font-size: 0.74rem;
+  font-weight: 600;
+  color: var(--color-text-tertiary);
+  cursor: pointer;
+  white-space: nowrap;
+  transition: all var(--transition-fast);
+}
+
+.scada-tab-btn:hover {
+  color: var(--color-text-primary);
+}
+
+.scada-tab-btn.is-active {
+  background: var(--color-canvas-raised);
+  border-color: var(--border-medium);
+  border-bottom: 1px solid var(--color-canvas-raised);
+  color: var(--color-cyan);
+}
+
+/* SCADA Dashboard Body */
+.scada-body {
+  padding: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.telemetry-row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+}
+
+.telemetry-card {
+  background: rgba(10, 15, 24, 0.75);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-sm);
+  padding: 10px 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.telemetry-card .tag {
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  color: var(--color-text-tertiary);
+  text-transform: uppercase;
+}
+
+.telemetry-card .val {
+  font-family: var(--font-mono);
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--color-cyan);
+}
+
+.telemetry-card.is-amber .val {
+  color: var(--color-amber);
+}
+
+.telemetry-card.is-green .val {
+  color: var(--color-green);
+}
+
+/* Waveform Graph Canvas */
+.waveform-panel {
+  background: rgba(6, 9, 15, 0.9);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-sm);
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.waveform-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  color: var(--color-text-tertiary);
+}
+
+.waveform-canvas {
+  width: 100%;
+  height: 72px;
+  display: block;
+}
+
+/* 4-Axis Kinematics Coordinates Readout */
+.kinematics-panel {
+  background: rgba(10, 15, 24, 0.75);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-sm);
+  padding: 12px;
+}
+
+.kinematics-title {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  color: var(--color-text-tertiary);
+  text-transform: uppercase;
+  margin-bottom: 8px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.axis-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 8px;
+}
+
+.axis-box {
+  background: rgba(15, 23, 42, 0.6);
+  border-radius: var(--radius-xs);
+  padding: 6px 8px;
+  text-align: center;
+  border: 1px solid rgba(255, 255, 255, 0.04);
+}
+
+.axis-name {
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  color: var(--color-text-tertiary);
+  font-weight: 700;
+}
+
+.axis-coord {
+  font-family: var(--font-mono);
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: var(--color-text-primary);
+}
+
+/* Interactive Controls Toolbar */
+.scada-toolbar {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding-top: 4px;
+}
+
+.scada-btn {
+  flex: 1;
+  padding: 8px 12px;
+  border-radius: var(--radius-xs);
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  font-weight: 700;
+  border: 1px solid var(--border-medium);
+  background: var(--glass-surface);
+  color: var(--color-text-primary);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+}
+
+.scada-btn:hover {
+  background: var(--glass-surface-hover);
+  border-color: var(--color-cyan);
+  color: var(--color-cyan);
+}
+
+.scada-btn.btn-run {
+  background: rgba(16, 185, 129, 0.15);
+  border-color: rgba(16, 185, 129, 0.4);
+  color: var(--color-green);
+}
+
+.scada-btn.btn-run:hover {
+  background: rgba(16, 185, 129, 0.3);
+  box-shadow: 0 0 12px rgba(16, 185, 129, 0.4);
+}
+
+.scada-btn.btn-estop {
+  background: rgba(239, 68, 68, 0.15);
+  border-color: rgba(239, 68, 68, 0.4);
+  color: #f87171;
+}
+
+.scada-btn.btn-estop:hover {
+  background: rgba(239, 68, 68, 0.3);
+  box-shadow: 0 0 12px rgba(239, 68, 68, 0.4);
+}
+
+/* --------------------------------------------------------------------------
+   2. ABOUT ME & 4 PILLARS
+   -------------------------------------------------------------------------- */
+.about-grid {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: clamp(32px, 5vw, 64px);
+  align-items: start;
+}
+
+.about-narrative {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  font-size: 1.05rem;
+  color: var(--color-text-secondary);
+  line-height: 1.7;
+}
+
+.about-narrative p strong {
+  color: var(--color-text-primary);
+}
+
+.about-quote {
+  border-left: 3px solid var(--color-cyan);
+  padding: 16px 20px;
+  background: var(--color-cyan-subtle);
+  border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+  font-style: italic;
+  color: var(--color-text-primary);
+  margin: 12px 0;
+}
+
+.pillars-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+}
+
+.pillar-card {
+  background: var(--glass-surface);
+  border: 1px solid var(--border-medium);
+  border-radius: var(--radius-md);
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  transition: all var(--transition-normal);
+}
+
+.pillar-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--color-cyan);
+  box-shadow: var(--shadow-md), var(--shadow-cyan);
+}
+
+.pillar-icon-box {
+  width: 44px;
+  height: 44px;
+  border-radius: var(--radius-sm);
+  background: var(--color-cyan-subtle);
+  border: 1px solid var(--border-highlight);
+  color: var(--color-cyan);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.pillar-icon-box svg {
+  width: 22px;
+  height: 22px;
+}
+
+.pillar-title {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--color-text-primary);
+}
+
+.pillar-desc {
+  font-size: 0.88rem;
+  color: var(--color-text-secondary);
+  line-height: 1.5;
+}
+
+/* --------------------------------------------------------------------------
+   3. TECHNICAL SKILLS RACK & PROTOCOL INSPECTOR
+   -------------------------------------------------------------------------- */
+.skills-toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-bottom: 32px;
+  background: var(--glass-surface);
+  border: 1px solid var(--border-subtle);
+  padding: 12px 18px;
+  border-radius: var(--radius-full);
+}
+
+.skills-filter-group {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.skills-filter-btn {
+  background: transparent;
+  border: 1px solid transparent;
+  color: var(--color-text-secondary);
+  font-family: var(--font-sans);
+  font-size: 0.85rem;
+  font-weight: 600;
+  padding: 6px 14px;
+  border-radius: var(--radius-full);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.skills-filter-btn:hover {
+  color: var(--color-text-primary);
+  background: var(--color-cyan-subtle);
+}
+
+.skills-filter-btn.is-active {
+  background: var(--color-cyan);
+  color: #07090e;
+  font-weight: 700;
+}
+
+.skills-search-wrapper {
+  position: relative;
+  min-width: 240px;
+}
+
+.skills-search-input {
+  width: 100%;
+  background: rgba(10, 15, 24, 0.6);
+  border: 1px solid var(--border-medium);
+  border-radius: var(--radius-full);
+  padding: 8px 16px 8px 36px;
+  font-family: var(--font-sans);
+  font-size: 0.85rem;
+  color: var(--color-text-primary);
+  outline: none;
+  transition: border-color var(--transition-fast);
+}
+
+.skills-search-input:focus {
+  border-color: var(--color-cyan);
+}
+
+.skills-search-icon {
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 15px;
+  height: 15px;
+  color: var(--color-text-tertiary);
+  pointer-events: none;
+}
+
+/* Skills Grid */
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 18px;
+}
+
+.skill-card {
+  background: var(--glass-surface);
+  border: 1px solid var(--border-medium);
+  border-radius: var(--radius-md);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  transition: all var(--transition-normal);
+  position: relative;
+  overflow: hidden;
+}
+
+.skill-card:hover {
+  border-color: var(--color-cyan);
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-md);
+}
+
+.skill-card-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.skill-category-badge {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--color-cyan);
+  background: var(--color-cyan-subtle);
+  padding: 4px 10px;
+  border-radius: var(--radius-full);
+}
+
+.skill-name {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--color-text-primary);
+}
+
+.skill-context {
+  font-size: 0.85rem;
+  color: var(--color-text-secondary);
+  line-height: 1.5;
+}
+
+.skill-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: auto;
+}
+
+.skill-tag {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid var(--border-subtle);
+  color: var(--color-text-secondary);
+  padding: 3px 8px;
+  border-radius: var(--radius-xs);
+}
+
+/* --------------------------------------------------------------------------
+   4. PROFESSIONAL EXPERIENCE TIMELINE
+   -------------------------------------------------------------------------- */
+.timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  position: relative;
+  max-width: 980px;
+  margin: 0 auto;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  top: 30px;
+  bottom: 30px;
+  left: 28px;
+  width: 2px;
+  background: linear-gradient(180deg, var(--color-cyan), var(--color-blue) 40%, var(--border-medium) 100%);
+}
+
+.timeline-item {
+  position: relative;
+  padding-left: 72px;
+}
+
+.timeline-marker {
+  position: absolute;
+  left: 17px;
+  top: 24px;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: var(--color-canvas);
+  border: 2px solid var(--color-cyan);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+  box-shadow: 0 0 10px var(--color-cyan-glow);
+}
+
+.timeline-marker-inner {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--color-cyan);
+}
+
+.timeline-card {
+  background: var(--glass-surface);
+  border: 1px solid var(--border-medium);
+  border-radius: var(--radius-lg);
+  padding: clamp(20px, 3vw, 32px);
+  box-shadow: var(--shadow-sm);
+  transition: all var(--transition-normal);
+}
+
+.timeline-card:hover {
+  border-color: var(--border-highlight);
+  box-shadow: var(--shadow-md);
+}
+
+/* Featured Current Tech Lead Card */
+.timeline-card.is-current {
+  border-color: var(--border-highlight);
+  background: linear-gradient(135deg, rgba(18, 26, 42, 0.85) 0%, rgba(12, 18, 30, 0.95) 100%);
+  box-shadow: var(--shadow-md), 0 0 35px -5px rgba(0, 240, 255, 0.15);
+}
+
+.timeline-card-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 16px;
+  border-bottom: 1px solid var(--border-subtle);
+  padding-bottom: 16px;
+}
+
+.timeline-role {
+  font-size: 1.35rem;
+  font-weight: 800;
+  color: var(--color-text-primary);
+}
+
+.timeline-company {
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--color-cyan);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.timeline-period {
+  font-family: var(--font-mono);
+  font-size: 0.82rem;
+  color: var(--color-text-tertiary);
+  background: var(--glass-surface-translucent);
+  border: 1px solid var(--border-subtle);
+  padding: 6px 14px;
+  border-radius: var(--radius-full);
+}
+
+.badge-lead {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(245, 158, 11, 0.15);
+  border: 1px solid rgba(245, 158, 11, 0.4);
+  color: var(--color-amber);
+  font-family: var(--font-mono);
+  font-size: 0.74rem;
+  font-weight: 700;
+  padding: 4px 10px;
+  border-radius: var(--radius-full);
+  margin-left: 8px;
+}
+
+.timeline-bullets {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin: 16px 0;
+}
+
+.timeline-bullets li {
+  position: relative;
+  padding-left: 22px;
+  font-size: 0.95rem;
+  color: var(--color-text-secondary);
+  line-height: 1.6;
+}
+
+.timeline-bullets li::before {
+  content: '▹';
+  position: absolute;
+  left: 0;
+  color: var(--color-cyan);
+  font-weight: 700;
+}
+
+.client-pills {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 16px;
+  padding-top: 14px;
+  border-top: 1px solid var(--border-subtle);
+}
+
+.client-pill-title {
+  font-size: 0.78rem;
+  font-family: var(--font-mono);
+  color: var(--color-text-tertiary);
+  text-transform: uppercase;
+}
+
+.client-pill {
+  font-size: 0.78rem;
+  font-weight: 600;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--border-subtle);
+  padding: 3px 10px;
+  border-radius: var(--radius-full);
+  color: var(--color-text-primary);
+}
+
+/* --------------------------------------------------------------------------
+   5. FEATURED PROJECTS SHOWCASE WITH INTERACTIVE ARCHITECTURE DIAGRAMS
+   -------------------------------------------------------------------------- */
+.projects-container {
+  display: flex;
+  flex-direction: column;
+  gap: 56px;
+}
+
+.project-card {
+  background: var(--glass-surface);
+  border: 1px solid var(--border-medium);
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+  transition: all var(--transition-normal);
+}
+
+.project-card:hover {
+  border-color: var(--border-highlight);
+  box-shadow: var(--shadow-lg), var(--shadow-cyan);
+}
+
+.project-grid {
+  display: grid;
+  grid-template-columns: 1.05fr 1.15fr;
+}
+
+.project-info {
+  padding: clamp(24px, 4vw, 40px);
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  border-right: 1px solid var(--border-subtle);
+}
+
+.project-badge-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.project-num {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  font-weight: 800;
+  color: var(--color-cyan);
+  background: var(--color-cyan-subtle);
+  padding: 4px 10px;
+  border-radius: var(--radius-xs);
+}
+
+.project-client-badge {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--color-amber);
+  background: var(--color-amber-subtle);
+  border: 1px solid rgba(245, 158, 11, 0.3);
+  padding: 4px 10px;
+  border-radius: var(--radius-full);
+}
+
+.project-name {
+  font-size: clamp(1.4rem, 2vw, 1.85rem);
+  font-weight: 800;
+  color: var(--color-text-primary);
+  line-height: 1.25;
+}
+
+.project-desc {
+  font-size: 0.98rem;
+  color: var(--color-text-secondary);
+  line-height: 1.65;
+}
+
+.project-highlights-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.project-highlights-list li {
+  position: relative;
+  padding-left: 20px;
+  font-size: 0.92rem;
+  color: var(--color-text-secondary);
+  line-height: 1.5;
+}
+
+.project-highlights-list li::before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  color: var(--color-green);
+  font-weight: 800;
+}
+
+.project-tech-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: auto;
+  padding-top: 16px;
+  border-top: 1px solid var(--border-subtle);
+}
+
+.project-tech-tag {
+  font-family: var(--font-mono);
+  font-size: 0.74rem;
+  background: rgba(0, 240, 255, 0.08);
+  border: 1px solid var(--border-highlight);
+  color: var(--color-cyan);
+  padding: 4px 10px;
+  border-radius: var(--radius-full);
+}
+
+/* Interactive Project Architecture Visualizer Area */
+.project-diagram-panel {
+  background: rgba(6, 10, 18, 0.85);
+  padding: clamp(20px, 3vw, 36px);
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  justify-content: center;
+  position: relative;
+}
+
+.diagram-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid var(--border-subtle);
+  padding-bottom: 12px;
+}
+
+.diagram-title {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: var(--color-cyan);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.diagram-interactive-svg {
+  width: 100%;
+  height: auto;
+  min-height: 260px;
+  max-height: 360px;
+}
+
+/* --------------------------------------------------------------------------
+   6. EDUCATION SECTION
+   -------------------------------------------------------------------------- */
+.education-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+}
+
+.education-card {
+  background: var(--glass-surface);
+  border: 1px solid var(--border-medium);
+  border-radius: var(--radius-lg);
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  transition: all var(--transition-normal);
+}
+
+.education-card:hover {
+  border-color: var(--color-cyan);
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+}
+
+.education-badge {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--color-cyan);
+  background: var(--color-cyan-subtle);
+  padding: 4px 12px;
+  border-radius: var(--radius-full);
+  align-self: flex-start;
+}
+
+.education-degree {
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: var(--color-text-primary);
+}
+
+.education-inst {
+  font-size: 1rem;
+  color: var(--color-text-secondary);
+}
+
+.education-period {
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  color: var(--color-text-tertiary);
+}
+
+.education-notes {
+  font-size: 0.9rem;
+  color: var(--color-text-secondary);
+  line-height: 1.6;
+  margin-top: 6px;
+}
+
+/* --------------------------------------------------------------------------
+   7. DEDICATED RESUME / CV SECTION & IN-BROWSER PREVIEW
+   -------------------------------------------------------------------------- */
+.resume-section-wrapper {
+  background: linear-gradient(135deg, rgba(15, 23, 42, 0.7) 0%, rgba(9, 14, 24, 0.85) 100%);
+  border: 1px solid var(--border-medium);
+  border-radius: var(--radius-xl);
+  padding: clamp(24px, 4vw, 48px);
+  box-shadow: var(--shadow-lg);
+}
+
+.resume-layout {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: clamp(32px, 5vw, 64px);
+  align-items: center;
+}
+
+.resume-copy {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.resume-highlights {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin: 10px 0;
+}
+
+.resume-highlights li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.92rem;
+  color: var(--color-text-secondary);
+}
+
+.resume-highlights li svg {
+  width: 16px;
+  height: 16px;
+  color: var(--color-green);
+  flex-shrink: 0;
+}
+
+.resume-preview-frame {
+  background: var(--color-canvas);
+  border: 1px solid var(--border-medium);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+  display: flex;
+  flex-direction: column;
+  height: 480px;
+  position: relative;
+}
+
+.resume-frame-bar {
+  background: rgba(15, 23, 42, 0.95);
+  border-bottom: 1px solid var(--border-subtle);
+  padding: 10px 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--color-text-secondary);
+}
+
+.resume-iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+  background: #ffffff;
+}
+
+/* --------------------------------------------------------------------------
+   8. CONTACT HUB & MODALS
+   -------------------------------------------------------------------------- */
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.15fr;
+  gap: clamp(32px, 5vw, 64px);
+}
+
+.contact-cards-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.contact-card {
+  background: var(--glass-surface);
+  border: 1px solid var(--border-medium);
+  border-radius: var(--radius-md);
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  transition: all var(--transition-normal);
+}
+
+.contact-card:hover {
+  border-color: var(--color-cyan);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-sm);
+}
+
+.contact-card-info {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.contact-card-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: var(--color-cyan-subtle);
+  color: var(--color-cyan);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.contact-card-icon svg {
+  width: 20px;
+  height: 20px;
+}
+
+.contact-card-label {
+  font-size: 0.75rem;
+  font-family: var(--font-mono);
+  color: var(--color-text-tertiary);
+  text-transform: uppercase;
+}
+
+.contact-card-val {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--color-text-primary);
+  text-decoration: none;
+  transition: color var(--transition-fast);
+}
+
+.contact-card-val:hover {
+  color: var(--color-cyan);
+}
+
+.copy-btn {
+  background: var(--glass-surface-translucent);
+  border: 1px solid var(--border-subtle);
+  color: var(--color-text-secondary);
+  padding: 8px 12px;
+  border-radius: var(--radius-xs);
+  cursor: pointer;
+  font-family: var(--font-mono);
+  font-size: 0.74rem;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  transition: all var(--transition-fast);
+}
+
+.copy-btn:hover {
+  color: var(--color-cyan);
+  border-color: var(--color-cyan);
+  background: var(--color-cyan-subtle);
+}
+
+/* Contact Message Form */
+.contact-form {
+  background: var(--glass-surface);
+  border: 1px solid var(--border-medium);
+  border-radius: var(--radius-lg);
+  padding: clamp(24px, 4vw, 36px);
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.form-group label {
+  font-size: 0.84rem;
+  font-weight: 600;
+  color: var(--color-text-secondary);
+  font-family: var(--font-mono);
+}
+
+.form-control {
+  background: rgba(10, 15, 24, 0.6);
+  border: 1px solid var(--border-medium);
+  border-radius: var(--radius-sm);
+  padding: 12px 16px;
+  font-family: var(--font-sans);
+  font-size: 0.95rem;
+  color: var(--color-text-primary);
+  outline: none;
+  transition: border-color var(--transition-fast);
+}
+
+.form-control:focus {
+  border-color: var(--color-cyan);
+}
+
+textarea.form-control {
+  min-height: 120px;
+  resize: vertical;
+}
+
+/* Fullscreen Modals */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(5, 7, 12, 0.85);
+  backdrop-filter: var(--blur-lg);
+  -webkit-backdrop-filter: var(--blur-lg);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity var(--transition-normal);
+}
+
+.modal-overlay.is-active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.modal-card {
+  background: var(--color-canvas-raised);
+  border: 1px solid var(--border-highlight);
+  border-radius: var(--radius-xl);
+  width: 100%;
+  max-width: 960px;
+  max-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  box-shadow: var(--shadow-lg), var(--shadow-cyan);
+  overflow: hidden;
+  transform: scale(0.95);
+  transition: transform var(--transition-normal);
+}
+
+.modal-overlay.is-active .modal-card {
+  transform: scale(1);
+}
+
+.modal-top {
+  padding: 16px 24px;
+  background: rgba(15, 23, 42, 0.9);
+  border-bottom: 1px solid var(--border-subtle);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.modal-title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--color-text-primary);
+}
+
+.modal-close-btn {
+  background: transparent;
+  border: none;
+  color: var(--color-text-secondary);
+  cursor: pointer;
+  padding: 6px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: color var(--transition-fast);
+}
+
+.modal-close-btn:hover {
+  color: var(--color-cyan);
+}
+
+.modal-body {
+  padding: 24px;
+  overflow-y: auto;
+  flex: 1;
+}
